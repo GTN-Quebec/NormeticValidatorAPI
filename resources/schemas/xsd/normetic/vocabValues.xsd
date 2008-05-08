@@ -1,0 +1,56 @@
+<xs:schema targetNamespace="http://ltsc.ieee.org/xsd/LOM"
+           xmlns="http://ltsc.ieee.org/xsd/LOM"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           version="IEEE LTSC LOM XML 1.0">
+
+   <xs:annotation>
+      <xs:documentation>
+         This component schema defintion defines the standard vocabulary value 
+         declarations as defined in the NORMETIC1.1 profile.
+         Written by: Frédéric Bergeron &lt;frederic.bergeron@licef.teluq.uqam.ca&gt;
+         Date: 2007/05
+      </xs:documentation>
+   </xs:annotation>
+
+   <!-- Source -->
+   <xs:simpleType name="normeticSourceValues">
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml"/>
+         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+   <!-- 5.2 Learning Resource Type -->
+   <xs:simpleType name="normeticLearningResourceTypeValues">
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="evaluation"/>
+         <xs:enumeration value="animation"/>
+         <xs:enumeration value="tutorial"/>
+         <xs:enumeration value="glossary"/>
+         <xs:enumeration value="guide"/>
+         <xs:enumeration value="reference material"/>
+         <xs:enumeration value="tools"/>
+         <xs:enumeration value="simulation"/>
+         <xs:enumeration value="presentation"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+   <!-- 5.6 Context -->
+   <xs:simpleType name="normeticContextValues">
+      <xs:restriction base="xs:token">
+         <xs:enumeration value="education pre scolaire"/>
+         <xs:enumeration value="education primaire"/>
+         <xs:enumeration value="education secondaire"/>
+         <xs:enumeration value="formation professionnelle"/>
+         <xs:enumeration value="cegep"/>
+         <xs:enumeration value="formation technique"/>
+         <xs:enumeration value="universite premier cycle"/>
+         <xs:enumeration value="universite second cycle"/>
+         <xs:enumeration value="universite troisieme cycle"/>
+         <xs:enumeration value="formation continue ou en entreprise"/>
+         <xs:enumeration value="autre"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+</xs:schema>
