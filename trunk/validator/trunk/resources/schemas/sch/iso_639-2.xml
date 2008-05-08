@@ -1,0 +1,2207 @@
+<?xml version="1.0"?>
+<languages type="ISO-639-2">
+  <language code="aar">
+    <name lang="en">Afar</name>
+    <name lang="fr">afar</name>
+  </language>
+  <language code="abk">
+    <name lang="en">Abkhazian</name>
+    <name lang="fr">abkhaze</name>
+  </language>
+  <language code="ace">
+    <name lang="en">Achinese</name>
+    <name lang="fr">aceh</name>
+  </language>
+  <language code="ach">
+    <name lang="en">Acoli</name>
+    <name lang="fr">acoli</name>
+  </language>
+  <language code="ada">
+    <name lang="en">Adangme</name>
+    <name lang="fr">adangme</name>
+  </language>
+  <language code="ady">
+    <name lang="en">Adyghe; Adygei</name>
+    <name lang="fr">adyghé</name>
+  </language>
+  <language code="afa">
+    <name lang="en">Afro-Asiatic (Other)</name>
+    <name lang="fr">afro-asiatiques, autres langues</name>
+  </language>
+  <language code="afh">
+    <name lang="en">Afrihili</name>
+    <name lang="fr">afrihili</name>
+  </language>
+  <language code="afr">
+    <name lang="en">Afrikaans</name>
+    <name lang="fr">afrikaans</name>
+  </language>
+  <language code="ain">
+    <name lang="en">Ainu</name>
+    <name lang="fr">aïnou</name>
+  </language>
+  <language code="aka">
+    <name lang="en">Akan</name>
+    <name lang="fr">akan</name>
+  </language>
+  <language code="akk">
+    <name lang="en">Akkadian</name>
+    <name lang="fr">akkadien</name>
+  </language>
+  <language code="alb">
+    <name lang="en">Albanian</name>
+    <name lang="fr">albanais</name>
+  </language>
+  <language code="sqi">
+    <name lang="en">Albanian</name>
+    <name lang="fr">albanais</name>
+  </language>
+  <language code="ale">
+    <name lang="en">Aleut</name>
+    <name lang="fr">aléoute</name>
+  </language>
+  <language code="alg">
+    <name lang="en">Algonquian languages</name>
+    <name lang="fr">algonquines, langues</name>
+  </language>
+  <language code="alt">
+    <name lang="en">Southern Altai</name>
+    <name lang="fr">altai du Sud</name>
+  </language>
+  <language code="amh">
+    <name lang="en">Amharic</name>
+    <name lang="fr">amharique</name>
+  </language>
+  <language code="ang">
+    <name lang="en">English, Old (ca.450-1100)</name>
+    <name lang="fr">anglo-saxon (ca.450-1100)</name>
+  </language>
+  <language code="anp">
+    <name lang="en">Angika</name>
+    <name lang="fr">angika</name>
+  </language>
+  <language code="apa">
+    <name lang="en">Apache languages</name>
+    <name lang="fr">apache</name>
+  </language>
+  <language code="ara">
+    <name lang="en">Arabic</name>
+    <name lang="fr">arabe</name>
+  </language>
+  <language code="arc">
+    <name lang="en">Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)</name>
+    <name lang="fr">araméen d'empire (700-300 BCE)</name>
+  </language>
+  <language code="arg">
+    <name lang="en">Aragonese</name>
+    <name lang="fr">aragonais</name>
+  </language>
+  <language code="arm">
+    <name lang="en">Armenian</name>
+    <name lang="fr">arménien</name>
+  </language>
+  <language code="hye">
+    <name lang="en">Armenian</name>
+    <name lang="fr">arménien</name>
+  </language>
+  <language code="arn">
+    <name lang="en">Mapudungun; Mapuche</name>
+    <name lang="fr">mapudungun; mapuche; mapuce</name>
+  </language>
+  <language code="arp">
+    <name lang="en">Arapaho</name>
+    <name lang="fr">arapaho</name>
+  </language>
+  <language code="art">
+    <name lang="en">Artificial (Other)</name>
+    <name lang="fr">artificielles, autres langues</name>
+  </language>
+  <language code="arw">
+    <name lang="en">Arawak</name>
+    <name lang="fr">arawak</name>
+  </language>
+  <language code="asm">
+    <name lang="en">Assamese</name>
+    <name lang="fr">assamais</name>
+  </language>
+  <language code="ast">
+    <name lang="en">Asturian; Bable</name>
+    <name lang="fr">asturien; bable</name>
+  </language>
+  <language code="ath">
+    <name lang="en">Athapascan languages</name>
+    <name lang="fr">athapascanes, langues</name>
+  </language>
+  <language code="aus">
+    <name lang="en">Australian languages</name>
+    <name lang="fr">australiennes, langues</name>
+  </language>
+  <language code="ava">
+    <name lang="en">Avaric</name>
+    <name lang="fr">avar</name>
+  </language>
+  <language code="ave">
+    <name lang="en">Avestan</name>
+    <name lang="fr">avestique</name>
+  </language>
+  <language code="awa">
+    <name lang="en">Awadhi</name>
+    <name lang="fr">awadhi</name>
+  </language>
+  <language code="aym">
+    <name lang="en">Aymara</name>
+    <name lang="fr">aymara</name>
+  </language>
+  <language code="aze">
+    <name lang="en">Azerbaijani</name>
+    <name lang="fr">azéri</name>
+  </language>
+  <language code="bad">
+    <name lang="en">Banda languages</name>
+    <name lang="fr">banda, langues</name>
+  </language>
+  <language code="bai">
+    <name lang="en">Bamileke languages</name>
+    <name lang="fr">bamilékés, langues</name>
+  </language>
+  <language code="bak">
+    <name lang="en">Bashkir</name>
+    <name lang="fr">bachkir</name>
+  </language>
+  <language code="bal">
+    <name lang="en">Baluchi</name>
+    <name lang="fr">baloutchi</name>
+  </language>
+  <language code="bam">
+    <name lang="en">Bambara</name>
+    <name lang="fr">bambara</name>
+  </language>
+  <language code="ban">
+    <name lang="en">Balinese</name>
+    <name lang="fr">balinais</name>
+  </language>
+  <language code="baq">
+    <name lang="en">Basque</name>
+    <name lang="fr">basque</name>
+  </language>
+  <language code="eus">
+    <name lang="en">Basque</name>
+    <name lang="fr">basque</name>
+  </language>
+  <language code="bas">
+    <name lang="en">Basa</name>
+    <name lang="fr">basa</name>
+  </language>
+  <language code="bat">
+    <name lang="en">Baltic (Other)</name>
+    <name lang="fr">baltiques, autres langues</name>
+  </language>
+  <language code="bej">
+    <name lang="en">Beja</name>
+    <name lang="fr">bedja</name>
+  </language>
+  <language code="bel">
+    <name lang="en">Belarusian</name>
+    <name lang="fr">biélorusse</name>
+  </language>
+  <language code="bem">
+    <name lang="en">Bemba</name>
+    <name lang="fr">bemba</name>
+  </language>
+  <language code="ben">
+    <name lang="en">Bengali</name>
+    <name lang="fr">bengali</name>
+  </language>
+  <language code="ber">
+    <name lang="en">Berber (Other)</name>
+    <name lang="fr">berbères, autres langues</name>
+  </language>
+  <language code="bho">
+    <name lang="en">Bhojpuri</name>
+    <name lang="fr">bhojpuri</name>
+  </language>
+  <language code="bih">
+    <name lang="en">Bihari</name>
+    <name lang="fr">bihari</name>
+  </language>
+  <language code="bik">
+    <name lang="en">Bikol</name>
+    <name lang="fr">bikol</name>
+  </language>
+  <language code="bin">
+    <name lang="en">Bini; Edo</name>
+    <name lang="fr">bini; edo</name>
+  </language>
+  <language code="bis">
+    <name lang="en">Bislama</name>
+    <name lang="fr">bichlamar</name>
+  </language>
+  <language code="bla">
+    <name lang="en">Siksika</name>
+    <name lang="fr">blackfoot</name>
+  </language>
+  <language code="bnt">
+    <name lang="en">Bantu (Other)</name>
+    <name lang="fr">bantoues, autres langues</name>
+  </language>
+  <language code="tib">
+    <name lang="en">Tibetan</name>
+    <name lang="fr">tibétain</name>
+  </language>
+  <language code="bod">
+    <name lang="en">Tibetan</name>
+    <name lang="fr">tibétain</name>
+  </language>
+  <language code="bos">
+    <name lang="en">Bosnian</name>
+    <name lang="fr">bosniaque</name>
+  </language>
+  <language code="bra">
+    <name lang="en">Braj</name>
+    <name lang="fr">braj</name>
+  </language>
+  <language code="bre">
+    <name lang="en">Breton</name>
+    <name lang="fr">breton</name>
+  </language>
+  <language code="btk">
+    <name lang="en">Batak languages</name>
+    <name lang="fr">batak, langues</name>
+  </language>
+  <language code="bua">
+    <name lang="en">Buriat</name>
+    <name lang="fr">bouriate</name>
+  </language>
+  <language code="bug">
+    <name lang="en">Buginese</name>
+    <name lang="fr">bugi</name>
+  </language>
+  <language code="bul">
+    <name lang="en">Bulgarian</name>
+    <name lang="fr">bulgare</name>
+  </language>
+  <language code="bur">
+    <name lang="en">Burmese</name>
+    <name lang="fr">birman</name>
+  </language>
+  <language code="mya">
+    <name lang="en">Burmese</name>
+    <name lang="fr">birman</name>
+  </language>
+  <language code="byn">
+    <name lang="en">Blin; Bilin</name>
+    <name lang="fr">blin; bilen</name>
+  </language>
+  <language code="cad">
+    <name lang="en">Caddo</name>
+    <name lang="fr">caddo</name>
+  </language>
+  <language code="cai">
+    <name lang="en">Central American Indian (Other)</name>
+    <name lang="fr">indiennes d'Amérique centrale, autres langues</name>
+  </language>
+  <language code="car">
+    <name lang="en">Galibi Carib</name>
+    <name lang="fr">karib; galibi; carib</name>
+  </language>
+  <language code="cat">
+    <name lang="en">Catalan; Valencian</name>
+    <name lang="fr">catalan; valencien</name>
+  </language>
+  <language code="cau">
+    <name lang="en">Caucasian (Other)</name>
+    <name lang="fr">caucasiennes, autres langues</name>
+  </language>
+  <language code="ceb">
+    <name lang="en">Cebuano</name>
+    <name lang="fr">cebuano</name>
+  </language>
+  <language code="cel">
+    <name lang="en">Celtic (Other)</name>
+    <name lang="fr">celtiques, autres langues</name>
+  </language>
+  <language code="cze">
+    <name lang="en">Czech</name>
+    <name lang="fr">tchèque</name>
+  </language>
+  <language code="ces">
+    <name lang="en">Czech</name>
+    <name lang="fr">tchèque</name>
+  </language>
+  <language code="cha">
+    <name lang="en">Chamorro</name>
+    <name lang="fr">chamorro</name>
+  </language>
+  <language code="chb">
+    <name lang="en">Chibcha</name>
+    <name lang="fr">chibcha</name>
+  </language>
+  <language code="che">
+    <name lang="en">Chechen</name>
+    <name lang="fr">tchétchène</name>
+  </language>
+  <language code="chg">
+    <name lang="en">Chagatai</name>
+    <name lang="fr">djaghataï</name>
+  </language>
+  <language code="chi">
+    <name lang="en">Chinese</name>
+    <name lang="fr">chinois</name>
+  </language>
+  <language code="zho">
+    <name lang="en">Chinese</name>
+    <name lang="fr">chinois</name>
+  </language>
+  <language code="chk">
+    <name lang="en">Chuukese</name>
+    <name lang="fr">chuuk</name>
+  </language>
+  <language code="chm">
+    <name lang="en">Mari</name>
+    <name lang="fr">mari</name>
+  </language>
+  <language code="chn">
+    <name lang="en">Chinook jargon</name>
+    <name lang="fr">chinook, jargon</name>
+  </language>
+  <language code="cho">
+    <name lang="en">Choctaw</name>
+    <name lang="fr">choctaw</name>
+  </language>
+  <language code="chp">
+    <name lang="en">Chipewyan</name>
+    <name lang="fr">chipewyan</name>
+  </language>
+  <language code="chr">
+    <name lang="en">Cherokee</name>
+    <name lang="fr">cherokee</name>
+  </language>
+  <language code="chu">
+    <name lang="en">Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</name>
+    <name lang="fr">slavon d'église; vieux slave; slavon liturgique; vieux bulgare</name>
+  </language>
+  <language code="chv">
+    <name lang="en">Chuvash</name>
+    <name lang="fr">tchouvache</name>
+  </language>
+  <language code="chy">
+    <name lang="en">Cheyenne</name>
+    <name lang="fr">cheyenne</name>
+  </language>
+  <language code="cmc">
+    <name lang="en">Chamic languages</name>
+    <name lang="fr">chames, langues</name>
+  </language>
+  <language code="cop">
+    <name lang="en">Coptic</name>
+    <name lang="fr">copte</name>
+  </language>
+  <language code="cor">
+    <name lang="en">Cornish</name>
+    <name lang="fr">cornique</name>
+  </language>
+  <language code="cos">
+    <name lang="en">Corsican</name>
+    <name lang="fr">corse</name>
+  </language>
+  <language code="cpe">
+    <name lang="en">Creoles and pidgins, English based (Other)</name>
+    <name lang="fr">créoles et pidgins anglais, autres</name>
+  </language>
+  <language code="cpf">
+    <name lang="en">Creoles and pidgins, French-based (Other)</name>
+    <name lang="fr">créoles et pidgins français, autres</name>
+  </language>
+  <language code="cpp">
+    <name lang="en">Creoles and pidgins, Portuguese-based (Other)</name>
+    <name lang="fr">créoles et pidgins portugais, autres</name>
+  </language>
+  <language code="cre">
+    <name lang="en">Cree</name>
+    <name lang="fr">cree</name>
+  </language>
+  <language code="crh">
+    <name lang="en">Crimean Tatar; Crimean Turkish</name>
+    <name lang="fr">tatar de Crimé</name>
+  </language>
+  <language code="crp">
+    <name lang="en">Creoles and pidgins (Other)</name>
+    <name lang="fr">créoles et pidgins divers</name>
+  </language>
+  <language code="csb">
+    <name lang="en">Kashubian</name>
+    <name lang="fr">kachoube</name>
+  </language>
+  <language code="cus">
+    <name lang="en">Cushitic (Other)</name>
+    <name lang="fr">couchitiques, autres langues</name>
+  </language>
+  <language code="wel">
+    <name lang="en">Welsh</name>
+    <name lang="fr">gallois</name>
+  </language>
+  <language code="cym">
+    <name lang="en">Welsh</name>
+    <name lang="fr">gallois</name>
+  </language>
+  <language code="cze">
+    <name lang="en">Czech</name>
+    <name lang="fr">tchèque</name>
+  </language>
+  <language code="ces">
+    <name lang="en">Czech</name>
+    <name lang="fr">tchèque</name>
+  </language>
+  <language code="dak">
+    <name lang="en">Dakota</name>
+    <name lang="fr">dakota</name>
+  </language>
+  <language code="dan">
+    <name lang="en">Danish</name>
+    <name lang="fr">danois</name>
+  </language>
+  <language code="dar">
+    <name lang="en">Dargwa</name>
+    <name lang="fr">dargwa</name>
+  </language>
+  <language code="day">
+    <name lang="en">Land Dayak languages</name>
+    <name lang="fr">dayak, langues</name>
+  </language>
+  <language code="del">
+    <name lang="en">Delaware</name>
+    <name lang="fr">delaware</name>
+  </language>
+  <language code="den">
+    <name lang="en">Slave (Athapascan)</name>
+    <name lang="fr">esclave (athapascan)</name>
+  </language>
+  <language code="ger">
+    <name lang="en">German</name>
+    <name lang="fr">allemand</name>
+  </language>
+  <language code="deu">
+    <name lang="en">German</name>
+    <name lang="fr">allemand</name>
+  </language>
+  <language code="dgr">
+    <name lang="en">Dogrib</name>
+    <name lang="fr">dogrib</name>
+  </language>
+  <language code="din">
+    <name lang="en">Dinka</name>
+    <name lang="fr">dinka</name>
+  </language>
+  <language code="div">
+    <name lang="en">Divehi; Dhivehi; Maldivian</name>
+    <name lang="fr">maldivien</name>
+  </language>
+  <language code="doi">
+    <name lang="en">Dogri</name>
+    <name lang="fr">dogri</name>
+  </language>
+  <language code="dra">
+    <name lang="en">Dravidian (Other)</name>
+    <name lang="fr">dravidiennes, autres langues</name>
+  </language>
+  <language code="dsb">
+    <name lang="en">Lower Sorbian</name>
+    <name lang="fr">bas-sorabe</name>
+  </language>
+  <language code="dua">
+    <name lang="en">Duala</name>
+    <name lang="fr">douala</name>
+  </language>
+  <language code="dum">
+    <name lang="en">Dutch, Middle (ca.1050-1350)</name>
+    <name lang="fr">néerlandais moyen (ca. 1050-1350)</name>
+  </language>
+  <language code="dut">
+    <name lang="en">Dutch; Flemish</name>
+    <name lang="fr">néerlandais; flamand</name>
+  </language>
+  <language code="nld">
+    <name lang="en">Dutch; Flemish</name>
+    <name lang="fr">néerlandais; flamand</name>
+  </language>
+  <language code="dyu">
+    <name lang="en">Dyula</name>
+    <name lang="fr">dioula</name>
+  </language>
+  <language code="dzo">
+    <name lang="en">Dzongkha</name>
+    <name lang="fr">dzongkha</name>
+  </language>
+  <language code="efi">
+    <name lang="en">Efik</name>
+    <name lang="fr">efik</name>
+  </language>
+  <language code="egy">
+    <name lang="en">Egyptian (Ancient)</name>
+    <name lang="fr">égyptien</name>
+  </language>
+  <language code="eka">
+    <name lang="en">Ekajuk</name>
+    <name lang="fr">ekajuk</name>
+  </language>
+  <language code="gre">
+    <name lang="en">Greek, Modern (1453-)</name>
+    <name lang="fr">grec moderne (après 1453)</name>
+  </language>
+  <language code="ell">
+    <name lang="en">Greek, Modern (1453-)</name>
+    <name lang="fr">grec moderne (après 1453)</name>
+  </language>
+  <language code="elx">
+    <name lang="en">Elamite</name>
+    <name lang="fr">élamite</name>
+  </language>
+  <language code="eng">
+    <name lang="en">English</name>
+    <name lang="fr">anglais</name>
+  </language>
+  <language code="enm">
+    <name lang="en">English, Middle (1100-1500)</name>
+    <name lang="fr">anglais moyen (1100-1500)</name>
+  </language>
+  <language code="epo">
+    <name lang="en">Esperanto</name>
+    <name lang="fr">espéranto</name>
+  </language>
+  <language code="est">
+    <name lang="en">Estonian</name>
+    <name lang="fr">estonien</name>
+  </language>
+  <language code="baq">
+    <name lang="en">Basque</name>
+    <name lang="fr">basque</name>
+  </language>
+  <language code="eus">
+    <name lang="en">Basque</name>
+    <name lang="fr">basque</name>
+  </language>
+  <language code="ewe">
+    <name lang="en">Ewe</name>
+    <name lang="fr">éwé</name>
+  </language>
+  <language code="ewo">
+    <name lang="en">Ewondo</name>
+    <name lang="fr">éwondo</name>
+  </language>
+  <language code="fan">
+    <name lang="en">Fang</name>
+    <name lang="fr">fang</name>
+  </language>
+  <language code="fao">
+    <name lang="en">Faroese</name>
+    <name lang="fr">féroïen</name>
+  </language>
+  <language code="per">
+    <name lang="en">Persian</name>
+    <name lang="fr">persan</name>
+  </language>
+  <language code="fas">
+    <name lang="en">Persian</name>
+    <name lang="fr">persan</name>
+  </language>
+  <language code="fat">
+    <name lang="en">Fanti</name>
+    <name lang="fr">fanti</name>
+  </language>
+  <language code="fij">
+    <name lang="en">Fijian</name>
+    <name lang="fr">fidjien</name>
+  </language>
+  <language code="fil">
+    <name lang="en">Filipino; Pilipino</name>
+    <name lang="fr">filipino; pilipino</name>
+  </language>
+  <language code="fin">
+    <name lang="en">Finnish</name>
+    <name lang="fr">finnois</name>
+  </language>
+  <language code="fiu">
+    <name lang="en">Finno-Ugrian (Other)</name>
+    <name lang="fr">finno-ougriennes, autres langues</name>
+  </language>
+  <language code="fon">
+    <name lang="en">Fon</name>
+    <name lang="fr">fon</name>
+  </language>
+  <language code="fre">
+    <name lang="en">French</name>
+    <name lang="fr">français</name>
+  </language>
+  <language code="fra">
+    <name lang="en">French</name>
+    <name lang="fr">français</name>
+  </language>
+  <language code="fre">
+    <name lang="en">French</name>
+    <name lang="fr">français</name>
+  </language>
+  <language code="fra">
+    <name lang="en">French</name>
+    <name lang="fr">français</name>
+  </language>
+  <language code="frm">
+    <name lang="en">French, Middle (ca.1400-1600)</name>
+    <name lang="fr">français moyen (1400-1600)</name>
+  </language>
+  <language code="fro">
+    <name lang="en">French, Old (842-ca.1400)</name>
+    <name lang="fr">français ancien (842-ca.1400)</name>
+  </language>
+  <language code="frr">
+    <name lang="en">Northern Frisian</name>
+    <name lang="fr">frison septentrional</name>
+  </language>
+  <language code="frs">
+    <name lang="en">Eastern Frisian</name>
+    <name lang="fr">frison oriental</name>
+  </language>
+  <language code="fry">
+    <name lang="en">Western Frisian</name>
+    <name lang="fr">frison occidental</name>
+  </language>
+  <language code="ful">
+    <name lang="en">Fulah</name>
+    <name lang="fr">peul</name>
+  </language>
+  <language code="fur">
+    <name lang="en">Friulian</name>
+    <name lang="fr">frioulan</name>
+  </language>
+  <language code="gaa">
+    <name lang="en">Ga</name>
+    <name lang="fr">ga</name>
+  </language>
+  <language code="gay">
+    <name lang="en">Gayo</name>
+    <name lang="fr">gayo</name>
+  </language>
+  <language code="gba">
+    <name lang="en">Gbaya</name>
+    <name lang="fr">gbaya</name>
+  </language>
+  <language code="gem">
+    <name lang="en">Germanic (Other)</name>
+    <name lang="fr">germaniques, autres langues</name>
+  </language>
+  <language code="geo">
+    <name lang="en">Georgian</name>
+    <name lang="fr">géorgien</name>
+  </language>
+  <language code="kat">
+    <name lang="en">Georgian</name>
+    <name lang="fr">géorgien</name>
+  </language>
+  <language code="ger">
+    <name lang="en">German</name>
+    <name lang="fr">allemand</name>
+  </language>
+  <language code="deu">
+    <name lang="en">German</name>
+    <name lang="fr">allemand</name>
+  </language>
+  <language code="gez">
+    <name lang="en">Geez</name>
+    <name lang="fr">guèze</name>
+  </language>
+  <language code="gil">
+    <name lang="en">Gilbertese</name>
+    <name lang="fr">kiribati</name>
+  </language>
+  <language code="gla">
+    <name lang="en">Gaelic; Scottish Gaelic</name>
+    <name lang="fr">gaélique; gaélique écossais</name>
+  </language>
+  <language code="gle">
+    <name lang="en">Irish</name>
+    <name lang="fr">irlandais</name>
+  </language>
+  <language code="glg">
+    <name lang="en">Galician</name>
+    <name lang="fr">galicien</name>
+  </language>
+  <language code="glv">
+    <name lang="en">Manx</name>
+    <name lang="fr">manx; mannois</name>
+  </language>
+  <language code="gmh">
+    <name lang="en">German, Middle High (ca.1050-1500)</name>
+    <name lang="fr">allemand, moyen haut (ca. 1050-1500)</name>
+  </language>
+  <language code="goh">
+    <name lang="en">German, Old High (ca.750-1050)</name>
+    <name lang="fr">allemand, vieux haut (ca. 750-1050)</name>
+  </language>
+  <language code="gon">
+    <name lang="en">Gondi</name>
+    <name lang="fr">gond</name>
+  </language>
+  <language code="gor">
+    <name lang="en">Gorontalo</name>
+    <name lang="fr">gorontalo</name>
+  </language>
+  <language code="got">
+    <name lang="en">Gothic</name>
+    <name lang="fr">gothique</name>
+  </language>
+  <language code="grb">
+    <name lang="en">Grebo</name>
+    <name lang="fr">grebo</name>
+  </language>
+  <language code="grc">
+    <name lang="en">Greek, Ancient (to 1453)</name>
+    <name lang="fr">grec ancien (jusqu'à 1453)</name>
+  </language>
+  <language code="gre">
+    <name lang="en">Greek, Modern (1453-)</name>
+    <name lang="fr">grec moderne (après 1453)</name>
+  </language>
+  <language code="ell">
+    <name lang="en">Greek, Modern (1453-)</name>
+    <name lang="fr">grec moderne (après 1453)</name>
+  </language>
+  <language code="grn">
+    <name lang="en">Guarani</name>
+    <name lang="fr">guarani</name>
+  </language>
+  <language code="gsw">
+    <name lang="en">Swiss German; Alemannic</name>
+    <name lang="fr">alémanique</name>
+  </language>
+  <language code="guj">
+    <name lang="en">Gujarati</name>
+    <name lang="fr">goudjrati</name>
+  </language>
+  <language code="gwi">
+    <name lang="en">Gwich'in</name>
+    <name lang="fr">gwich'in</name>
+  </language>
+  <language code="hai">
+    <name lang="en">Haida</name>
+    <name lang="fr">haida</name>
+  </language>
+  <language code="hat">
+    <name lang="en">Haitian; Haitian Creole</name>
+    <name lang="fr">haïtien; créole haïtien</name>
+  </language>
+  <language code="hau">
+    <name lang="en">Hausa</name>
+    <name lang="fr">haoussa</name>
+  </language>
+  <language code="haw">
+    <name lang="en">Hawaiian</name>
+    <name lang="fr">hawaïen</name>
+  </language>
+  <language code="heb">
+    <name lang="en">Hebrew</name>
+    <name lang="fr">hébreu</name>
+  </language>
+  <language code="her">
+    <name lang="en">Herero</name>
+    <name lang="fr">herero</name>
+  </language>
+  <language code="hil">
+    <name lang="en">Hiligaynon</name>
+    <name lang="fr">hiligaynon</name>
+  </language>
+  <language code="him">
+    <name lang="en">Himachali</name>
+    <name lang="fr">himachali</name>
+  </language>
+  <language code="hin">
+    <name lang="en">Hindi</name>
+    <name lang="fr">hindi</name>
+  </language>
+  <language code="hit">
+    <name lang="en">Hittite</name>
+    <name lang="fr">hittite</name>
+  </language>
+  <language code="hmn">
+    <name lang="en">Hmong</name>
+    <name lang="fr">hmong</name>
+  </language>
+  <language code="hmo">
+    <name lang="en">Hiri Motu</name>
+    <name lang="fr">hiri motu</name>
+  </language>
+  <language code="scr">
+    <name lang="en">Croatian</name>
+    <name lang="fr">croate</name>
+  </language>
+  <language code="hrv">
+    <name lang="en">Croatian</name>
+    <name lang="fr">croate</name>
+  </language>
+  <language code="hsb">
+    <name lang="en">Upper Sorbian</name>
+    <name lang="fr">haut-sorabe</name>
+  </language>
+  <language code="hun">
+    <name lang="en">Hungarian</name>
+    <name lang="fr">hongrois</name>
+  </language>
+  <language code="hup">
+    <name lang="en">Hupa</name>
+    <name lang="fr">hupa</name>
+  </language>
+  <language code="arm">
+    <name lang="en">Armenian</name>
+    <name lang="fr">arménien</name>
+  </language>
+  <language code="hye">
+    <name lang="en">Armenian</name>
+    <name lang="fr">arménien</name>
+  </language>
+  <language code="iba">
+    <name lang="en">Iban</name>
+    <name lang="fr">iban</name>
+  </language>
+  <language code="ibo">
+    <name lang="en">Igbo</name>
+    <name lang="fr">igbo</name>
+  </language>
+  <language code="ice">
+    <name lang="en">Icelandic</name>
+    <name lang="fr">islandais</name>
+  </language>
+  <language code="isl">
+    <name lang="en">Icelandic</name>
+    <name lang="fr">islandais</name>
+  </language>
+  <language code="ido">
+    <name lang="en">Ido</name>
+    <name lang="fr">ido</name>
+  </language>
+  <language code="iii">
+    <name lang="en">Sichuan Yi</name>
+    <name lang="fr">yi de Sichuan</name>
+  </language>
+  <language code="ijo">
+    <name lang="en">Ijo languages</name>
+    <name lang="fr">ijo, langues</name>
+  </language>
+  <language code="iku">
+    <name lang="en">Inuktitut</name>
+    <name lang="fr">inuktitut</name>
+  </language>
+  <language code="ile">
+    <name lang="en">Interlingue</name>
+    <name lang="fr">interlingue</name>
+  </language>
+  <language code="ilo">
+    <name lang="en">Iloko</name>
+    <name lang="fr">ilocano</name>
+  </language>
+  <language code="ina">
+    <name lang="en">Interlingua (International Auxiliary Language Association)</name>
+    <name lang="fr">interlingua (langue auxiliaire internationale)</name>
+  </language>
+  <language code="inc">
+    <name lang="en">Indic (Other)</name>
+    <name lang="fr">indo-aryennes, autres langues</name>
+  </language>
+  <language code="ind">
+    <name lang="en">Indonesian</name>
+    <name lang="fr">indonésien</name>
+  </language>
+  <language code="ine">
+    <name lang="en">Indo-European (Other)</name>
+    <name lang="fr">indo-européennes, autres langues</name>
+  </language>
+  <language code="inh">
+    <name lang="en">Ingush</name>
+    <name lang="fr">ingouche</name>
+  </language>
+  <language code="ipk">
+    <name lang="en">Inupiaq</name>
+    <name lang="fr">inupiaq</name>
+  </language>
+  <language code="ira">
+    <name lang="en">Iranian (Other)</name>
+    <name lang="fr">iraniennes, autres langues</name>
+  </language>
+  <language code="iro">
+    <name lang="en">Iroquoian languages</name>
+    <name lang="fr">iroquoises, langues (famille)</name>
+  </language>
+  <language code="ice">
+    <name lang="en">Icelandic</name>
+    <name lang="fr">islandais</name>
+  </language>
+  <language code="isl">
+    <name lang="en">Icelandic</name>
+    <name lang="fr">islandais</name>
+  </language>
+  <language code="ita">
+    <name lang="en">Italian</name>
+    <name lang="fr">italien</name>
+  </language>
+  <language code="jav">
+    <name lang="en">Javanese</name>
+    <name lang="fr">javanais</name>
+  </language>
+  <language code="jbo">
+    <name lang="en">Lojban</name>
+    <name lang="fr">lojban</name>
+  </language>
+  <language code="jpn">
+    <name lang="en">Japanese</name>
+    <name lang="fr">japonais</name>
+  </language>
+  <language code="jpr">
+    <name lang="en">Judeo-Persian</name>
+    <name lang="fr">judéo-persan</name>
+  </language>
+  <language code="jrb">
+    <name lang="en">Judeo-Arabic</name>
+    <name lang="fr">judéo-arabe</name>
+  </language>
+  <language code="kaa">
+    <name lang="en">Kara-Kalpak</name>
+    <name lang="fr">karakalpak</name>
+  </language>
+  <language code="kab">
+    <name lang="en">Kabyle</name>
+    <name lang="fr">kabyle</name>
+  </language>
+  <language code="kac">
+    <name lang="en">Kachin; Jingpho</name>
+    <name lang="fr">kachin; jingpho</name>
+  </language>
+  <language code="kal">
+    <name lang="en">Kalaallisut; Greenlandic</name>
+    <name lang="fr">groenlandais</name>
+  </language>
+  <language code="kam">
+    <name lang="en">Kamba</name>
+    <name lang="fr">kamba</name>
+  </language>
+  <language code="kan">
+    <name lang="en">Kannada</name>
+    <name lang="fr">kannada</name>
+  </language>
+  <language code="kar">
+    <name lang="en">Karen languages</name>
+    <name lang="fr">karen, langues</name>
+  </language>
+  <language code="kas">
+    <name lang="en">Kashmiri</name>
+    <name lang="fr">kashmiri</name>
+  </language>
+  <language code="geo">
+    <name lang="en">Georgian</name>
+    <name lang="fr">géorgien</name>
+  </language>
+  <language code="kat">
+    <name lang="en">Georgian</name>
+    <name lang="fr">géorgien</name>
+  </language>
+  <language code="kau">
+    <name lang="en">Kanuri</name>
+    <name lang="fr">kanouri</name>
+  </language>
+  <language code="kaw">
+    <name lang="en">Kawi</name>
+    <name lang="fr">kawi</name>
+  </language>
+  <language code="kaz">
+    <name lang="en">Kazakh</name>
+    <name lang="fr">kazakh</name>
+  </language>
+  <language code="kbd">
+    <name lang="en">Kabardian</name>
+    <name lang="fr">kabardien</name>
+  </language>
+  <language code="kha">
+    <name lang="en">Khasi</name>
+    <name lang="fr">khasi</name>
+  </language>
+  <language code="khi">
+    <name lang="en">Khoisan (Other)</name>
+    <name lang="fr">khoisan, autres langues</name>
+  </language>
+  <language code="khm">
+    <name lang="en">Central Khmer</name>
+    <name lang="fr">khmer central</name>
+  </language>
+  <language code="kho">
+    <name lang="en">Khotanese</name>
+    <name lang="fr">khotanais</name>
+  </language>
+  <language code="kik">
+    <name lang="en">Kikuyu; Gikuyu</name>
+    <name lang="fr">kikuyu</name>
+  </language>
+  <language code="kin">
+    <name lang="en">Kinyarwanda</name>
+    <name lang="fr">rwanda</name>
+  </language>
+  <language code="kir">
+    <name lang="en">Kirghiz; Kyrgyz</name>
+    <name lang="fr">kirghiz</name>
+  </language>
+  <language code="kmb">
+    <name lang="en">Kimbundu</name>
+    <name lang="fr">kimbundu</name>
+  </language>
+  <language code="kok">
+    <name lang="en">Konkani</name>
+    <name lang="fr">konkani</name>
+  </language>
+  <language code="kom">
+    <name lang="en">Komi</name>
+    <name lang="fr">kom</name>
+  </language>
+  <language code="kon">
+    <name lang="en">Kongo</name>
+    <name lang="fr">kongo</name>
+  </language>
+  <language code="kor">
+    <name lang="en">Korean</name>
+    <name lang="fr">coréen</name>
+  </language>
+  <language code="kos">
+    <name lang="en">Kosraean</name>
+    <name lang="fr">kosrae</name>
+  </language>
+  <language code="kpe">
+    <name lang="en">Kpelle</name>
+    <name lang="fr">kpellé</name>
+  </language>
+  <language code="krc">
+    <name lang="en">Karachay-Balkar</name>
+    <name lang="fr">karatchai balkar</name>
+  </language>
+  <language code="krl">
+    <name lang="en">Karelian</name>
+    <name lang="fr">carélien</name>
+  </language>
+  <language code="kro">
+    <name lang="en">Kru languages</name>
+    <name lang="fr">krou, langues</name>
+  </language>
+  <language code="kru">
+    <name lang="en">Kurukh</name>
+    <name lang="fr">kurukh</name>
+  </language>
+  <language code="kua">
+    <name lang="en">Kuanyama; Kwanyama</name>
+    <name lang="fr">kuanyama; kwanyama</name>
+  </language>
+  <language code="kum">
+    <name lang="en">Kumyk</name>
+    <name lang="fr">koumyk</name>
+  </language>
+  <language code="kur">
+    <name lang="en">Kurdish</name>
+    <name lang="fr">kurde</name>
+  </language>
+  <language code="kut">
+    <name lang="en">Kutenai</name>
+    <name lang="fr">kutenai</name>
+  </language>
+  <language code="lad">
+    <name lang="en">Ladino</name>
+    <name lang="fr">judéo-espagnol</name>
+  </language>
+  <language code="lah">
+    <name lang="en">Lahnda</name>
+    <name lang="fr">lahnda</name>
+  </language>
+  <language code="lam">
+    <name lang="en">Lamba</name>
+    <name lang="fr">lamba</name>
+  </language>
+  <language code="lao">
+    <name lang="en">Lao</name>
+    <name lang="fr">lao</name>
+  </language>
+  <language code="lat">
+    <name lang="en">Latin</name>
+    <name lang="fr">latin</name>
+  </language>
+  <language code="lav">
+    <name lang="en">Latvian</name>
+    <name lang="fr">letton</name>
+  </language>
+  <language code="lez">
+    <name lang="en">Lezghian</name>
+    <name lang="fr">lezghien</name>
+  </language>
+  <language code="lim">
+    <name lang="en">Limburgan; Limburger; Limburgish</name>
+    <name lang="fr">limbourgeois</name>
+  </language>
+  <language code="lin">
+    <name lang="en">Lingala</name>
+    <name lang="fr">lingala</name>
+  </language>
+  <language code="lit">
+    <name lang="en">Lithuanian</name>
+    <name lang="fr">lituanien</name>
+  </language>
+  <language code="lol">
+    <name lang="en">Mongo</name>
+    <name lang="fr">mongo</name>
+  </language>
+  <language code="loz">
+    <name lang="en">Lozi</name>
+    <name lang="fr">lozi</name>
+  </language>
+  <language code="ltz">
+    <name lang="en">Luxembourgish; Letzeburgesch</name>
+    <name lang="fr">luxembourgeois</name>
+  </language>
+  <language code="lua">
+    <name lang="en">Luba-Lulua</name>
+    <name lang="fr">luba-lulua</name>
+  </language>
+  <language code="lub">
+    <name lang="en">Luba-Katanga</name>
+    <name lang="fr">luba-katanga</name>
+  </language>
+  <language code="lug">
+    <name lang="en">Ganda</name>
+    <name lang="fr">ganda</name>
+  </language>
+  <language code="lui">
+    <name lang="en">Luiseno</name>
+    <name lang="fr">luiseno</name>
+  </language>
+  <language code="lun">
+    <name lang="en">Lunda</name>
+    <name lang="fr">lunda</name>
+  </language>
+  <language code="luo">
+    <name lang="en">Luo (Kenya and Tanzania)</name>
+    <name lang="fr">luo (Kenya et Tanzanie)</name>
+  </language>
+  <language code="lus">
+    <name lang="en">Lushai</name>
+    <name lang="fr">lushai</name>
+  </language>
+  <language code="mac">
+    <name lang="en">Macedonian</name>
+    <name lang="fr">macédonien</name>
+  </language>
+  <language code="mkd">
+    <name lang="en">Macedonian</name>
+    <name lang="fr">macédonien</name>
+  </language>
+  <language code="mad">
+    <name lang="en">Madurese</name>
+    <name lang="fr">madourais</name>
+  </language>
+  <language code="mag">
+    <name lang="en">Magahi</name>
+    <name lang="fr">magahi</name>
+  </language>
+  <language code="mah">
+    <name lang="en">Marshallese</name>
+    <name lang="fr">marshall</name>
+  </language>
+  <language code="mai">
+    <name lang="en">Maithili</name>
+    <name lang="fr">maithili</name>
+  </language>
+  <language code="mak">
+    <name lang="en">Makasar</name>
+    <name lang="fr">makassar</name>
+  </language>
+  <language code="mal">
+    <name lang="en">Malayalam</name>
+    <name lang="fr">malayalam</name>
+  </language>
+  <language code="man">
+    <name lang="en">Mandingo</name>
+    <name lang="fr">mandingue</name>
+  </language>
+  <language code="mao">
+    <name lang="en">Maori</name>
+    <name lang="fr">maori</name>
+  </language>
+  <language code="mri">
+    <name lang="en">Maori</name>
+    <name lang="fr">maori</name>
+  </language>
+  <language code="map">
+    <name lang="en">Austronesian (Other)</name>
+    <name lang="fr">malayo-polynésiennes, autres langues</name>
+  </language>
+  <language code="mar">
+    <name lang="en">Marathi</name>
+    <name lang="fr">marathe</name>
+  </language>
+  <language code="mas">
+    <name lang="en">Masai</name>
+    <name lang="fr">massaï</name>
+  </language>
+  <language code="may">
+    <name lang="en">Malay</name>
+    <name lang="fr">malais</name>
+  </language>
+  <language code="msa">
+    <name lang="en">Malay</name>
+    <name lang="fr">malais</name>
+  </language>
+  <language code="mdf">
+    <name lang="en">Moksha</name>
+    <name lang="fr">moksa</name>
+  </language>
+  <language code="mdr">
+    <name lang="en">Mandar</name>
+    <name lang="fr">mandar</name>
+  </language>
+  <language code="men">
+    <name lang="en">Mende</name>
+    <name lang="fr">mendé</name>
+  </language>
+  <language code="mga">
+    <name lang="en">Irish, Middle (900-1200)</name>
+    <name lang="fr">irlandais moyen (900-1200)</name>
+  </language>
+  <language code="mic">
+    <name lang="en">Mi'kmaq; Micmac</name>
+    <name lang="fr">mi'kmaq; micmac</name>
+  </language>
+  <language code="min">
+    <name lang="en">Minangkabau</name>
+    <name lang="fr">minangkabau</name>
+  </language>
+  <language code="mis">
+    <name lang="en">Miscellaneous languages</name>
+    <name lang="fr">diverses, langues</name>
+  </language>
+  <language code="mac">
+    <name lang="en">Macedonian</name>
+    <name lang="fr">macédonien</name>
+  </language>
+  <language code="mkd">
+    <name lang="en">Macedonian</name>
+    <name lang="fr">macédonien</name>
+  </language>
+  <language code="mkh">
+    <name lang="en">Mon-Khmer (Other)</name>
+    <name lang="fr">môn-khmer, autres langues</name>
+  </language>
+  <language code="mlg">
+    <name lang="en">Malagasy</name>
+    <name lang="fr">malgache</name>
+  </language>
+  <language code="mlt">
+    <name lang="en">Maltese</name>
+    <name lang="fr">maltais</name>
+  </language>
+  <language code="mnc">
+    <name lang="en">Manchu</name>
+    <name lang="fr">mandchou</name>
+  </language>
+  <language code="mni">
+    <name lang="en">Manipuri</name>
+    <name lang="fr">manipuri</name>
+  </language>
+  <language code="mno">
+    <name lang="en">Manobo languages</name>
+    <name lang="fr">manobo, langues</name>
+  </language>
+  <language code="moh">
+    <name lang="en">Mohawk</name>
+    <name lang="fr">mohawk</name>
+  </language>
+  <language code="mol">
+    <name lang="en">Moldavian</name>
+    <name lang="fr">moldave</name>
+  </language>
+  <language code="mon">
+    <name lang="en">Mongolian</name>
+    <name lang="fr">mongol</name>
+  </language>
+  <language code="mos">
+    <name lang="en">Mossi</name>
+    <name lang="fr">moré</name>
+  </language>
+  <language code="mao">
+    <name lang="en">Maori</name>
+    <name lang="fr">maori</name>
+  </language>
+  <language code="mri">
+    <name lang="en">Maori</name>
+    <name lang="fr">maori</name>
+  </language>
+  <language code="may">
+    <name lang="en">Malay</name>
+    <name lang="fr">malais</name>
+  </language>
+  <language code="msa">
+    <name lang="en">Malay</name>
+    <name lang="fr">malais</name>
+  </language>
+  <language code="mul">
+    <name lang="en">Multiple languages</name>
+    <name lang="fr">multilingue</name>
+  </language>
+  <language code="mun">
+    <name lang="en">Munda languages</name>
+    <name lang="fr">mounda, langues</name>
+  </language>
+  <language code="mus">
+    <name lang="en">Creek</name>
+    <name lang="fr">muskogee</name>
+  </language>
+  <language code="mwl">
+    <name lang="en">Mirandese</name>
+    <name lang="fr">mirandais</name>
+  </language>
+  <language code="mwr">
+    <name lang="en">Marwari</name>
+    <name lang="fr">marvari</name>
+  </language>
+  <language code="bur">
+    <name lang="en">Burmese</name>
+    <name lang="fr">birman</name>
+  </language>
+  <language code="mya">
+    <name lang="en">Burmese</name>
+    <name lang="fr">birman</name>
+  </language>
+  <language code="myn">
+    <name lang="en">Mayan languages</name>
+    <name lang="fr">maya, langues</name>
+  </language>
+  <language code="myv">
+    <name lang="en">Erzya</name>
+    <name lang="fr">erza</name>
+  </language>
+  <language code="nah">
+    <name lang="en">Nahuatl languages</name>
+    <name lang="fr">nahuatl, langues</name>
+  </language>
+  <language code="nai">
+    <name lang="en">North American Indian</name>
+    <name lang="fr">indiennes d'Amérique du Nord, autres langues</name>
+  </language>
+  <language code="nap">
+    <name lang="en">Neapolitan</name>
+    <name lang="fr">napolitain</name>
+  </language>
+  <language code="nau">
+    <name lang="en">Nauru</name>
+    <name lang="fr">nauruan</name>
+  </language>
+  <language code="nav">
+    <name lang="en">Navajo; Navaho</name>
+    <name lang="fr">navaho</name>
+  </language>
+  <language code="nbl">
+    <name lang="en">Ndebele, South; South Ndebele</name>
+    <name lang="fr">ndébélé du Sud</name>
+  </language>
+  <language code="nde">
+    <name lang="en">Ndebele, North; North Ndebele</name>
+    <name lang="fr">ndébélé du Nord</name>
+  </language>
+  <language code="ndo">
+    <name lang="en">Ndonga</name>
+    <name lang="fr">ndonga</name>
+  </language>
+  <language code="nds">
+    <name lang="en">Low German; Low Saxon; German, Low; Saxon, Low</name>
+    <name lang="fr">bas allemand; bas saxon; allemand, bas; saxon, bas</name>
+  </language>
+  <language code="nep">
+    <name lang="en">Nepali</name>
+    <name lang="fr">népalais</name>
+  </language>
+  <language code="new">
+    <name lang="en">Nepal Bhasa; Newari</name>
+    <name lang="fr">nepal bhasa; newari</name>
+  </language>
+  <language code="nia">
+    <name lang="en">Nias</name>
+    <name lang="fr">nias</name>
+  </language>
+  <language code="nic">
+    <name lang="en">Niger-Kordofanian (Other)</name>
+    <name lang="fr">nigéro-congolaises, autres langues</name>
+  </language>
+  <language code="niu">
+    <name lang="en">Niuean</name>
+    <name lang="fr">niué</name>
+  </language>
+  <language code="dut">
+    <name lang="en">Dutch; Flemish</name>
+    <name lang="fr">néerlandais; flamand</name>
+  </language>
+  <language code="nld">
+    <name lang="en">Dutch; Flemish</name>
+    <name lang="fr">néerlandais; flamand</name>
+  </language>
+  <language code="nno">
+    <name lang="en">Norwegian Nynorsk; Nynorsk, Norwegian</name>
+    <name lang="fr">norvégien nynorsk; nynorsk, norvégien</name>
+  </language>
+  <language code="nob">
+    <name lang="en">Bokmål, Norwegian; Norwegian Bokmål</name>
+    <name lang="fr">norvégien bokmål</name>
+  </language>
+  <language code="nog">
+    <name lang="en">Nogai</name>
+    <name lang="fr">nogaï; nogay</name>
+  </language>
+  <language code="non">
+    <name lang="en">Norse, Old</name>
+    <name lang="fr">norrois, vieux</name>
+  </language>
+  <language code="nor">
+    <name lang="en">Norwegian</name>
+    <name lang="fr">norvégien</name>
+  </language>
+  <language code="nqo">
+    <name lang="en">N'Ko</name>
+    <name lang="fr">n'ko</name>
+  </language>
+  <language code="nso">
+    <name lang="en">Pedi; Sepedi; Northern Sotho</name>
+    <name lang="fr">pedi; sepedi; sotho du Nord</name>
+  </language>
+  <language code="nub">
+    <name lang="en">Nubian languages</name>
+    <name lang="fr">nubiennes, langues</name>
+  </language>
+  <language code="nwc">
+    <name lang="en">Classical Newari; Old Newari; Classical Nepal Bhasa</name>
+    <name lang="fr">newari classique</name>
+  </language>
+  <language code="nya">
+    <name lang="en">Chichewa; Chewa; Nyanja</name>
+    <name lang="fr">chichewa; chewa; nyanja</name>
+  </language>
+  <language code="nym">
+    <name lang="en">Nyamwezi</name>
+    <name lang="fr">nyamwezi</name>
+  </language>
+  <language code="nyn">
+    <name lang="en">Nyankole</name>
+    <name lang="fr">nyankolé</name>
+  </language>
+  <language code="nyo">
+    <name lang="en">Nyoro</name>
+    <name lang="fr">nyoro</name>
+  </language>
+  <language code="nzi">
+    <name lang="en">Nzima</name>
+    <name lang="fr">nzema</name>
+  </language>
+  <language code="oci">
+    <name lang="en">Occitan (post 1500); Provençal</name>
+    <name lang="fr">occitan (après 1500); provençal</name>
+  </language>
+  <language code="oji">
+    <name lang="en">Ojibwa</name>
+    <name lang="fr">ojibwa</name>
+  </language>
+  <language code="ori">
+    <name lang="en">Oriya</name>
+    <name lang="fr">oriya</name>
+  </language>
+  <language code="orm">
+    <name lang="en">Oromo</name>
+    <name lang="fr">galla</name>
+  </language>
+  <language code="osa">
+    <name lang="en">Osage</name>
+    <name lang="fr">osage</name>
+  </language>
+  <language code="oss">
+    <name lang="en">Ossetian; Ossetic</name>
+    <name lang="fr">ossète</name>
+  </language>
+  <language code="ota">
+    <name lang="en">Turkish, Ottoman (1500-1928)</name>
+    <name lang="fr">turc ottoman (1500-1928)</name>
+  </language>
+  <language code="oto">
+    <name lang="en">Otomian languages</name>
+    <name lang="fr">otomangue, langues</name>
+  </language>
+  <language code="paa">
+    <name lang="en">Papuan (Other)</name>
+    <name lang="fr">papoues, autres langues</name>
+  </language>
+  <language code="pag">
+    <name lang="en">Pangasinan</name>
+    <name lang="fr">pangasinan</name>
+  </language>
+  <language code="pal">
+    <name lang="en">Pahlavi</name>
+    <name lang="fr">pahlavi</name>
+  </language>
+  <language code="pam">
+    <name lang="en">Pampanga</name>
+    <name lang="fr">pampangan</name>
+  </language>
+  <language code="pan">
+    <name lang="en">Panjabi; Punjabi</name>
+    <name lang="fr">pendjabi</name>
+  </language>
+  <language code="pap">
+    <name lang="en">Papiamento</name>
+    <name lang="fr">papiamento</name>
+  </language>
+  <language code="pau">
+    <name lang="en">Palauan</name>
+    <name lang="fr">palau</name>
+  </language>
+  <language code="peo">
+    <name lang="en">Persian, Old (ca.600-400 B.C.)</name>
+    <name lang="fr">perse, vieux (ca. 600-400 av. J.-C.)</name>
+  </language>
+  <language code="per">
+    <name lang="en">Persian</name>
+    <name lang="fr">persan</name>
+  </language>
+  <language code="fas">
+    <name lang="en">Persian</name>
+    <name lang="fr">persan</name>
+  </language>
+  <language code="phi">
+    <name lang="en">Philippine (Other)</name>
+    <name lang="fr">philippines, autres langues</name>
+  </language>
+  <language code="phn">
+    <name lang="en">Phoenician</name>
+    <name lang="fr">phénicien</name>
+  </language>
+  <language code="pli">
+    <name lang="en">Pali</name>
+    <name lang="fr">pali</name>
+  </language>
+  <language code="pol">
+    <name lang="en">Polish</name>
+    <name lang="fr">polonais</name>
+  </language>
+  <language code="pon">
+    <name lang="en">Pohnpeian</name>
+    <name lang="fr">pohnpei</name>
+  </language>
+  <language code="por">
+    <name lang="en">Portuguese</name>
+    <name lang="fr">portugais</name>
+  </language>
+  <language code="pra">
+    <name lang="en">Prakrit languages</name>
+    <name lang="fr">prâkrit</name>
+  </language>
+  <language code="pro">
+    <name lang="en">Provençal, Old (to 1500)</name>
+    <name lang="fr">provençal ancien (jusqu'à 1500)</name>
+  </language>
+  <language code="pus">
+    <name lang="en">Pushto</name>
+    <name lang="fr">pachto</name>
+  </language>
+  <language code="qaa-qtz">
+    <name lang="en">Reserved for local use</name>
+    <name lang="fr">réservée à l'usage local</name>
+  </language>
+  <language code="que">
+    <name lang="en">Quechua</name>
+    <name lang="fr">quechua</name>
+  </language>
+  <language code="raj">
+    <name lang="en">Rajasthani</name>
+    <name lang="fr">rajasthani</name>
+  </language>
+  <language code="rap">
+    <name lang="en">Rapanui</name>
+    <name lang="fr">rapanui</name>
+  </language>
+  <language code="rar">
+    <name lang="en">Rarotongan; Cook Islands Maori</name>
+    <name lang="fr">rarotonga; maori des îles Cook</name>
+  </language>
+  <language code="roa">
+    <name lang="en">Romance (Other)</name>
+    <name lang="fr">romanes, autres langues</name>
+  </language>
+  <language code="roh">
+    <name lang="en">Romansh</name>
+    <name lang="fr">romanche</name>
+  </language>
+  <language code="rom">
+    <name lang="en">Romany</name>
+    <name lang="fr">tsigane</name>
+  </language>
+  <language code="rum">
+    <name lang="en">Romanian</name>
+    <name lang="fr">roumain</name>
+  </language>
+  <language code="ron">
+    <name lang="en">Romanian</name>
+    <name lang="fr">roumain</name>
+  </language>
+  <language code="rum">
+    <name lang="en">Romanian</name>
+    <name lang="fr">roumain</name>
+  </language>
+  <language code="ron">
+    <name lang="en">Romanian</name>
+    <name lang="fr">roumain</name>
+  </language>
+  <language code="run">
+    <name lang="en">Rundi</name>
+    <name lang="fr">rundi</name>
+  </language>
+  <language code="rup">
+    <name lang="en">Aromanian; Arumanian; Macedo-Romanian</name>
+    <name lang="fr">aroumain; macédo-roumain</name>
+  </language>
+  <language code="rus">
+    <name lang="en">Russian</name>
+    <name lang="fr">russe</name>
+  </language>
+  <language code="sad">
+    <name lang="en">Sandawe</name>
+    <name lang="fr">sandawe</name>
+  </language>
+  <language code="sag">
+    <name lang="en">Sango</name>
+    <name lang="fr">sango</name>
+  </language>
+  <language code="sah">
+    <name lang="en">Yakut</name>
+    <name lang="fr">iakoute</name>
+  </language>
+  <language code="sai">
+    <name lang="en">South American Indian (Other)</name>
+    <name lang="fr">indiennes d'Amérique du Sud, autres langues</name>
+  </language>
+  <language code="sal">
+    <name lang="en">Salishan languages</name>
+    <name lang="fr">salish, langues</name>
+  </language>
+  <language code="sam">
+    <name lang="en">Samaritan Aramaic</name>
+    <name lang="fr">samaritain</name>
+  </language>
+  <language code="san">
+    <name lang="en">Sanskrit</name>
+    <name lang="fr">sanskrit</name>
+  </language>
+  <language code="sas">
+    <name lang="en">Sasak</name>
+    <name lang="fr">sasak</name>
+  </language>
+  <language code="sat">
+    <name lang="en">Santali</name>
+    <name lang="fr">santal</name>
+  </language>
+  <language code="scc">
+    <name lang="en">Serbian</name>
+    <name lang="fr">serbe</name>
+  </language>
+  <language code="srp">
+    <name lang="en">Serbian</name>
+    <name lang="fr">serbe</name>
+  </language>
+  <language code="scn">
+    <name lang="en">Sicilian</name>
+    <name lang="fr">sicilien</name>
+  </language>
+  <language code="sco">
+    <name lang="en">Scots</name>
+    <name lang="fr">écossais</name>
+  </language>
+  <language code="scr">
+    <name lang="en">Croatian</name>
+    <name lang="fr">croate</name>
+  </language>
+  <language code="hrv">
+    <name lang="en">Croatian</name>
+    <name lang="fr">croate</name>
+  </language>
+  <language code="sel">
+    <name lang="en">Selkup</name>
+    <name lang="fr">selkoupe</name>
+  </language>
+  <language code="sem">
+    <name lang="en">Semitic (Other)</name>
+    <name lang="fr">sémitiques, autres langues</name>
+  </language>
+  <language code="sga">
+    <name lang="en">Irish, Old (to 900)</name>
+    <name lang="fr">irlandais ancien (jusqu'à 900)</name>
+  </language>
+  <language code="sgn">
+    <name lang="en">Sign Languages</name>
+    <name lang="fr">langues des signes</name>
+  </language>
+  <language code="shn">
+    <name lang="en">Shan</name>
+    <name lang="fr">chan</name>
+  </language>
+  <language code="sid">
+    <name lang="en">Sidamo</name>
+    <name lang="fr">sidamo</name>
+  </language>
+  <language code="sin">
+    <name lang="en">Sinhala; Sinhalese</name>
+    <name lang="fr">singhalais</name>
+  </language>
+  <language code="sio">
+    <name lang="en">Siouan languages</name>
+    <name lang="fr">sioux, langues</name>
+  </language>
+  <language code="sit">
+    <name lang="en">Sino-Tibetan (Other)</name>
+    <name lang="fr">sino-tibétaines, autres langues</name>
+  </language>
+  <language code="sla">
+    <name lang="en">Slavic (Other)</name>
+    <name lang="fr">slaves, autres langues</name>
+  </language>
+  <language code="slo">
+    <name lang="en">Slovak</name>
+    <name lang="fr">slovaque</name>
+  </language>
+  <language code="slk">
+    <name lang="en">Slovak</name>
+    <name lang="fr">slovaque</name>
+  </language>
+  <language code="slo">
+    <name lang="en">Slovak</name>
+    <name lang="fr">slovaque</name>
+  </language>
+  <language code="slk">
+    <name lang="en">Slovak</name>
+    <name lang="fr">slovaque</name>
+  </language>
+  <language code="slv">
+    <name lang="en">Slovenian</name>
+    <name lang="fr">slovène</name>
+  </language>
+  <language code="sma">
+    <name lang="en">Southern Sami</name>
+    <name lang="fr">sami du Sud</name>
+  </language>
+  <language code="sme">
+    <name lang="en">Northern Sami</name>
+    <name lang="fr">sami du Nord</name>
+  </language>
+  <language code="smi">
+    <name lang="en">Sami languages (Other)</name>
+    <name lang="fr">sami, autres langues</name>
+  </language>
+  <language code="smj">
+    <name lang="en">Lule Sami</name>
+    <name lang="fr">sami de Lule</name>
+  </language>
+  <language code="smn">
+    <name lang="en">Inari Sami</name>
+    <name lang="fr">sami d'Inari</name>
+  </language>
+  <language code="smo">
+    <name lang="en">Samoan</name>
+    <name lang="fr">samoan</name>
+  </language>
+  <language code="sms">
+    <name lang="en">Skolt Sami</name>
+    <name lang="fr">sami skolt</name>
+  </language>
+  <language code="sna">
+    <name lang="en">Shona</name>
+    <name lang="fr">shona</name>
+  </language>
+  <language code="snd">
+    <name lang="en">Sindhi</name>
+    <name lang="fr">sindhi</name>
+  </language>
+  <language code="snk">
+    <name lang="en">Soninke</name>
+    <name lang="fr">soninké</name>
+  </language>
+  <language code="sog">
+    <name lang="en">Sogdian</name>
+    <name lang="fr">sogdien</name>
+  </language>
+  <language code="som">
+    <name lang="en">Somali</name>
+    <name lang="fr">somali</name>
+  </language>
+  <language code="son">
+    <name lang="en">Songhai languages</name>
+    <name lang="fr">songhai, langues</name>
+  </language>
+  <language code="sot">
+    <name lang="en">Sotho, Southern</name>
+    <name lang="fr">sotho du Sud</name>
+  </language>
+  <language code="spa">
+    <name lang="en">Spanish; Castilian</name>
+    <name lang="fr">espagnol; castillan</name>
+  </language>
+  <language code="alb">
+    <name lang="en">Albanian</name>
+    <name lang="fr">albanais</name>
+  </language>
+  <language code="sqi">
+    <name lang="en">Albanian</name>
+    <name lang="fr">albanais</name>
+  </language>
+  <language code="srd">
+    <name lang="en">Sardinian</name>
+    <name lang="fr">sarde</name>
+  </language>
+  <language code="srn">
+    <name lang="en">Sranan Tongo</name>
+    <name lang="fr">sranan tongo</name>
+  </language>
+  <language code="scc">
+    <name lang="en">Serbian</name>
+    <name lang="fr">serbe</name>
+  </language>
+  <language code="srp">
+    <name lang="en">Serbian</name>
+    <name lang="fr">serbe</name>
+  </language>
+  <language code="srr">
+    <name lang="en">Serer</name>
+    <name lang="fr">sérère</name>
+  </language>
+  <language code="ssa">
+    <name lang="en">Nilo-Saharan (Other)</name>
+    <name lang="fr">nilo-sahariennes, autres langues</name>
+  </language>
+  <language code="ssw">
+    <name lang="en">Swati</name>
+    <name lang="fr">swati</name>
+  </language>
+  <language code="suk">
+    <name lang="en">Sukuma</name>
+    <name lang="fr">sukuma</name>
+  </language>
+  <language code="sun">
+    <name lang="en">Sundanese</name>
+    <name lang="fr">soundanais</name>
+  </language>
+  <language code="sus">
+    <name lang="en">Susu</name>
+    <name lang="fr">soussou</name>
+  </language>
+  <language code="sux">
+    <name lang="en">Sumerian</name>
+    <name lang="fr">sumérien</name>
+  </language>
+  <language code="swa">
+    <name lang="en">Swahili</name>
+    <name lang="fr">swahili</name>
+  </language>
+  <language code="swe">
+    <name lang="en">Swedish</name>
+    <name lang="fr">suédois</name>
+  </language>
+  <language code="syc">
+    <name lang="en"> Classical Syriac</name>
+    <name lang="fr">syriaque classique</name>
+  </language>
+  <language code="syr">
+    <name lang="en">Syriac</name>
+    <name lang="fr">syriaque</name>
+  </language>
+  <language code="tah">
+    <name lang="en">Tahitian</name>
+    <name lang="fr">tahitien</name>
+  </language>
+  <language code="tai">
+    <name lang="en">Tai (Other)</name>
+    <name lang="fr">thaïes, autres langues</name>
+  </language>
+  <language code="tam">
+    <name lang="en">Tamil</name>
+    <name lang="fr">tamoul</name>
+  </language>
+  <language code="tat">
+    <name lang="en">Tatar</name>
+    <name lang="fr">tatar</name>
+  </language>
+  <language code="tel">
+    <name lang="en">Telugu</name>
+    <name lang="fr">télougou</name>
+  </language>
+  <language code="tem">
+    <name lang="en">Timne</name>
+    <name lang="fr">temne</name>
+  </language>
+  <language code="ter">
+    <name lang="en">Tereno</name>
+    <name lang="fr">tereno</name>
+  </language>
+  <language code="tet">
+    <name lang="en">Tetum</name>
+    <name lang="fr">tetum</name>
+  </language>
+  <language code="tgk">
+    <name lang="en">Tajik</name>
+    <name lang="fr">tadjik</name>
+  </language>
+  <language code="tgl">
+    <name lang="en">Tagalog</name>
+    <name lang="fr">tagalog</name>
+  </language>
+  <language code="tha">
+    <name lang="en">Thai</name>
+    <name lang="fr">thaï</name>
+  </language>
+  <language code="tib">
+    <name lang="en">Tibetan</name>
+    <name lang="fr">tibétain</name>
+  </language>
+  <language code="bod">
+    <name lang="en">Tibetan</name>
+    <name lang="fr">tibétain</name>
+  </language>
+  <language code="tig">
+    <name lang="en">Tigre</name>
+    <name lang="fr">tigré</name>
+  </language>
+  <language code="tir">
+    <name lang="en">Tigrinya</name>
+    <name lang="fr">tigrigna</name>
+  </language>
+  <language code="tiv">
+    <name lang="en">Tiv</name>
+    <name lang="fr">tiv</name>
+  </language>
+  <language code="tkl">
+    <name lang="en">Tokelau</name>
+    <name lang="fr">tokelau</name>
+  </language>
+  <language code="tlh">
+    <name lang="en">Klingon; tlhIngan-Hol</name>
+    <name lang="fr">klingon</name>
+  </language>
+  <language code="tli">
+    <name lang="en">Tlingit</name>
+    <name lang="fr">tlingit</name>
+  </language>
+  <language code="tmh">
+    <name lang="en">Tamashek</name>
+    <name lang="fr">tamacheq</name>
+  </language>
+  <language code="tog">
+    <name lang="en">Tonga (Nyasa)</name>
+    <name lang="fr">tonga (Nyasa)</name>
+  </language>
+  <language code="ton">
+    <name lang="en">Tonga (Tonga Islands)</name>
+    <name lang="fr">tongan (Îles Tonga)</name>
+  </language>
+  <language code="tpi">
+    <name lang="en">Tok Pisin</name>
+    <name lang="fr">tok pisin</name>
+  </language>
+  <language code="tsi">
+    <name lang="en">Tsimshian</name>
+    <name lang="fr">tsimshian</name>
+  </language>
+  <language code="tsn">
+    <name lang="en">Tswana</name>
+    <name lang="fr">tswana</name>
+  </language>
+  <language code="tso">
+    <name lang="en">Tsonga</name>
+    <name lang="fr">tsonga</name>
+  </language>
+  <language code="tuk">
+    <name lang="en">Turkmen</name>
+    <name lang="fr">turkmène</name>
+  </language>
+  <language code="tum">
+    <name lang="en">Tumbuka</name>
+    <name lang="fr">tumbuka</name>
+  </language>
+  <language code="tup">
+    <name lang="en">Tupi languages</name>
+    <name lang="fr">tupi, langues</name>
+  </language>
+  <language code="tur">
+    <name lang="en">Turkish</name>
+    <name lang="fr">turc</name>
+  </language>
+  <language code="tut">
+    <name lang="en">Altaic (Other)</name>
+    <name lang="fr">altaïques, autres langues</name>
+  </language>
+  <language code="tvl">
+    <name lang="en">Tuvalu</name>
+    <name lang="fr">tuvalu</name>
+  </language>
+  <language code="twi">
+    <name lang="en">Twi</name>
+    <name lang="fr">twi</name>
+  </language>
+  <language code="tyv">
+    <name lang="en">Tuvinian</name>
+    <name lang="fr">touva</name>
+  </language>
+  <language code="udm">
+    <name lang="en">Udmurt</name>
+    <name lang="fr">oudmourte</name>
+  </language>
+  <language code="uga">
+    <name lang="en">Ugaritic</name>
+    <name lang="fr">ougaritique</name>
+  </language>
+  <language code="uig">
+    <name lang="en">Uighur; Uyghur</name>
+    <name lang="fr">ouïgour</name>
+  </language>
+  <language code="ukr">
+    <name lang="en">Ukrainian</name>
+    <name lang="fr">ukrainien</name>
+  </language>
+  <language code="umb">
+    <name lang="en">Umbundu</name>
+    <name lang="fr">umbundu</name>
+  </language>
+  <language code="und">
+    <name lang="en">Undetermined</name>
+    <name lang="fr">indéterminée</name>
+  </language>
+  <language code="urd">
+    <name lang="en">Urdu</name>
+    <name lang="fr">ourdou</name>
+  </language>
+  <language code="uzb">
+    <name lang="en">Uzbek</name>
+    <name lang="fr">ouszbek</name>
+  </language>
+  <language code="vai">
+    <name lang="en">Vai</name>
+    <name lang="fr">vaï</name>
+  </language>
+  <language code="ven">
+    <name lang="en">Venda</name>
+    <name lang="fr">venda</name>
+  </language>
+  <language code="vie">
+    <name lang="en">Vietnamese</name>
+    <name lang="fr">vietnamien</name>
+  </language>
+  <language code="vol">
+    <name lang="en">Volapük</name>
+    <name lang="fr">volapük</name>
+  </language>
+  <language code="vot">
+    <name lang="en">Votic</name>
+    <name lang="fr">vote</name>
+  </language>
+  <language code="wak">
+    <name lang="en">Wakashan languages</name>
+    <name lang="fr">wakashennes, langues</name>
+  </language>
+  <language code="wal">
+    <name lang="en">Walamo</name>
+    <name lang="fr">walamo</name>
+  </language>
+  <language code="war">
+    <name lang="en">Waray</name>
+    <name lang="fr">waray</name>
+  </language>
+  <language code="was">
+    <name lang="en">Washo</name>
+    <name lang="fr">washo</name>
+  </language>
+  <language code="wel">
+    <name lang="en">Welsh</name>
+    <name lang="fr">gallois</name>
+  </language>
+  <language code="cym">
+    <name lang="en">Welsh</name>
+    <name lang="fr">gallois</name>
+  </language>
+  <language code="wen">
+    <name lang="en">Sorbian languages</name>
+    <name lang="fr">sorabes, langues</name>
+  </language>
+  <language code="wln">
+    <name lang="en">Walloon</name>
+    <name lang="fr">wallon</name>
+  </language>
+  <language code="wol">
+    <name lang="en">Wolof</name>
+    <name lang="fr">wolof</name>
+  </language>
+  <language code="xal">
+    <name lang="en">Kalmyk; Oirat</name>
+    <name lang="fr">kalmouk; oïrat</name>
+  </language>
+  <language code="xho">
+    <name lang="en">Xhosa</name>
+    <name lang="fr">xhosa</name>
+  </language>
+  <language code="yao">
+    <name lang="en">Yao</name>
+    <name lang="fr">yao</name>
+  </language>
+  <language code="yap">
+    <name lang="en">Yapese</name>
+    <name lang="fr">yapois</name>
+  </language>
+  <language code="yid">
+    <name lang="en">Yiddish</name>
+    <name lang="fr">yiddish</name>
+  </language>
+  <language code="yor">
+    <name lang="en">Yoruba</name>
+    <name lang="fr">yoruba</name>
+  </language>
+  <language code="ypk">
+    <name lang="en">Yupik languages</name>
+    <name lang="fr">yupik, langues</name>
+  </language>
+  <language code="zap">
+    <name lang="en">Zapotec</name>
+    <name lang="fr">zapotèque</name>
+  </language>
+  <language code="zen">
+    <name lang="en">Zenaga</name>
+    <name lang="fr">zenaga</name>
+  </language>
+  <language code="zha">
+    <name lang="en">Zhuang; Chuang</name>
+    <name lang="fr">zhuang; chuang</name>
+  </language>
+  <language code="chi">
+    <name lang="en">Chinese</name>
+    <name lang="fr">chinois</name>
+  </language>
+  <language code="zho">
+    <name lang="en">Chinese</name>
+    <name lang="fr">chinois</name>
+  </language>
+  <language code="znd">
+    <name lang="en">Zande languages</name>
+    <name lang="fr">zandé, langues</name>
+  </language>
+  <language code="zul">
+    <name lang="en">Zulu</name>
+    <name lang="fr">zoulou</name>
+  </language>
+  <language code="zun">
+    <name lang="en">Zuni</name>
+    <name lang="fr">zuni</name>
+  </language>
+  <language code="zxx">
+    <name lang="en">No linguistic content</name>
+    <name lang="fr">pas de contenu linguistique</name>
+  </language>
+  <language code="zza">
+    <name lang="en">Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki</name>
+    <name lang="fr">zaza; dimili; dimli; kirdki; kirmanjki; zazaki</name>
+  </language>
+</languages>
