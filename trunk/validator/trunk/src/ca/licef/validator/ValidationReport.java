@@ -1,10 +1,11 @@
 package ca.licef.validator;
 
+import java.io.Serializable;
 import java.util.Enumeration;
 import java.util.ListIterator;
 import java.util.Vector;
 
-public class ValidationReport {
+public class ValidationReport implements Serializable {
 
     public ValidationReport() {
     }
