@@ -1,6 +1,8 @@
 package ca.licef.validator;
 
-public class ValidationError {
+import java.io.Serializable;
+
+public class ValidationError implements Serializable {
 
     public enum ValidationType {
         UNKOWN,
