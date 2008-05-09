@@ -1,6 +1,8 @@
 package ca.licef.validator;
 
-public class ErrorEntry {
+import java.io.Serializable;
+
+public class ErrorEntry implements Serializable {
 
     public ErrorEntry( ValidationError error ) {
         this.error = error;
