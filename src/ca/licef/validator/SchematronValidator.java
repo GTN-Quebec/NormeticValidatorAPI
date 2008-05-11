@@ -75,17 +75,13 @@ class SchematronValidator {
         }
 
         ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
-System.out.println( "bundle="+bundle );
-System.out.println( "str="+bundle.getString( "Element1.3UndefinedMandatory" ) );
 
         ValidationError[] errors = report.getErrors();
         for( int i = 0; i < errors.length; i++ ) {
             ValidationError error = errors[ i ];
             int indexOfColon = error.getMessage().indexOf( ":" );
-System.out.println( "error="+error +" indexOfColon=" + indexOfColon );            
             if( indexOfColon != -1 ) {
                 String key = error.getMessage().substring( 0, indexOfColon );
-System.out.println( "k=" + key + " contained?"+(bundle.containsKey( key ) ) );                
                 if( bundle.containsKey( key ) )
                     error.setAlternateMessage( bundle.getString( key ) );
             }
