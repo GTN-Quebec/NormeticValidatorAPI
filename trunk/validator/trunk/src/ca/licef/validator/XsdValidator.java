@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.Locale;
-import java.util.ResourceBundle;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
@@ -30,11 +29,9 @@ class XsdValidator {
     }
 
     public boolean validate( String lom ) throws SAXException, IOException {
-        try { // Temporary try-catch
         report = new ValidationReport();
 
         Validator validator = getValidator();
-        System.out.println( "validator=" + validator + " class=" + validator.getClass());
         //System.out.println( "prop flocale=" + validator.getProperty( "fLocale" ) );
         validator.setErrorHandler( new ValidationErrorHandler( ValidationError.ValidationType.XSD, report ) );
         StringReader stringReader = new StringReader( lom );
@@ -47,19 +44,7 @@ class XsdValidator {
             // Ignore instances of SAXException as they have already been handled by ValidationErrorHandler.
         }
 
-        // Translate and/or improve error messages.
-        ValidationError[] errors = report.getErrors();
-        for( int i = 0; i < errors.length; i++ ) {
-            ValidationError error = errors[ i ];
-            ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
-        }
-
         return( report.getErrorCount() == 0 );
-        }
-        catch( Exception e ) {
-            e.printStackTrace();
-            return( false );
-        }
     }
 
     public ValidationReport getReport() {
