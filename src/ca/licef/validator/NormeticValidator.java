@@ -57,14 +57,14 @@ public class NormeticValidator {
         if( !isValid )
             return( false );
 
-        RelaxNgValidator rngValidator = new RelaxNgValidator(); 
-        rngValidator.setLocale( locale );
-        isValid = rngValidator.validate( lom );
+        //RelaxNgValidator rngValidator = new RelaxNgValidator(); 
+        //rngValidator.setLocale( locale );
+        //isValid = rngValidator.validate( lom );
 
         // Temporary.  Not needed to add the errors found by RelaxNG.
         // However, we may use this info to use location error data (line, col) 
         // for some mandatory elements to improve userfriendliness.
-        report.append( rngValidator.getReport().getErrors() );
+        //report.append( rngValidator.getReport().getErrors() );
 
         //if( !isValid )
         //    return( false );
@@ -101,7 +101,6 @@ public class NormeticValidator {
             boolean isValid = validator.validate( lomFile );
             ValidationReport report = validator.getReport();
             System.out.println( report );
-            System.out.println( "isValid=" + isValid );
         }
         catch( SAXException e ) {
             // Ignore the exception for now.  It's been written in the report anyway.

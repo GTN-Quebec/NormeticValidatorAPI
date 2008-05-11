@@ -11,6 +11,7 @@ import java.io.StringWriter;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
@@ -45,7 +46,7 @@ class SchematronValidator {
         for( Enumeration e = hSchXslStyleSheet.elements(); e.hasMoreElements(); ) {
             File schXslStyleSheet = (File)e.nextElement();
             if (!schXslStyleSheet.delete()) 
-                System.err.println("Could not delete temporary file: " + schXslStyleSheet);
+                throw( new Exception( "Could not delete temporary file: " + schXslStyleSheet ) );
         }
     }
 
@@ -70,6 +71,23 @@ class SchematronValidator {
                 isValid = validatePhase( lom, phases[ i ] );
                 //if( !isValid )
                 //    return( false );
+            }
+        }
+
+        ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
+System.out.println( "bundle="+bundle );
+System.out.println( "str="+bundle.getString( "Element1.3UndefinedMandatory" ) );
+
+        ValidationError[] errors = report.getErrors();
+        for( int i = 0; i < errors.length; i++ ) {
+            ValidationError error = errors[ i ];
+            int indexOfColon = error.getMessage().indexOf( ":" );
+System.out.println( "error="+error +" indexOfColon=" + indexOfColon );            
+            if( indexOfColon != -1 ) {
+                String key = error.getMessage().substring( 0, indexOfColon );
+System.out.println( "k=" + key + " contained?"+(bundle.containsKey( key ) ) );                
+                if( bundle.containsKey( key ) )
+                    error.setAlternateMessage( bundle.getString( key ) );
             }
         }
 
