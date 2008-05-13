@@ -190,7 +190,7 @@
     <iso:pattern id="ConditionalMandatoryElements.LifeCycle">
         <iso:title>Validating LifeCycle category's conditional mandatory elements</iso:title>
         <iso:rule context="lom:lom/lom:lifeCycle">
-            <iso:assert test="count(lom:contribute/lom:date) > 0 and string-length( string-join( for $s in lom:contribute/lom:date/lom:dateTime return( normalize-space( $s ) ), '' ) ) > 0" diagnostics="Element2.3.3UndefinedMandatory">Element2.3.3UndefinedMandatory</iso:assert>
+            <iso:assert test="count(lom:contribute/lom:date) > 0 and (string-length( string-join( for $s in lom:contribute/lom:date/lom:dateTime return( normalize-space( $s ) ), '' ) ) > 0 or //lom:date/lom:description/lom:string[normalize-space(text())='non disponible'] )" diagnostics="Element2.3.3UndefinedMandatory">Element2.3.3UndefinedMandatory</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -207,10 +207,10 @@
             <iso:assert test="normalize-space() != ''" diagnostics="Element2.2EmptyRecommended">Element2.2EmptyRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute">
-            <iso:assert test="lom:date/lom:dateTime" diagnostics="Element2.3.3UndefinedRecommended">Element2.3.3UndefinedRecommended</iso:assert>
+            <iso:assert test="lom:date/lom:dateTime or lom:date/lom:description/lom:string[normalize-space(text())='non disponible']" diagnostics="Element2.3.3UndefinedRecommended">Element2.3.3UndefinedRecommended</iso:assert>
         </iso:rule>
-        <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:date/lom:dateTime">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element2.3.3EmptyRecommended">Element2.3.3EmptyRecommended</iso:assert>
+        <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:date">
+            <iso:assert test="normalize-space(lom:dateTime) != '' or normalize-space(lom:description/lom:string) != ''" diagnostics="Element2.3.3EmptyRecommended">Element2.3.3EmptyRecommended</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -625,13 +625,13 @@
         <iso:diagnostic id="Element2.3.2EmptyMandatory" xml:lang="en">Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
 
         <!-- Conditional Mandatory Elements (LifeCycle) -->
-        <iso:diagnostic id="Element2.3.3UndefinedMandatory" xml:lang="en">Element 2.3.3-Date is not defined.  This element is mandatory for at least one contributor.</iso:diagnostic>
+        <iso:diagnostic id="Element2.3.3UndefinedMandatory" xml:lang="en">Element 2.3.3-Date is not defined.  This element is mandatory for at least one contributor.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
 
         <!-- Recommended Elements (LifeCycle) -->
         <iso:diagnostic id="Element2.2UndefinedRecommended" xml:lang="en">Element 2.2-Status is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element2.2EmptyRecommended" xml:lang="en">Element 2.2-Status is empty.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.3UndefinedRecommended" xml:lang="en">Element 2.3.3-Date is not defined.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.3EmptyRecommended" xml:lang="en">Element 2.3.3-Date is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="Element2.3.3UndefinedRecommended" xml:lang="en">Element 2.3.3-Date is not defined.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
+        <iso:diagnostic id="Element2.3.3EmptyRecommended" xml:lang="en">Element 2.3.3-Date is empty.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
 
         <!-- Mandatory Elements (MetaMetadata) -->
         <iso:diagnostic id="Element3.1UndefinedMandatory" xml:lang="en">Element 3.1-Identifier is not defined.  This element is mandatory.</iso:diagnostic>
