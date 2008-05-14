@@ -30,7 +30,7 @@ class RelaxNgValidator {
         report = new ValidationReport();
 
         PropertyMapBuilder propMapBuilder = new PropertyMapBuilder();
-        ValidateProperty.ERROR_HANDLER.put( propMapBuilder, new ValidationErrorHandler( ValidationError.ValidationType.RNG, report ) );
+        ValidateProperty.ERROR_HANDLER.put( propMapBuilder, new ValidationIssueHandler( ValidationIssue.ValidationType.RNG, report ) );
         ValidationDriver validator = new ValidationDriver( propMapBuilder.toPropertyMap() );
         String prefix = "/schemas/rng/";
         InputSource rngSource = new InputSource( getClass().getResourceAsStream( prefix + "normetic.rng" ) );
@@ -43,7 +43,7 @@ class RelaxNgValidator {
             validator.validate( new InputSource( lomReader ) );
         }
         catch( SAXException e ) {
-            // Ignore instances of SAXException as they have already been handled by ValidationErrorHandler.
+            // Ignore instances of SAXException as they have already been handled by ValidationIssueHandler.
         }
 
         return( report.getErrorCount() == 0 );

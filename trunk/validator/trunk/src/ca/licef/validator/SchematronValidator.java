@@ -76,9 +76,9 @@ class SchematronValidator {
 
         ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
 
-        ValidationError[] errors = report.getErrors();
+        ValidationIssue[] errors = report.getIssues();
         for( int i = 0; i < errors.length; i++ ) {
-            ValidationError error = errors[ i ];
+            ValidationIssue error = errors[ i ];
             int indexOfColon = error.getMessage().indexOf( ":" );
             if( indexOfColon != -1 ) {
                 String key = error.getMessage().substring( 0, indexOfColon );
@@ -207,9 +207,9 @@ class SchematronValidator {
                     isOptionalPhaseRequired = true;
                 else {
                     int indexOfRecommended = errorLabel.indexOf( "Recommended" );
-                    ValidationError.Severity errorSeverity  = ( indexOfRecommended == -1 ? 
-                        ValidationError.Severity.ERROR : ValidationError.Severity.WARNING );
-                    ValidationError error = new ValidationError( ValidationError.ValidationType.SCH, errorSeverity, lines[ l ] );
+                    ValidationIssue.Severity errorSeverity  = ( indexOfRecommended == -1 ? 
+                        ValidationIssue.Severity.ERROR : ValidationIssue.Severity.WARNING );
+                    ValidationIssue error = new ValidationIssue( ValidationIssue.ValidationType.SCH, errorSeverity, lines[ l ] );
                     report.append( error );
                 }
             }

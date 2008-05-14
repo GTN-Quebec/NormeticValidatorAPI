@@ -2,7 +2,7 @@ package ca.licef.validator;
 
 import java.io.Serializable;
 
-public class ValidationError implements Serializable {
+public class ValidationIssue implements Serializable {
 
     public enum ValidationType {
         UNKOWN,
@@ -18,26 +18,26 @@ public class ValidationError implements Serializable {
         FATAL_ERROR
     }
 
-    public ValidationError() {
+    public ValidationIssue() {
     }
 
-    public ValidationError( String message ) {
+    public ValidationIssue( String message ) {
         this.message = message;
     }
 
-    public ValidationError( int line, int column, String message ) {
+    public ValidationIssue( int line, int column, String message ) {
         this.line = line;
         this.column = column;
         this.message = message;
     }
 
-    public ValidationError( ValidationType validationType, Severity severity, String message ) {
+    public ValidationIssue( ValidationType validationType, Severity severity, String message ) {
         this.validationType = validationType;
         this.severity = severity;
         this.message = message;
     }
 
-    public ValidationError( ValidationType validationType, Severity severity, int line, int column, String message ) {
+    public ValidationIssue( ValidationType validationType, Severity severity, int line, int column, String message ) {
         this.validationType = validationType;
         this.severity = severity;
         this.line = line;
