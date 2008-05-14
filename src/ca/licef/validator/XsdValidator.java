@@ -33,7 +33,7 @@ class XsdValidator {
 
         Validator validator = getValidator();
         //System.out.println( "prop flocale=" + validator.getProperty( "fLocale" ) );
-        validator.setErrorHandler( new ValidationErrorHandler( ValidationError.ValidationType.XSD, report ) );
+        validator.setErrorHandler( new ValidationIssueHandler( ValidationIssue.ValidationType.XSD, report ) );
         StringReader stringReader = new StringReader( lom );
         BufferedReader lomReader = new BufferedReader( stringReader );
         Source lomSource = new StreamSource( lomReader ); 
@@ -41,7 +41,7 @@ class XsdValidator {
             validator.validate( lomSource );
         }
         catch( SAXException e ) {
-            // Ignore instances of SAXException as they have already been handled by ValidationErrorHandler.
+            // Ignore instances of SAXException as they have already been handled by ValidationIssueHandler.
         }
 
         return( report.getErrorCount() == 0 );

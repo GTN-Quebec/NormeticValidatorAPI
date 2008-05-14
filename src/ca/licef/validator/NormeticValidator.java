@@ -52,7 +52,7 @@ public class NormeticValidator {
         xsdValidator.setLocale( locale );
         boolean isValid = xsdValidator.validate( lom );
 
-        report.append( xsdValidator.getReport().getErrors() );
+        report.append( xsdValidator.getReport().getIssues() );
 
         if( !isValid )
             return( false );
@@ -73,7 +73,7 @@ public class NormeticValidator {
         schValidator.setLocale( locale );
         isValid = schValidator.validate( lom );
 
-        report.append( schValidator.getReport().getErrors() );
+        report.append( schValidator.getReport().getIssues() );
         return( isValid );
     }
 
