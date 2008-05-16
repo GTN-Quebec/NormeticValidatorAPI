@@ -484,9 +484,9 @@
         <iso:rule context="lom:lom/lom:educational/lom:learningResourceType">
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
-            <iso:assert test="$source = 'LOMv1.0' or $source = 'http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.2">UnrecognizedVocabularySourceForElement5.2</iso:assert>
-            <iso:report test="$source = 'LOMv1.0' and not(document('LOMv1.0_element_5_2_learning_resource_type_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.2">InvalidVocabularyForElement5.2</iso:report>
-            <iso:report test="$source = 'http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml' and not(document('NORMETICv1.1_element_5_2_type_de_ressource_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.2">InvalidVocabularyForElement5.2</iso:report>
+            <iso:assert test="$source = 'LOMv1.0' or $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.2">UnrecognizedVocabularySourceForElement5.2</iso:assert>
+            <iso:report test="$source = 'LOMv1.0' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.2">InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="$source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.2">InvalidVocabularyForElement5.2</iso:report>
         </iso:rule>
 
         <iso:rule context="lom:lom/lom:educational/lom:context">

@@ -16,7 +16,7 @@
    <!-- Source -->
    <xs:simpleType name="normeticSourceValues">
       <xs:restriction base="xs:token">
-         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml"/>
+         <xs:enumeration value="http://www.normetic.org/vdex/typeressourcev1_2.xml"/>
          <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml"/>
       </xs:restriction>
    </xs:simpleType>
@@ -24,15 +24,26 @@
    <!-- 5.2 Learning Resource Type -->
    <xs:simpleType name="normeticLearningResourceTypeValues">
       <xs:restriction base="xs:token">
-         <xs:enumeration value="evaluation"/>
+         <xs:enumeration value="évaluation"/>
          <xs:enumeration value="animation"/>
-         <xs:enumeration value="tutorial"/>
-         <xs:enumeration value="glossary"/>
+         <xs:enumeration value="tutoriel"/>
+         <xs:enumeration value="glossaire"/>
          <xs:enumeration value="guide"/>
-         <xs:enumeration value="reference material"/>
-         <xs:enumeration value="tools"/>
+         <xs:enumeration value="matériel de référence"/>
+         <xs:enumeration value="outils"/>
          <xs:enumeration value="simulation"/>
-         <xs:enumeration value="presentation"/>
+         <xs:enumeration value="lecture/présentation"/>
+         <xs:enumeration value="activité"/>
+         <xs:enumeration value="démonstration"/>
+         <xs:enumeration value="examen"/>
+         <xs:enumeration value="exercice"/>
+         <xs:enumeration value="expérience"/>
+         <xs:enumeration value="exploration"/>
+         <xs:enumeration value="méthodologie"/>
+         <xs:enumeration value="questionnaire"/>
+         <xs:enumeration value="scénario pédagogique"/>
+         <xs:enumeration value="situation d'apprentissage et d'évaluation"/>
+         <xs:enumeration value="texte-document informatif"/>
       </xs:restriction>
    </xs:simpleType>
 
