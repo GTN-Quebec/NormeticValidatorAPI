@@ -67,6 +67,10 @@
         <!--iso:active pattern="ConditionalMandatoryElements.Classification.2"/-->
     </iso:phase>
 
+    <iso:phase id="RecommendedCategories">
+        <iso:active pattern="RecommendedCategories.All"/>
+    </iso:phase>
+
     <iso:phase id="RecommendedElements">
         <iso:active pattern="RecommendedElements.General"/>
         <iso:active pattern="RecommendedElements.LifeCycle"/>
@@ -74,7 +78,7 @@
         <iso:active pattern="RecommendedElements.Technical"/>
         <iso:active pattern="RecommendedElements.Educational"/>
         <!--iso:active pattern="RecommendedElements.Rights"/-->
-        <!--iso:active pattern="RecommendedElements.Relation"/-->
+        <iso:active pattern="RecommendedElements.Relation"/>
         <!--iso:active pattern="RecommendedElements.Annotation"/-->
         <!--iso:active pattern="RecommendedElements.Classification"/-->
     </iso:phase>
@@ -146,6 +150,13 @@
         <iso:rule context="lom:lom">
             <iso:let name="validNodes" value="//lom:classification/lom:purpose/lom:value[normalize-space(text())='discipline' or normalize-space(text())='idea']"/>
             <iso:assert test="count($validNodes) > 0" diagnostics="Element1.5UndefinedOrEmptyMandatory">Element1.5UndefinedOrEmptyMandatory</iso:assert>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedCategories.All">
+        <iso:title>Validating recommended categories</iso:title>
+        <iso:rule context="lom:lom">
+            <iso:assert test="lom:relation" diagnostics="RelationCategoryRecommended">RelationCategoryRecommended</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -368,9 +379,15 @@
         <iso:title>Validating Relation category's conditional mandatory elements (phase 2)</iso:title>
     </iso:pattern-->
 
-    <!--iso:pattern id="RecommendedElements.Relation">
+    <iso:pattern id="RecommendedElements.Relation">
         <iso:title>Validating Relation category's recommended elements</iso:title>
-    </iso:pattern-->
+        <iso:rule context="lom:lom/lom:relation">
+            <iso:assert test="lom:kind" diagnostics="Element7.1UndefinedRecommended">Element7.1UndefinedRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:relation/lom:kind">
+            <iso:assert test="normalize-space() != ''" diagnostics="Element7.1EmptyRecommended">Element7.1EmptyRecommended</iso:assert>
+        </iso:rule>
+    </iso:pattern>
 
     <!--iso:pattern id="MandatoryElements.Annotation">
         <iso:title>Validating Annotation category's mandatory elements</iso:title>
@@ -608,6 +625,9 @@
         <iso:diagnostic id="Element1.5UndefinedOrEmptyPhase2Required" xml:lang="en">Element 1.5-Keyword is not defined or is empty.  *** VALIDATION PHASE 2 REQUIRED ***</iso:diagnostic>
         <iso:diagnostic id="Element1.5UndefinedOrEmptyMandatory" xml:lang="en">Element 1.5-Keyword is not defined or is empty.  As no classification with purpose 'discipline' or 'idea' are defined, this element is mandatory.</iso:diagnostic>
 
+        <!-- Recommended Categories -->
+        <iso:diagnostic id="RelationCategoryRecommended" xml:lang="en">Category 7-Relation is not defined.  This category is recommended.</iso:diagnostic>  
+
         <!-- Recommended Elements (General) -->
         <iso:diagnostic id="Element1.1UndefinedRecommended" xml:lang="en">Element 1.1-Identifier is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element1.1.1UndefinedRecommended" xml:lang="en">Element 1.1.1-Catalog is not defined.  This element is recommended.</iso:diagnostic>
@@ -669,6 +689,10 @@
         <iso:diagnostic id="Element5.9EmptyRecommended" xml:lang="en">Element 5.5-IntendedEndUserRole is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element5.7EmptyRecommended" xml:lang="en">Element 5.7-TypicalAgeRange is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element5.9EmptyRecommended" xml:lang="en">Element 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
+
+        <!-- Recommended Elements (Educational) --> 
+        <iso:diagnostic id="Element7.1UndefinedRecommended" xml:lang="en">Element 7.1-Type is not defined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="Element7.1EmptyRecommended" xml:lang="en">Element 7.1-Type is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (Rights) --> 
         <iso:diagnostic id="Element6.1UndefinedMandatory" xml:lang="en">Element 6.1-Cost is not defined.  This element is mandatory.</iso:diagnostic>
