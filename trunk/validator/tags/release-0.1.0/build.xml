@@ -1,0 +1,79 @@
+<!-- Ant script for NormeticValidator -->
+<!-- Author: Frederic Bergeron -->
+<project name="NormeticValidator" default="build" basedir=".">
+
+    <!-- Directories -->
+    <property name="classes"                value="classes"/>
+    <property name="doc"                    value="doc"/>
+    <property name="javadoc"                value="${doc}/javadoc"/>
+    <property name="lib"                    value="lib"/>
+    <property name="src"                    value="src"/>
+    <property name="properties"             value="properties"/>
+    <property name="resources"              value="resources"/>
+    <property name="build"                  value="build"/>
+
+    <!-- Custom properties -->
+    <property file="build.properties"/>
+
+    <path id="classpath">
+        <fileset dir="${lib}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <pathelement location="${classes}"/>
+    </path>
+
+    <target name="compile">
+        <mkdir dir="${classes}"/>
+        <javac srcdir="${src}" destdir="${classes}" 
+            source="${build.compiler.source}" target="${build.compiler.target}" 
+            debug="${build.compiler.debug}" 
+            nowarn="${build.compiler.nowarn}" deprecation="${build.compiler.deprecation}">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <mkdir dir="${build}"/>
+        <jar jarfile="${build}/${ant.project.name}.jar">
+            <fileset dir="${classes}"/>
+            <fileset dir="${properties}"/>
+            <fileset dir="${resources}"/>
+        </jar>
+    </target>
+
+    <target name="run" depends="build">
+        <java classname="ca.licef.validator.NormeticValidator">
+            <classpath>
+                <pathelement location="${build}/${ant.project.name}.jar"/>            
+                <fileset dir="${lib}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <arg value="-lang"/>
+            <arg path="fr"/>
+            <arg value="-lom"/>
+            <arg path="../../LOM/specimens/4.xml"/>
+        </java>
+    </target>
+
+    <target name="javadoc" depends="compile">
+        <javadoc
+            destdir="${javadoc}"
+            windowtitle="${ant.project.name}'s API"
+            doctitle="${ant.project.name}"
+            public="true"
+            classpathref="classpath">
+            <packageset dir="${src}"/>
+        </javadoc>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build}"/>
+        <delete dir="${classes}"/>
+    </target>
+
+    <target name="cleanAll" depends="clean">
+        <delete dir="${javadoc}"/>
+    </target>
+
+</project>

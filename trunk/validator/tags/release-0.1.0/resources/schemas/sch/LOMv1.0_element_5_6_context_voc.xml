@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="en">
+  <vocabName>
+    <langstring language="fr">Le principal environnement prévu pour l’apprentissage et l’utilisation de cette REA.</langstring>
+    <langstring language="en">The principal environment within which the learning and use of this learning object is intended to take place.</langstring>
+  </vocabName>
+  <vocabIdentifier isRegistered="false">http://eureka.ntic.org/vdex/LOMv1.0_element_5_6_context_voc.xml</vocabIdentifier>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>higher education</termIdentifier>
+    <caption>
+      <langstring language="fr">Éducation supérieure</langstring>
+      <langstring language="en">Higher education</langstring>
+    </caption>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>school</termIdentifier>
+    <caption>
+      <langstring language="fr">École</langstring>
+      <langstring language="en">School</langstring>
+    </caption>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>training</termIdentifier>
+    <caption>
+      <langstring language="en">Training</langstring>
+      <langstring language="fr">Formation continue</langstring>
+    </caption>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>other</termIdentifier>
+    <caption>
+      <langstring language="en">Other</langstring>
+      <langstring language="fr">Autre</langstring>
+    </caption>
+  </term>
+  <metadata>
+    <vocabSource xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">LOMv1.0</vocabSource>
+    <vocabIsSystem xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">true</vocabIsSystem>
+    <vocabIsRelationship xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">false</vocabIsRelationship>
+  </metadata>
+</vdex>

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="en">
+  <vocabName>
+    <langstring language="en">Specific kind of learning object.</langstring>
+    <langstring language="fr">Type spécifique de REA.</langstring>
+  </vocabName>
+  <vocabIdentifier isRegistered="false">http://eureka.ntic.org/vdex/LOMv1.0_element_5_2_learning_resource_type_voc.xml</vocabIdentifier>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>exam</termIdentifier>
+    <caption>
+      <langstring language="fr">Examen</langstring>
+      <langstring language="en">Exam</langstring>
+    </caption>
+    <description>
+      <langstring language="en">An exam is "the process of testing, by questions oral or written, the knowledge or ability of pupils, or of candidates for office, degrees, etc." (OED).</langstring>
+      <langstring language="fr">Processus par lequel on évalue, par des questions orales ou écrites, les connaissances ou l’habileté des élèves, candidats en milieu de travail, degrés, etc. *(OED)</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>problem statement</termIdentifier>
+    <caption>
+      <langstring language="en">Problem statement</langstring>
+      <langstring language="fr">Énoncé d'un problème</langstring>
+    </caption>
+    <description>
+      <langstring language="fr">Énoncé oral ou écrit qui établit … une question embêtante ou une difficulté à laquelle on propose de trouver une solution. *(OED) </langstring>
+      <langstring language="en">A problem statement is "a written or oral communication setting forth… a difficult or puzzling question proposed for solution" (OED). </langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>self assessment</termIdentifier>
+    <caption>
+      <langstring language="en">Self assessment</langstring>
+      <langstring language="fr">Autoévaluation</langstring>
+    </caption>
+    <description>
+      <langstring language="fr">Évaluation de soi-même, de ses actions ou attitudes. *(OED)</langstring>
+      <langstring language="en">A self-assessment is an "assessment or evaluation of oneself, one's actions or attitudes by oneself" (OED).</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>simulation</termIdentifier>
+    <caption>
+      <langstring language="en">Simulation</langstring>
+      <langstring language="fr">Simulation</langstring>
+    </caption>
+    <description>
+      <langstring language="fr">Technique qui consiste à reproduire les conditions de certaines situations ou certains processus (économiques, militaires, mécaniques, etc.) par le biais d’une situation ou d’un appareil analogue adéquat. *(OED)  </langstring>
+      <langstring language="en">A simulation is "the technique of imitating the behaviour of some situation or process (whether economic, military, mechanical, etc.) by means of a suitably analogous situation or apparatus" (OED).  </langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>narrative text</termIdentifier>
+    <caption>
+      <langstring language="en">Narrative text</langstring>
+      <langstring language="fr">Texte narratif</langstring>
+    </caption>
+    <description>
+      <langstring language="fr">Compte rendu ou narration - histoire, légende, récit (de faits, etc.) qui est une section du contenu d’un manuscrit ou d’un livre imprimé ou d’une page qui constitue l’élément original et non un élément tiré de notes ou d’autres annexes importantes. *(OED) </langstring>
+      <langstring language="en">A narrative text is "an account or narration; a history, tale, story, recital (of facts, etc.) that is a portion of the contents of a manuscript or printed book, or of a page, which constitutes the original matter, as distinct from the notes or other critical appendages" (OED). </langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>lecture</termIdentifier>
+    <caption>
+      <langstring language="en">Lecture</langstring>
+      <langstring language="fr">Exposé</langstring>
+    </caption>
+    <description>
+      <langstring language="en">A lecture is "a discourse given before an audience upon a given subject, usually for the purpose of instruction" (OED).</langstring>
+      <langstring language="fr">Discours devant un auditoire sur un sujet donné, habituellement à des fins d’instruction *(OED)</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>slide</termIdentifier>
+    <caption>
+      <langstring language="fr">Diapositive</langstring>
+      <langstring language="en">Slide</langstring>
+    </caption>
+    <description>
+      <langstring language="fr">Transparent photographique utilisé dans un projecteur de diapositives. *(OED)</langstring>
+      <langstring language="en">A slide is "a photographic transparency for use in a slide projector" (OED).</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>index</termIdentifier>
+    <caption>
+      <langstring language="en">Index</langstring>
+      <langstring language="fr">Index</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">Liste de référence – Liste alphabétique.(OED)</langstring>
+      <langstring language="en">An index is "a reference list; an alphabetical list" (OED).</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>diagram</termIdentifier>
+    <caption>
+      <langstring language="fr">Diagramme</langstring>
+      <langstring language="en">Diagram</langstring>
+    </caption>
+    <description>
+      <langstring language="fr">Figure illustrée, qui ne représente pas l’apparence exacte d’une ressource, qui offre un aperçu ou un schéma global de cette ressource afin d’illustrer la forme et la relation entre les divers aspects. Une série de lignes, marques ou traçage qui représente symboliquement le cours ou les résultats de toute action ou tout processus ou les variations qui les caractérisent. *(OED) </langstring>
+      <langstring language="en">A diagram is "an illustrative figure which, without representing the exact appearance of a resource, gives an outline or general scheme of it, so as to exhibit the shape and relations of its various parts; a set of lines, marks, or tracings which represent symbolically the course or results of any action or process, or the variations which characterize it" (OED). </langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>graph</termIdentifier>
+    <caption>
+      <langstring language="fr">Graphique</langstring>
+      <langstring language="en">Graph</langstring>
+    </caption>
+    <description>
+      <langstring language="en">A graph is "a kind of symbolic diagram (used in Chemistry, Mathematics, etc.) in which a system of connections is expressed by spots or circles, some pairs of which are colligated by one or more lines" (OED).</langstring>
+      <langstring language="fr">Type de diagramme symbolique (utilisé en chimie, mathématiques, etc.) dans lequel un système de relations est présenté par des points ou des cercles dont certaines paires sont reliées par une ou plusieurs lignes. </langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>figure</termIdentifier>
+    <caption>
+      <langstring language="fr">Figure</langstring>
+      <langstring language="en">Figure</langstring>
+    </caption>
+    <description>
+      <langstring language="en">A figure is "the image, likeness, or representation of something material or immaterial" (OED).</langstring>
+      <langstring language="fr">Image, ressemblance ou représentation d’un élément matériel ou non matériel. *(OED)</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>questionnaire</termIdentifier>
+    <caption>
+      <langstring language="en">Questionnaire</langstring>
+      <langstring language="fr">Questionnaire</langstring>
+    </caption>
+    <description>
+      <langstring language="en">A questionnaire is "a list of questions by which information is sought from a selected group, usually for statistical analysis" (OED).</langstring>
+      <langstring language="fr">Série de questions qui permettent d’obtenir des renseignements d’un groupe donné, normalement pour analyse statistique.*(OED)</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>exercise</termIdentifier>
+    <caption>
+      <langstring language="en">Exercise</langstring>
+      <langstring language="fr">Exercice</langstring>
+    </caption>
+    <description>
+      <langstring language="en">An exercise is "the use of or method of using; a task prescribed or performed for the sake of attaining proficiency, for training either body or mind, or as an exhibition or test of proficiency or skill" (OED). </langstring>
+      <langstring language="fr">Utilisation ou méthode d’utilisation – Tâche prescrite ou effectuée dans le but de maîtriser quelque chose, formation pratique ou mentale ou destinée à démontrer une compétence ou une habileté.*(OED). </langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>table</termIdentifier>
+    <caption>
+      <langstring language="fr">Tableau</langstring>
+      <langstring language="en">Table</langstring>
+    </caption>
+    <description>
+      <langstring language="en">A table is "an arrangement in columns and lines…as the multiplication table, tables of weights and measures, a table of logarithms, astronomical tables, insurance tables, time-tables, etc. " (OED).</langstring>
+      <langstring language="fr">Objet formé de colonnes et de lignes … comme les tables de multiplication, tables de poids et mesures, tables de logarithmes, tables astronomiques, grilles d’assurances, grilles horaires, etc. *(OED)</langstring>
+    </description>
+  </term>
+  <metadata>
+    <vocabSource xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">LOMv1.0</vocabSource>
+    <vocabIsSystem xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">true</vocabIsSystem>
+    <vocabIsRelationship xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">false</vocabIsRelationship>
+  </metadata>
+</vdex>

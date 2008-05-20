@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<!-- 
+
+    RelaxNG schema file for validating Normetic application profile v1.1.
+    Written by: Frédéric Bergeron <frederic.bergeron@licef.teluq.uqam.ca>
+    Date: 2007/05
+
+-->
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/annotation/1.0">
+    <start>
+        <ref name="lomDefinition"/>
+    </start>
+
+    <define name="lomDefinition">
+        <element name="lom" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory category -->
+                <ref name="generalDefinition"/>
+                <!-- Mandatory category -->
+                <ref name="lifeCycleDefinition"/>
+                <!-- Mandatory category -->
+                <ref name="metaMetadataDefinition"/>
+                <!-- Mandatory category -->
+                <ref name="technicalDefinition"/>
+                <!-- Mandatory category -->
+                <ref name="educationalDefinition"/>
+                <!-- Mandatory category -->
+                <ref name="rightsDefinition"/>
+                <zeroOrMore>
+                    <ref name="relationDefinition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="annotationDefinition"/>
+                </zeroOrMore>
+                <!-- Mandatory category -->
+                <oneOrMore>
+                    <ref name="classificationDefinition"/>
+                </oneOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 1 General -->
+    <define name="generalDefinition">
+        <element name="general" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <zeroOrMore>
+                    <ref name="identifierDefinition"/>
+                </zeroOrMore>
+                <!-- Mandatory element -->
+                <ref name="titleDefinition"/>
+                <!-- Mandatory element -->
+                <ref name="languageDefinition"/>
+                <!-- Mandatory element -->
+                <ref name="descriptionDefinition"/>
+                <zeroOrMore>
+                    <ref name="keywordDefinition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="coverageDefinition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="structureDefinition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="aggregationLevelDefinition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 1.1 Identifier -->
+    <define name="identifierDefinition">
+        <element name="identifier" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.1.1 Catalog -->
+    <define name="catalogDefinition">
+        <element name="catalog" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.1.2 Entry -->
+    <define name="entryDefinition">
+        <element name="entry" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.2 Title -->
+    <define name="titleDefinition">
+        <element name="title" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.3 Language -->
+    <define name="languageDefinition">
+        <element name="language" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.4 Description -->
+    <define name="descriptionDefinition">
+        <element name="description" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.5 Keyword -->
+    <define name="keywordDefinition">
+        <element name="keyword" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.6 Coverage -->
+    <define name="coverageDefinition">
+        <element name="coverage" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.7 Structure -->
+    <define name="structureDefinition">
+        <element name="structure" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 1.8 Aggragation Level -->
+    <define name="aggregationLevelDefinition">
+        <element name="aggregationLevel" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 2 LifeCycle -->
+    <define name="lifeCycleDefinition">
+        <element name="lifeCycle" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="versionDefinition"/>
+                <optional>
+                    <ref name="statusDefinition"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="contributeDefinition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 2.1 Version -->
+    <define name="versionDefinition">
+        <element name="version" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 2.2 Status -->
+    <define name="statusDefinition">
+        <element name="status" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 2.3 Contribute -->
+    <define name="contributeDefinition">
+        <element name="contribute" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="roleDefinition"/>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="entityDefinition"/>
+                </oneOrMore>
+                <optional>
+                    <ref name="dateDefinition"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 2.3.1 Role -->
+    <define name="roleDefinition">
+        <element name="role" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 2.3.2 Entity -->
+    <define name="entityDefinition">
+        <element name="entity" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 2.3.3 Date -->
+    <define name="dateDefinition">
+        <element name="date" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 3 MetaMetadata -->
+    <define name="metaMetadataDefinition">
+        <element name="metaMetadata" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <zeroOrMore>
+                    <ref name="identifierMetaDefinition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="contributeMetaDefinition"/>
+                </zeroOrMore>
+                <!-- Mandatory element --> 
+                <oneOrMore>
+                    <ref name="metadataSchemaDefinition"/>
+                </oneOrMore>
+                <zeroOrMore>
+                    <ref name="languageDefinition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 3.1 Version -->
+    <define name="identifierMetaDefinition">
+        <element name="identifier" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="catalogDefinition"/>
+                <!-- Mandatory element -->
+                <ref name="entryDefinition"/>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 3.1.1 Catalog
+    <define name="catalogDefinition">
+        <element name="catalog" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 3.1.2 Entry
+    <define name="entryDefinition">
+        <element name="entry" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 3.2 Contribute -->
+    <define name="contributeMetaDefinition">
+        <element name="contribute" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 3.3 Metadata Schema -->
+    <define name="metadataSchemaDefinition">
+        <element name="metadataSchema" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 3.4 Language
+    <define name="languageDefinition">
+        <element name="language" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 4 Technical -->
+    <define name="technicalDefinition">
+        <element name="technical" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="formatDefinition"/>
+                </oneOrMore>
+                <optional>
+                    <ref name="sizeDefinition"/>
+                </optional>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="locationDefinition"/>
+                </oneOrMore>
+                <zeroOrMore>
+                    <ref name="requirementDefinition"/>
+                </zeroOrMore>
+                <optional>
+                    <ref name="installationRemarksDefinition"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="otherPlatformRequirementsDefinition"/>
+                </zeroOrMore>
+                <optional>
+                    <ref name="durationDefinition"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 4.1 Format -->
+    <define name="formatDefinition">
+        <element name="format" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 4.2 Size -->
+    <define name="sizeDefinition">
+        <element name="size" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 4.3 Location -->
+    <define name="locationDefinition">
+        <element name="location" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 4.4 Requirement -->
+    <define name="requirementDefinition">
+        <element name="requirement" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 4.5 Installation Remarks -->
+    <define name="installationRemarksDefinition">
+        <element name="installationRemarks" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 4.6 Other Platform Requirements -->
+    <define name="otherPlatformRequirementsDefinition">
+        <element name="otherPlatformRequirements" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 4.7 Duration -->
+    <define name="durationDefinition">
+        <element name="duration" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5 Educational -->
+    <define name="educationalDefinition">
+        <element name="educational" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <optional>
+                    <ref name="interactivityTypeDefinition"/>
+                </optional>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="learningResourceTypeDefinition"/>
+                </oneOrMore>
+                <optional>
+                    <ref name="interactivityLevelDefinition"/>
+                </optional>
+                <optional>
+                    <ref name="semanticDensityDefinition"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="intendedEndUserRoleDefinition"/>
+                </zeroOrMore>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="contextDefinition"/>
+                </oneOrMore>
+                <zeroOrMore>
+                    <ref name="typicalAgeRangeDefinition"/>
+                </zeroOrMore>
+                <optional>
+                    <ref name="difficultyDefinition"/>
+                </optional>
+                <optional>
+                    <ref name="typicalLearningTimeDefinition"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="descriptionDefinition"/>
+                </zeroOrMore>
+                <zeroOrMore>
+                    <ref name="languageDefinition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 5.1 Interactivity Type -->
+    <define name="interactivityTypeDefinition">
+        <element name="interactivityType" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.2 Learning Resource Type -->
+    <define name="learningResourceTypeDefinition">
+        <element name="learningResourceType" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.3 Interactivity Level -->
+    <define name="interactivityLevelDefinition">
+        <element name="interactivityLevel" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.4 Semantic Density -->
+    <define name="semanticDensityDefinition">
+        <element name="semanticDensity" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.5 Intended End User Role -->
+    <define name="intendedEndUserRoleDefinition">
+        <element name="intendedEndUserRole" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.6 Context -->
+    <define name="contextDefinition">
+        <element name="context" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.7 Typical Age Range -->
+    <define name="typicalAgeRangeDefinition">
+        <element name="typicalAgeRange" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.8 Difficulty -->
+    <define name="difficultyDefinition">
+        <element name="difficulty" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.9 Typical Learning Time -->
+    <define name="typicalLearningTimeDefinition">
+        <element name="typicalLearningTime" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 5.10 Description
+    <define name="descriptionDefinition">
+        <element name="description" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 5.11 Language
+    <define name="languageDefinition">
+        <element name="language" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 6 Rights -->
+    <define name="rightsDefinition">
+        <element name="rights" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="costDefinition"/>
+                <!-- Mandatory element -->
+                <ref name="copyrightAndOtherRestrictionsDefinition"/>
+                <optional>
+                    <ref name="descriptionDefinition"/>
+                </optional>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 6.1 Cost -->
+    <define name="costDefinition">
+        <element name="cost" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 6.2 Copyright and Other Restrictions -->
+    <define name="copyrightAndOtherRestrictionsDefinition">
+        <element name="copyrightAndOtherRestrictions" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 6.3 Description
+    <define name="descriptionDefinition">
+        <element name="description" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 7 Relation -->
+    <define name="relationDefinition">
+        <optional>
+            <element name="relation" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <optional>
+                    <ref name="kindDefinition"/>
+                </optional>
+                <optional>
+                    <ref name="resourceDefinition"/>
+                </optional>    
+            </interleave>
+            </element>
+        </optional>
+    </define>
+
+    <!-- 7.1 Kind -->
+    <define name="kindDefinition">
+        <element name="kind" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 7.2 Resource -->
+    <define name="resourceDefinition">
+        <element name="resource" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 8 Annotation -->
+    <define name="annotationDefinition">
+        <optional>
+            <element name="annotation" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <optional>
+                    <ref name="entityDefinition"/>
+                </optional>
+                <optional>
+                    <ref name="dateDefinition"/>
+                </optional>    
+                <optional>
+                    <ref name="descriptionDefinition"/>
+                </optional>
+            </interleave>
+            </element>
+        </optional>
+    </define>
+
+    <!-- 8.1 Entity
+    <define name="entityDefinition">
+        <element name="entity" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 8.2 Date
+    <define name="dateDefinition">
+        <element name="date" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 8.3 Description
+    <define name="descriptionDefinition">
+        <element name="description" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 9 Classification -->
+    <define name="classificationDefinition">
+        <element name="classification" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="purposeDefinition"/>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="taxonPathDefinition"/>
+                </oneOrMore>
+                <optional>
+                    <ref name="descriptionDefinition"/>
+                </optional>
+                <zeroOrMore>
+                    <ref name="keywordDefinition"/>
+                </zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 9.1 Purpose -->
+    <define name="purposeDefinition">
+        <element name="purpose" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 9.2 Taxon Path -->
+    <define name="taxonPathDefinition">
+        <element name="taxonPath" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="sourceDefinition"/>
+                <!-- Mandatory element -->
+                <oneOrMore>
+                    <ref name="taxonDefinition"/>
+                </oneOrMore>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 9.2.1 Source -->
+    <define name="sourceDefinition">
+        <element name="source" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 9.2.2 Taxon -->
+    <define name="taxonDefinition">
+        <element name="taxon" ns="http://ltsc.ieee.org/xsd/LOM">
+            <interleave>
+                <!-- Mandatory element -->
+                <ref name="idDefinition"/>
+                <!-- Mandatory element -->
+                <ref name="entryDefinition"/>
+            </interleave>
+        </element>
+    </define>
+
+    <!-- 9.2.2.1 Id -->
+    <define name="idDefinition">
+        <element name="id" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define>
+
+    <!-- 9.2.2.2 Entry
+    <define name="entryDefinition">
+        <element name="entry" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 9.3 Description
+    <define name="descriptionDefinition">
+        <element name="description" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <!-- 9.4 Keyword
+    <define name="keywordDefinition">
+        <element name="keyword" ns="http://ltsc.ieee.org/xsd/LOM">
+            <ref name="anything"/>
+        </element>
+    </define-->
+
+    <define name="anything">
+        <zeroOrMore>
+            <choice>
+                <text/>
+                <ref name="anyElement"/>
+            </choice>
+        </zeroOrMore>
+    </define>
+
+    <define name="anyElement">
+        <element>
+            <anyName/>
+            <zeroOrMore>
+                <choice>
+                    <attribute>
+                        <anyName/>
+                    </attribute>
+                    <text/>
+                    <ref name="anyElement"/>
+                </choice>
+            </zeroOrMore>
+        </element>
+    </define>
+
+    <define name="LanguageString">
+        <zeroOrMore>
+            <ref name="LangString"/>
+        </zeroOrMore>
+    </define>
+
+    <define name="LangString">
+        <ref name="CharacterString"/>
+    </define>
+
+    <define name="CharacterString">
+        <data type="string"/>
+    </define>
+
+</grammar>
