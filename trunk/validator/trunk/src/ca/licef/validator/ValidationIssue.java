@@ -2,7 +2,7 @@ package ca.licef.validator;
 
 import java.io.Serializable;
 
-public class ValidationIssue implements Serializable {
+public class ValidationIssue extends Object implements Serializable {
 
     public enum ValidationType {
         UNKOWN,

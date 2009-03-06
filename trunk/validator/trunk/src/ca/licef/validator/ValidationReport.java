@@ -10,17 +10,35 @@ public class ValidationReport implements Serializable {
     public ValidationReport() {
     }
 
-    public void append( ValidationIssue issue ) {
-        issues.addElement( issue );
+    public void append( String string ) {
+        items.addElement( string );
     }
 
-    public void append( ValidationIssue[] issues ) {
-        for( int i = 0; i < issues.length; i++ )
-            append( issues[ i ] );
+    public void append( ValidationReport report ) {
+        items.addElement( report );
+    }
+
+    public void append( ValidationIssue issue ) {
+        items.addElement( issue );
+    }
+
+    public void append( ValidationIssue[] items ) {
+        for( int i = 0; i < items.length; i++ )
+            append( items[ i ] );
     }
 
     public int getIssueCount() {
-        return( issues.size() );
+        int count = 0;
+        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
+            Object item = e.nextElement();
+            if( item instanceof ValidationIssue )
+                count++;
+            else if( item instanceof ValidationReport ) {
+                ValidationReport report = (ValidationReport)item;
+                count += report.getIssueCount();
+            }
+        }
+        return( count );
     }
 
     public int getWarningCount() {
@@ -37,29 +55,57 @@ public class ValidationReport implements Serializable {
 
     public int getIssueCount( ValidationIssue.Severity severity ) {
         int count = 0;
-        for( Enumeration e = issues.elements(); e.hasMoreElements(); ) {
-            ValidationIssue issue = (ValidationIssue)e.nextElement();
-            if( issue.getSeverity() == severity )
-                count++;
+        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
+            Object item = e.nextElement();
+            if( item instanceof ValidationIssue ) {
+                ValidationIssue issue = (ValidationIssue)item;
+                if( issue.getSeverity() == severity )
+                    count++;
+            }
+            else if( item instanceof ValidationReport ) {
+                ValidationReport report = (ValidationReport)item;
+                count += report.getIssueCount( severity );
+            }
         }
         return( count );
     }
 
     public ValidationIssue[] getIssues() {
+        Vector issues = new Vector();
+        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
+            Object item = e.nextElement();
+            if( item instanceof ValidationIssue )
+                issues.addElement( item );
+            else if( item instanceof ValidationReport ) {
+                ValidationReport report = (ValidationReport)item;
+                ValidationIssue[] reportIssues = report.getIssues();
+                for( int i = 0; i < reportIssues.length; i++ )  
+                    issues.addElement( reportIssues[ i ] );
+            }
+        }
         ValidationIssue[] array = new ValidationIssue[ issues.size() ];
         return( (ValidationIssue[])issues.toArray( array ) );
     }
 
     public String toString() {
         StringBuilder str = new StringBuilder();
-        for( ListIterator it = issues.listIterator(); it.hasNext(); ) {
-            ValidationIssue issue = (ValidationIssue)it.next();
-            str.append( issue.toString() );
-            str.append( "\n" );
+        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
+            Object item = e.nextElement();
+            if( item instanceof ValidationIssue ) {
+                ValidationIssue issue = (ValidationIssue)item;
+                str.append( issue.toString() );
+                str.append( "\n" );
+            }
+            else if( item instanceof ValidationReport ) {
+                ValidationReport report = (ValidationReport)item;
+                str.append( report.toString() );
+            }
+            else if( item instanceof String ) 
+                str.append( item.toString() );
         }
         return( str.toString() );
     }
 
-    private Vector<ValidationIssue> issues = new Vector<ValidationIssue>();
+    private Vector items = new Vector();
 
 }
