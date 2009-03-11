@@ -34,6 +34,7 @@ class XsdValidator {
         Validator validator = getValidator();
         //System.out.println( "prop flocale=" + validator.getProperty( "fLocale" ) );
         validator.setErrorHandler( new ValidationIssueHandler( ValidationIssue.ValidationType.XSD, report ) );
+
         StringReader stringReader = new StringReader( lom );
         BufferedReader lomReader = new BufferedReader( stringReader );
         Source lomSource = new StreamSource( lomReader ); 
@@ -70,7 +71,6 @@ class XsdValidator {
                 new StreamSource( getClass().getResourceAsStream( prefix + "common/vocabValues.xsd" ) ),
                 new StreamSource( getClass().getResourceAsStream( prefix + "common/vocabTypes.xsd" ) )
             };
-
             Schema schema = schemafactory.newSchema( xsdSources );
             validator = schema.newValidator();
         }

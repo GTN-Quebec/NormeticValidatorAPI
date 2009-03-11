@@ -53,6 +53,22 @@ public class ValidationIssue extends Object implements Serializable {
         return( column );
     }
 
+    public String getKind() {
+        return( kind );
+    }
+
+    public void setKind( String kind ) {
+        this.kind = kind;
+    }
+
+    public String getRelatedFieldNumber() {
+        return( relatedFieldNumber );
+    }
+
+    public void setRelatedFieldNumber( String relatedFieldNumber ) {
+        this.relatedFieldNumber = relatedFieldNumber;
+    }
+
     public String getMessage() {
         return( message );
     }
@@ -63,6 +79,30 @@ public class ValidationIssue extends Object implements Serializable {
 
     public void setAlternateMessage( String alternateMessage ) {
         this.alternateMessage = alternateMessage;
+    }
+
+    public String getExplanation() {
+        return( explanation );
+    }
+
+    public void setExplanation( String explanation ) {
+        this.explanation = explanation;
+    }
+
+    public String getLexicalField() {
+        return( lexicalField );
+    }
+
+    public void setLexicalField( String lexicalField ) {
+        this.lexicalField = lexicalField;
+    }
+
+    public String getReference() {
+        return( reference );
+    }
+
+    public void setReference( String reference ) {
+        this.reference = reference;
     }
 
     public Severity getSeverity() {
@@ -81,11 +121,32 @@ public class ValidationIssue extends Object implements Serializable {
         return( str.toString() );
     }
 
+    public String toHumanReadableString() {
+        StringBuffer str = new StringBuffer();
+        if( kind != null ) {
+            str.append( kind );
+            if( relatedFieldNumber != null )
+                str.append( "(" ).append( relatedFieldNumber ).append( ")" );
+            str.append( ":" );
+        }
+        str.append( alternateMessage != null ? alternateMessage : message );
+        if( explanation != null )
+            str.append( explanation );
+        if( line != -1 && column != -1 )
+            str.append( " [" ).append( line ).append( "," ).append( column ).append( "]" );
+        return( str.toString() );
+    }
+
     private int line = -1;
     private int column = -1;
+    private String kind; // As defined in Validation_09-02-25-couriel.xls.  May contain value like E1, E2, E3, E4, P1, P2, etc.
+    private String relatedFieldNumber; // As defined in Validation_09-02-25-courriel.xls.  May contain a field number (like 1.2). 
     private String message; // Original message in English given from a low-level validator.
     private String alternateMessage; // Translated message and/or interpretation of the original message in English.
+    private String explanation; // As defined in Validation_09-02-25-courriel.xls for the column Explication.
     private Severity severity = Severity.UNKNOWN;
     private ValidationType validationType = ValidationType.UNKOWN;
+    private String lexicalField;
+    private String reference;
 
 }

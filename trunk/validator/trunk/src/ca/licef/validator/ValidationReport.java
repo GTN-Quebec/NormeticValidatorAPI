@@ -106,6 +106,26 @@ public class ValidationReport implements Serializable {
         return( str.toString() );
     }
 
+    public String toHumanReadableString() {
+        StringBuilder str = new StringBuilder();
+        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
+            Object item = e.nextElement();
+            if( item instanceof ValidationIssue ) {
+                ValidationIssue issue = (ValidationIssue)item;
+                str.append( issue.toHumanReadableString() );
+                str.append( "\n" );
+            }
+            else if( item instanceof ValidationReport ) {
+                ValidationReport report = (ValidationReport)item;
+                str.append( report.toHumanReadableString() );
+            }
+            else if( item instanceof String ) {
+                str.append( item.toString() );
+            }
+        }
+        return( str.toString() );
+    }
+
     private Vector items = new Vector();
 
 }

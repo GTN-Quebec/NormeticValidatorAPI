@@ -75,24 +75,51 @@ class SchematronValidator {
             }
         }
 
-        ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
-
-        ValidationIssue[] errors = report.getIssues();
-        for( int i = 0; i < errors.length; i++ ) {
-            ValidationIssue error = errors[ i ];
-            int indexOfColon = error.getMessage().indexOf( ":" );
-            if( indexOfColon != -1 ) {
-                String key = error.getMessage().substring( 0, indexOfColon );
-                if( bundle.containsKey( key ) )
-                    error.setAlternateMessage( bundle.getString( key ) );
-            }
-        }
+        decorateIssues( report.getIssues() );
 
         return( isValid );
     }
 
     public ValidationReport getReport() {
         return( report );
+    }
+
+    /*
+     * Add additional information extracted from the key of the error message.
+     * Also improve easy-friendliness and translate message if possible.
+     */
+    private void decorateIssues( ValidationIssue[] errors ) {
+        ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
+        for( int i = 0; i < errors.length; i++ ) {
+            ValidationIssue error = errors[ i ];
+            int indexOfColon = error.getMessage().indexOf( ":" );
+            if( indexOfColon != -1 ) {
+                String key = error.getMessage().substring( 0, indexOfColon );
+                int indexOfMetadataDelimiter = key.indexOf( "_" );
+                if( indexOfMetadataDelimiter != -1 ) {
+                    String metadataString = key.substring( 0, indexOfMetadataDelimiter );
+                    key = key.substring( indexOfMetadataDelimiter + 1 );
+                    String kind = null;
+                    int indexOfParenthesis = metadataString.indexOf( "(" );
+                    if( indexOfParenthesis != -1 ) {
+                        kind = metadataString.substring( 0, indexOfParenthesis );
+                        String relatedFieldNumber = metadataString.substring( indexOfParenthesis + 1, metadataString.indexOf( ")" ) );
+                        error.setRelatedFieldNumber( relatedFieldNumber );
+                    }
+                    else 
+                        kind = metadataString;
+
+                    error.setKind( kind );
+                }
+                if( bundle.containsKey( key ) ) {
+                    String localeMetadataString = bundle.getString( key );
+                    String[] localeMetadata = localeMetadataString.split( "\\|" ); 
+
+                    error.setAlternateMessage( localeMetadata[ 0 ] );
+                    error.setExplanation( localeMetadata[ 1 ] );
+                }
+            }
+        }
     }
 
     private File getSchematronValidatorStylesheet( String phase ) throws IOException, TransformerConfigurationException, TransformerException {

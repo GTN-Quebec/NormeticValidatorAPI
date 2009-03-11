@@ -1,3 +1,10 @@
+Just for info:  There are 316 validation rules in the xls file.
+When validating the file 1.2_Titre/E1_Titre.xml, I get an error message with {0} marks.  These marks should be subsituted.  Why not?  The strings are in etc directory.
+Localized as many strings as possible.
+The online validator displays XSD errors in English.  Why so?
+Make the report locale-sensitive.
+Implement an associative array with error identifiers and error metadata (like referential page, etc.)
+Make the references to demo.licef.ca parameterizable and document it in the manual.txt.
 Check the case when a file in the control file doesn't exist.
 Check the case when a folder in the control file doesn't exist.
 Refactor ValidationReport.toString() if needed.
