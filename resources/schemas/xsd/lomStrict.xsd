@@ -21,15 +21,15 @@
       </xs:documentation>
     </xs:annotation>
     <!-- Learning Object Metadata -->
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/anyElement.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/unique/strict.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/vocab" schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/vocab/strict.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend" schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/extend/strict.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/dataTypes.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/elementNames.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/elementTypes.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/rootElement.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/vocabValues.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/common/vocabTypes.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/normetic/vocabValues.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/anyElement.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="http://demo.licef.ca/xsd/normetic/unique/strict.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/vocab" schemaLocation="http://demo.licef.ca/xsd/normetic/vocab/strict.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend" schemaLocation="http://demo.licef.ca/xsd/normetic/extend/strict.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/dataTypes.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/elementNames.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/elementTypes.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/rootElement.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/vocabValues.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/vocabTypes.xsd"/>
+    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/normetic/vocabValues.xsd"/>
 </xs:schema>

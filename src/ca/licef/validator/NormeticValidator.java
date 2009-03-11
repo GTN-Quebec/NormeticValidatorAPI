@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.xml.transform.Source;
@@ -39,7 +40,7 @@ public class NormeticValidator {
         ValidationReport report = new ValidationReport();
         File controlFile = new File( lomFolder, "control.txt" );
         BufferedReader reader = null;
-        Pattern fileLinePattern = Pattern.compile( "file:\\s*([.A-Za-z0-9_-]+?)\\s+expectedResult:\\s*(\\w+)" );
+        Pattern fileLinePattern = Pattern.compile( "file:\\s*([.A-Za-z0-9_-]+?)\\s+expectedResult:\\s*(.+)" );
         Pattern folderLinePattern = Pattern.compile( "folder:\\s*([.A-Za-z0-9_-]+)" );
         try {
             FileReader fileReader = new FileReader( controlFile );
@@ -52,22 +53,36 @@ public class NormeticValidator {
 
                 Matcher fileLineMatcher = fileLinePattern.matcher( line );
                 if( fileLineMatcher.find() ) {
+System.out.println( "matches file" );                    
                     String fileToValidate = fileLineMatcher.group( 1 );
                     String expectedResult = fileLineMatcher.group( 2 );
-                    System.out.println( "fileToValidate=" + fileToValidate + " expectedResult=" + expectedResult );
                     File childLomFile = new File( lomFolder, fileToValidate );
-                    report.append( "Validating lom: " + childLomFile + "\n\n" );
+                    report.append( strValidatingLom + childLomFile + "\n\n" );
+                    if( !childLomFile.exists() )
+                        throw( new ValidatorException( "File to validate '" + childLomFile + "' not found.  Error in control file of directory:" + lomFolder ) );
+System.out.println( "1" );                    
                     ValidationReport childLomFileReport = validate( childLomFile );
-                    report.append( childLomFileReport.toString() );
+System.out.println( "2" );                    
+                    report.append( childLomFileReport );
                     String actualResult = getValidationStatus( childLomFileReport );
-                    report.append( "\nExpected result: " + expectedResult + " vs Actual result: " + actualResult + "\n\n" );
+System.out.println( "3" );                    
+                    boolean isPassed = isValidationOk( expectedResult, actualResult );
+System.out.println( "4" );                    
+                    report.append( "\n" );
+                    report.append( strExpectedResult + expectedResult );
+                    report.append( "\n" );
+                    report.append( strActualResult + actualResult );
+                    report.append( "\n" );
+                    report.append( strIsTestValid + ( isPassed ? strTrue : strFalse ) );
+                    report.append( "\n\n" );
                 }
                 else {
                     Matcher folderLineMatcher = folderLinePattern.matcher( line );
                     if( folderLineMatcher.find() ) {
+System.out.println( "matches folder" );                        
                         String folderToValidate = folderLineMatcher.group( 1 );
                         File childLomFolder = new File( lomFolder, folderToValidate );  
-                        report.append( "Validating folder: " + childLomFolder + "\n\n" );
+                        report.append( strValidatingFolder + childLomFolder + "\n\n" );
                         ValidationReport childLomFolderReport = validateFolder( childLomFolder );
                         report.append( childLomFolderReport );
                     }
@@ -108,6 +123,15 @@ public class NormeticValidator {
 
     public void setLocale( Locale locale ) {
         this.locale = locale;
+
+        ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
+        strValidatingFolder = bundle.getString( "ValidatingFolder" );
+        strValidatingLom = bundle.getString( "ValidatingLom" );
+        strExpectedResult = bundle.getString( "ExpectedResult" );
+        strActualResult = bundle.getString( "ActualResult" );
+        strIsTestValid = bundle.getString( "IsTestValid" );
+        strTrue = bundle.getString( "True" );
+        strFalse = bundle.getString( "False" );
     }
 
     public Locale getLocale() {
@@ -135,7 +159,7 @@ public class NormeticValidator {
 
         boolean isValid = true;
 
-        if( isXSDEnabled ) {
+        if( isValid && isXSDEnabled ) {
             XsdValidator xsdValidator = new XsdValidator();
             xsdValidator.setLocale( locale );
             isValid = xsdValidator.validate( lom );
@@ -197,7 +221,7 @@ public class NormeticValidator {
 
             try {
                 ValidationReport report = validator.validate( location );
-                System.out.println( report );
+                System.out.println( report.toHumanReadableString() );
             }
             catch( SAXException e ) {
                 // Ignore the exception for now.  It's been written in the report anyway.
@@ -207,16 +231,115 @@ public class NormeticValidator {
         System.exit( 0 );
     }
 
+    boolean isValidationOk( String expectedResult, String actualResult ) {
+        String expectedStatus = expectedResult;
+        int indexOfExpectedIssueListDelimiter = expectedStatus.indexOf( "[" );
+        if( indexOfExpectedIssueListDelimiter != -1 )
+            expectedStatus = expectedStatus.substring( 0, indexOfExpectedIssueListDelimiter );
+
+        String actualStatus = actualResult;
+        int indexOfActualIssueListDelimiter = actualStatus.indexOf( "[" );
+        if( indexOfActualIssueListDelimiter != -1 )
+            actualStatus = actualStatus.substring( 0, indexOfActualIssueListDelimiter );
+System.out.println( "expectedStatus="+expectedStatus+" =? actualStatus="+actualStatus + " res=" + expectedStatus.equals( actualStatus ) );
+
+        if( !expectedStatus.equals( actualStatus ) )
+            return( false );
+
+        String expectedIssueList = expectedResult.substring( indexOfExpectedIssueListDelimiter + 1, 
+            indexOfExpectedIssueListDelimiter != -1 ? expectedResult.indexOf( "]" ) : expectedResult.length() );
+        String[] expectedIssues = expectedIssueList.split( "," );
+
+        String actualIssueList = actualResult.substring( indexOfActualIssueListDelimiter + 1, 
+            indexOfActualIssueListDelimiter != -1 ? actualResult.indexOf( "]" ) : actualResult.length() );
+        String[] actualIssues = actualIssueList.split( "," );
+
+        // This could be optimized.  We could sort the issues for example.
+        expectedIssue:
+        for( int i = 0; i < expectedIssues.length; i++ ) {
+            String expectedIssue = expectedIssues[ i ];
+            String expectedIssueKind = null;
+            String expectedIssueFieldNumber = null;
+            int indexOfExpectedIssueFieldNumberDelimiter = expectedIssue.indexOf( "(" );
+            if( indexOfExpectedIssueFieldNumberDelimiter == -1 )
+                expectedIssueKind = expectedIssue;
+            else {
+                expectedIssueKind = expectedIssue.substring( 0, indexOfExpectedIssueFieldNumberDelimiter );
+                expectedIssueFieldNumber = expectedIssue.substring( indexOfExpectedIssueFieldNumberDelimiter + 1, expectedIssue.indexOf( ")" ) );
+            }
+            for( int j = 0; j < actualIssues.length; j++ ) {
+                String actualIssue = actualIssues[ j ];
+                String actualIssueKind = null;
+                String actualIssueFieldNumber = null;
+                int indexOfActualIssueFieldNumberDelimiter = actualIssue.indexOf( "(" );
+                if( indexOfActualIssueFieldNumberDelimiter == -1 )
+                    actualIssueKind = actualIssue;
+                else {
+                    actualIssueKind = actualIssue.substring( 0, indexOfActualIssueFieldNumberDelimiter );
+                    actualIssueFieldNumber = actualIssue.substring( indexOfActualIssueFieldNumberDelimiter + 1, actualIssue.indexOf( ")" ) );
+                }
+
+System.out.println( "eik="+expectedIssueKind+" vs aik="+actualIssueKind+" =?" + ( expectedIssueKind.equals( actualIssueKind ) ) );                
+                if( !expectedIssueKind.equals( actualIssueKind ) )
+                    continue;
+System.out.println( "eifn="+expectedIssueFieldNumber+" vs aifn="+actualIssueFieldNumber );
+
+                if( ( expectedIssueFieldNumber == null && actualIssueFieldNumber != null ) ||
+                    ( expectedIssueFieldNumber != null && ( actualIssueFieldNumber == null || !expectedIssueFieldNumber.equals( actualIssueFieldNumber ) ) ) )
+                        continue;
+                // If we reach this point, this means that the expectedIssue has been found in the actualIssueList
+                // so we get out of the inner loop to handle next exptectedIssue.
+                break expectedIssue;
+            }
+            return( false ); // The expected issue has not been found among the actual issue list, so the validation has failed.
+        }
+        // All the expected issues have been found in the actual issue list so success!
+        return( true );
+    }
+
     private String getValidationStatus( ValidationReport report ) {
         if( report.getIssueCount() == 0 )
             return( VALIDATION_STATUS_OK );
+
+        StringBuilder str = new StringBuilder();
         if( report.getErrorCount() > 0 || report.getFatalErrorCount() > 0 )
-            return( VALIDATION_STATUS_INVALID );
-        return( VALIDATION_STATUS_OK_WITH_WARNINGS );
+            str.append( VALIDATION_STATUS_INVALID );
+        else
+            str.append( VALIDATION_STATUS_OK_WITH_WARNINGS );
+
+        String issueDelimiter = "";
+        ValidationIssue[] issues = report.getIssues();
+        boolean isDelimiterDisplayed = false;
+        for( int i = 0; i < issues.length; i++ ) {
+            ValidationIssue issue = issues[ i ];
+            if( issue.getKind() != null ) {
+                if( !isDelimiterDisplayed ) {
+                    str.append( "[" );
+                    isDelimiterDisplayed = true;
+                }
+
+                str.append( issue.getKind() );
+                if( issue.getRelatedFieldNumber() != null )
+                    str.append( "(" ).append( issue.getRelatedFieldNumber() ).append( ")" );
+                str.append( issueDelimiter ); 
+                issueDelimiter = ",";
+            }
+        }
+        if( isDelimiterDisplayed )
+            str.append( "]" );
+        return( str.toString() );
     }
 
     private Locale              locale = Locale.ENGLISH;
     private boolean             isXSDEnabled = true;
     private boolean             isSchematronEnabled = true;
+
+    private String strValidatingFolder;
+    private String strValidatingLom;
+    private String strExpectedResult;
+    private String strActualResult;
+    private String strIsTestValid;
+    private String strTrue;
+    private String strFalse;
 
 }

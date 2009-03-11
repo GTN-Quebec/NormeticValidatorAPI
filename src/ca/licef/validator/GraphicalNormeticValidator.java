@@ -131,6 +131,8 @@ public class GraphicalNormeticValidator {
     }
 
     public void setLocale( Locale locale ) {
+        this.locale = locale;
+
         ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
         frame.setTitle( bundle.getString( "Title" ) );
         labelLocation.setText( bundle.getString( "SpecifyLocation" ) );
@@ -169,7 +171,7 @@ public class GraphicalNormeticValidator {
             validator.setSchematronValidationEnabled( false );
         try {
             ValidationReport report = validator.validate( location );
-            textAreaReport.setText( report.toString() );
+            textAreaReport.setText( report.toHumanReadableString() );
         }
         catch( SAXException e ) {
             // Ignore the exception for now.  It's been written in the report anyway.
