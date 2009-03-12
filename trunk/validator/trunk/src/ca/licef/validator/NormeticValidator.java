@@ -318,10 +318,10 @@ System.out.println( "eifn="+expectedIssueFieldNumber+" vs aifn="+actualIssueFiel
                     isDelimiterDisplayed = true;
                 }
 
+                str.append( issueDelimiter ); 
                 str.append( issue.getKind() );
                 if( issue.getRelatedFieldNumber() != null )
                     str.append( "(" ).append( issue.getRelatedFieldNumber() ).append( ")" );
-                str.append( issueDelimiter ); 
                 issueDelimiter = ",";
             }
         }
