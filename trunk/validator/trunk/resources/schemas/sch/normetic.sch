@@ -196,8 +196,8 @@
             <iso:assert test="normalize-space() != ''" diagnostics="E2(2.1)_Element2.1EmptyMandatory">E2(2.1)_Element2.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute">
-            <iso:assert test="lom:role" diagnostics="Element2.3.1UndefinedMandatory">Element2.3.1UndefinedMandatory</iso:assert>
-            <iso:assert test="lom:entity" diagnostics="Element2.3.2UndefinedMandatory">Element2.3.2UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:role" diagnostics="SE1(2.3.1)_Element2.3.1UndefinedMandatory">SE1(2.3.1)_Element2.3.1UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:entity" diagnostics="SE1(2.3.2)_Element2.3.2UndefinedMandatory">SE1(2.3.2)_Element2.3.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:role">
             <iso:assert test="normalize-space() != ''" diagnostics="Element2.3.1EmptyMandatory">Element2.3.1EmptyMandatory</iso:assert>
@@ -241,8 +241,8 @@
             <iso:assert test="lom:metadataSchema" diagnostics="E1(3.3)_Element3.3UndefinedMandatory">E1(3.3)_Element3.3UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:identifier">
-            <iso:assert test="lom:catalog" diagnostics="Element3.1.1UndefinedMandatory">Element3.1.1UndefinedMandatory</iso:assert>
-            <iso:assert test="lom:entry" diagnostics="Element3.1.2UndefinedMandatory">Element3.1.2UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:catalog" diagnostics="SE1(3.1.1)_Element3.1.1UndefinedMandatory">SE1(3.1.1)_Element3.1.1UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:entry" diagnostics="SE1(3.1.2)_Element3.1.2UndefinedMandatory">SE1(3.1.2)_Element3.1.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:identifier/lom:catalog">
             <iso:assert test="normalize-space() != ''" diagnostics="Element3.1.1EmptyMandatory">Element3.1.1EmptyMandatory</iso:assert>
@@ -458,15 +458,15 @@
             <iso:assert test="normalize-space() != ''" diagnostics="E2(9.1)_Element9.1EmptyMandatory">E2(9.1)_Element9.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath">
-            <iso:assert test="lom:source" diagnostics="Element9.2.1UndefinedMandatory">Element9.2.1UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:source" diagnostics="SE1(9.2.1)_Element9.2.1UndefinedMandatory">SE1(9.2.1)_Element9.2.1UndefinedMandatory</iso:assert>
             <iso:assert test="lom:taxon" diagnostics="Element9.2.2UndefinedMandatory">Element9.2.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:source">
             <iso:assert test="normalize-space() != ''" diagnostics="Element9.2.1EmptyMandatory">Element9.2.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon">
-            <iso:assert test="lom:id" diagnostics="Element9.2.2.1UndefinedMandatory">Element9.2.2.1UndefinedMandatory</iso:assert>
-            <iso:assert test="lom:entry" diagnostics="Element9.2.2.2UndefinedMandatory">Element9.2.2.2UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:id" diagnostics="SE1(9.2.2.1)_Element9.2.2.1UndefinedMandatory">SE1(9.2.2.1)_Element9.2.2.1UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:entry" diagnostics="SE1(9.2.2.2)_Element9.2.2.2UndefinedMandatory">SE1(9.2.2.2)_Element9.2.2.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon/lom:id">
             <iso:assert test="normalize-space() != ''" diagnostics="Element9.2.2.1EmptyMandatory">Element9.2.2.1EmptyMandatory</iso:assert>
@@ -691,8 +691,8 @@
         <iso:diagnostic id="E1(2.1)_Element2.1UndefinedMandatory" xml:lang="en">Element 2.1-Version is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(2.3)_Element2.3UndefinedMandatory" xml:lang="en">Element 2.3-Contribute is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(2.1)_Element2.1EmptyMandatory" xml:lang="en">Element 2.1-Version is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.1UndefinedMandatory" xml:lang="en">Element 2.3.1-Role is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.2UndefinedMandatory" xml:lang="en">Element 2.3.2-Entity is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(2.3.1)_Element2.3.1UndefinedMandatory" xml:lang="en">SE1(2.3.1)_Element 2.3.1-Role is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(2.3.2)_Element2.3.2UndefinedMandatory" xml:lang="en">SE1(2.3.2)_Element 2.3.2-Entity is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.1EmptyMandatory" xml:lang="en">Element 2.3.1-Role is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.2EmptyMandatory" xml:lang="en">Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
 
@@ -708,8 +708,8 @@
         <!-- Mandatory Elements (MetaMetadata) -->
         <iso:diagnostic id="E1(3.1)_Element3.1UndefinedMandatory" xml:lang="en">Element 3.1-Identifier is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(3.3)_Element3.3UndefinedMandatory" xml:lang="en">Element 3.3-MetadataSchema is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element3.1.1UndefinedMandatory" xml:lang="en">Element 3.1.1-Catalog is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element3.1.2UndefinedMandatory" xml:lang="en">Element 3.1.2-Entry is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(3.1.1)_Element3.1.1UndefinedMandatory" xml:lang="en">SE1(3.1.1)_Element 3.1.1-Catalog is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(3.1.2)_Element3.1.2UndefinedMandatory" xml:lang="en">SE1(3.1.2)_Element 3.1.2-Entry is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element3.1.1EmptyMandatory" xml:lang="en">Element 3.1.1-Catalog is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element3.1.2EmptyMandatory" xml:lang="en">Element 3.1.2-Entry is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(3.3)_Element3.3EmptyMandatory" xml:lang="en">Element 3.3-MetadataSchema is empty.  This element is mandatory.</iso:diagnostic>
@@ -775,11 +775,11 @@
         <iso:diagnostic id="E1(9.1)_Element9.1UndefinedMandatory" xml:lang="en">E1(9.1)_Element 9.1-Purpose is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(9.2)_Element9.2UndefinedMandatory" xml:lang="en">E1(9.2)_Element 9.2-TaxonPath is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(9.1)_Element9.1EmptyMandatory" xml:lang="en">E2(9.1)_Element 9.1-Purpose is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element9.2.1UndefinedMandatory" xml:lang="en">Element 9.2.1-Source is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(9.2.1)_Element9.2.1UndefinedMandatory" xml:lang="en">SE(9.2.1)_Element 9.2.1-Source is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element9.2.2UndefinedMandatory" xml:lang="en">Element 9.2.2-Taxon is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element9.2.1EmptyMandatory" xml:lang="en">Element 9.2.1-Source is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element9.2.2.1UndefinedMandatory" xml:lang="en">Element 9.2.2.1-Id is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element9.2.2.2UndefinedMandatory" xml:lang="en">Element 9.2.2.2-Entry is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(9.2.2.1)_Element9.2.2.1UndefinedMandatory" xml:lang="en">SE1(9.2.2.1)_Element 9.2.2.1-Id is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE1(9.2.2.2)_Element9.2.2.2UndefinedMandatory" xml:lang="en">SE1(9.2.2.2)_Element 9.2.2.2-Entry is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element9.2.2.1EmptyMandatory" xml:lang="en">Element 9.2.2.1-Id is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element9.2.2.2EmptyMandatory" xml:lang="en">Element 9.2.2.2-Entry is empty.  This element is mandatory.</iso:diagnostic>
 
