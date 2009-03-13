@@ -170,10 +170,10 @@
             <iso:assert test="lom:entry" diagnostics="Element1.1.2UndefinedRecommended">Element1.1.2UndefinedRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:general/lom:identifier/lom:catalog">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element1.1.1EmptyRecommended">Element1.1.1EmptyRecommended</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(1.1.1)_Element1.1.1EmptyRecommended">SE2(1.1.1)_Element1.1.1EmptyRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:general/lom:identifier/lom:entry">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element1.1.2EmptyRecommended">Element1.1.2EmptyRecommended</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(1.1.2)_Element1.1.2EmptyRecommended">SE2(1.1.2)_Element1.1.2EmptyRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:general/lom:coverage">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(1.6)_Element1.6EmptyRecommended">E2(1.6)_Element1.6EmptyRecommended</iso:assert>
@@ -203,7 +203,7 @@
             <iso:assert test="normalize-space() != ''" diagnostics="Element2.3.1EmptyMandatory">Element2.3.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:entity">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element2.3.2EmptyMandatory">Element2.3.2EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(2.3.2)_Element2.3.2EmptyMandatory">SE2(2.3.2)_Element2.3.2EmptyMandatory</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -245,10 +245,10 @@
             <iso:assert test="lom:entry" diagnostics="SE1(3.1.2)_Element3.1.2UndefinedMandatory">SE1(3.1.2)_Element3.1.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:identifier/lom:catalog">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element3.1.1EmptyMandatory">Element3.1.1EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.1.1)_Element3.1.1EmptyMandatory">SE2(3.1.1)_Element3.1.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:identifier/lom:entry">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element3.1.2EmptyMandatory">Element3.1.2EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.1.2)_Element3.1.2EmptyMandatory">SE2(3.1.2)_Element3.1.2EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:metadataSchema">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(3.3)_Element3.3EmptyMandatory">E2(3.3)_Element3.3EmptyMandatory</iso:assert>
@@ -265,6 +265,18 @@
 
     <iso:pattern id="RecommendedElements.MetaMetadata">
         <iso:title>Validating MetaMetadata category's recommended elements</iso:title>
+        <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2)_Element3.2EmptyRecommended">SE2(3.2)_Element3.2EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:role">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2.1)_Element3.2.1EmptyRecommended">SE2(3.2.1)_Element3.2.1EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:entity">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2.2)_Element3.2.2EmptyRecommended">SE2(3.2.2)_Element3.2.2EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:date">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2.3)_Element3.2.3EmptyRecommended">SE2(3.2.3)_Element3.2.3EmptyRecommended</iso:assert>
+        </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:language">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(3.4)_Element3.4EmptyRecommended">E2(3.4)_Element3.4EmptyRecommended</iso:assert>
         </iso:rule>
@@ -302,6 +314,18 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:size">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(4.2)_Element4.2EmptyRecommended">E2(4.2)_Element4.2EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:type">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.1)_Element4.4.1.1EmptyRecommended">SE2(4.4.1.1)_Element4.4.1.1EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:name">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.2)_Element4.4.1.2EmptyRecommended">SE2(4.4.1.2)_Element4.4.1.2EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:minimumVersion">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.3)_Element4.4.1.3EmptyRecommended">SE2(4.4.1.3)_Element4.4.1.3EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:maximumVersion">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.4)_Element4.4.1.4EmptyRecommended">SE2(4.4.1.4)_Element4.4.1.4EmptyRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:installationRemarks">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(4.5)_Element4.5EmptyRecommended">E2(4.5)_Element4.5EmptyRecommended</iso:assert>
@@ -421,6 +445,15 @@
         <iso:rule context="lom:lom/lom:relation/lom:kind">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(7.1)_Element7.1EmptyRecommended">E2(7.1)_Element7.1EmptyRecommended</iso:assert>
         </iso:rule>
+        <iso:rule context="lom:lom/lom:relation/lom:resource/lom:identifier/lom:catalog">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(7.2.1.1)_Element7.2.1.1EmptyRecommended">SE2(7.2.1.1)_Element7.2.1.1EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:relation/lom:resource/lom:identifier/lom:entry">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(7.2.1.2)_Element7.2.1.2EmptyRecommended">SE2(7.2.1.2)_Element7.2.1.2EmptyRecommended</iso:assert>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:relation/lom:resource/lom:description">
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(7.2.2)_Element7.2.2EmptyRecommended">SE2(7.2.2)_Element7.2.2EmptyRecommended</iso:assert>
+        </iso:rule>
     </iso:pattern>
 
     <!--iso:pattern id="MandatoryElements.Annotation">
@@ -462,17 +495,17 @@
             <iso:assert test="lom:taxon" diagnostics="Element9.2.2UndefinedMandatory">Element9.2.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:source">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element9.2.1EmptyMandatory">Element9.2.1EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(9.2.1)_Element9.2.1EmptyMandatory">SE2(9.2.1)_Element9.2.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon">
             <iso:assert test="lom:id" diagnostics="SE1(9.2.2.1)_Element9.2.2.1UndefinedMandatory">SE1(9.2.2.1)_Element9.2.2.1UndefinedMandatory</iso:assert>
             <iso:assert test="lom:entry" diagnostics="SE1(9.2.2.2)_Element9.2.2.2UndefinedMandatory">SE1(9.2.2.2)_Element9.2.2.2UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon/lom:id">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element9.2.2.1EmptyMandatory">Element9.2.2.1EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(9.2.2.1)_Element9.2.2.1EmptyMandatory">SE2(9.2.2.1)_Element9.2.2.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon/lom:entry">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element9.2.2.2EmptyMandatory">Element9.2.2.2EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="SE2(9.2.2.2)_Element9.2.2.2EmptyMandatory">SE2(9.2.2.2)_Element9.2.2.2EmptyMandatory</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -681,8 +714,8 @@
         <iso:diagnostic id="Element1.1UndefinedRecommended" xml:lang="en">Element 1.1-Identifier is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element1.1.1UndefinedRecommended" xml:lang="en">Element 1.1.1-Catalog is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element1.1.2UndefinedRecommended" xml:lang="en">Element 1.1.2-Entry is not defined.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="Element1.1.1EmptyRecommended" xml:lang="en">Element 1.1.1-Catalog is empty.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="Element1.1.2EmptyRecommended" xml:lang="en">Element 1.1.2-Entry is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(1.1.1)_Element1.1.1EmptyRecommended" xml:lang="en">SE2(1.1.1)_Element 1.1.1-Catalog is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(1.1.2)_Element1.1.2EmptyRecommended" xml:lang="en">SE2(1.1.2)_Element 1.1.2-Entry is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(1.6)_Element1.6EmptyRecommended" xml:lang="en">E2(1.6)_Element 1.6-Coverage is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(1.7)_Element1.7EmptyRecommended" xml:lang="en">E2(1.7)_Element 1.7-Structure is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(1.8)_Element1.8EmptyRecommended" xml:lang="en">E2(1.8)_Element 1.8-Aggregation Level is empty.  This element is recommended.</iso:diagnostic>
@@ -694,7 +727,7 @@
         <iso:diagnostic id="SE1(2.3.1)_Element2.3.1UndefinedMandatory" xml:lang="en">SE1(2.3.1)_Element 2.3.1-Role is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(2.3.2)_Element2.3.2UndefinedMandatory" xml:lang="en">SE1(2.3.2)_Element 2.3.2-Entity is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.1EmptyMandatory" xml:lang="en">Element 2.3.1-Role is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.2EmptyMandatory" xml:lang="en">Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE2(2.3.2)_Element2.3.2EmptyMandatory" xml:lang="en">SE2(2.3.2)_Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
 
         <!-- Conditional Mandatory Elements (LifeCycle) -->
         <iso:diagnostic id="Element2.3.3UndefinedMandatory" xml:lang="en">Element 2.3.3-Date is not defined.  This element is mandatory for at least one contributor.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
@@ -710,15 +743,19 @@
         <iso:diagnostic id="E1(3.3)_Element3.3UndefinedMandatory" xml:lang="en">Element 3.3-MetadataSchema is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(3.1.1)_Element3.1.1UndefinedMandatory" xml:lang="en">SE1(3.1.1)_Element 3.1.1-Catalog is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(3.1.2)_Element3.1.2UndefinedMandatory" xml:lang="en">SE1(3.1.2)_Element 3.1.2-Entry is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element3.1.1EmptyMandatory" xml:lang="en">Element 3.1.1-Catalog is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element3.1.2EmptyMandatory" xml:lang="en">Element 3.1.2-Entry is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE2(3.1.1)_Element3.1.1EmptyMandatory" xml:lang="en">SE2(3.1.1)_Element 3.1.1-Catalog is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE2(3.1.2)_Element3.1.2EmptyMandatory" xml:lang="en">SE2(3.1.2)_Element 3.1.2-Entry is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(3.3)_Element3.3EmptyMandatory" xml:lang="en">Element 3.3-MetadataSchema is empty.  This element is mandatory.</iso:diagnostic>
 
 
         <!-- Recommended Elements (MetaMetadata) -->
+        <iso:diagnostic id="SE2(3.2)_Element3.2EmptyRecommended" xml:lang="en">SE2(3.2)_Element 3.2-Contribute is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(3.2.1)_Element3.2.1EmptyRecommended" xml:lang="en">SE2(3.2.1)_Element 3.2.1-Role is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(3.2.2)_Element3.2.2EmptyRecommended" xml:lang="en">SE2(3.2.2)_Element 3.2.2-Entity is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(3.2.3)_Element3.2.3EmptyRecommended" xml:lang="en">SE2(3.2.3)_Element 3.2.3-Date is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(3.4)_Element3.4EmptyRecommended" xml:lang="en">E2(3.4)_Element 3.4-Language is empty.  This element is recommended.</iso:diagnostic>
 
-        <!-- Mandatotry Elements (Technical) -->
+        <!-- Mandatory Elements (Technical) -->
         <iso:diagnostic id="E1(4.1)_Element4.1UndefinedMandatory" xml:lang="en">Element 4.1-Format is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(4.3)_Element4.3UndefinedMandatory" xml:lang="en">Element 4.3-Location is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element4.1EmptyMandatory" xml:lang="en">Element 4.1-Format is empty.  This element is mandatory.</iso:diagnostic>
@@ -729,6 +766,10 @@
         <iso:diagnostic id="Element4.5UndefinedRecommended" xml:lang="en">Element 4.5-InstallationRemarks is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element4.6UndefinedRecommended" xml:lang="en">Element 4.6-OtherPlatformRequirements is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.2)_Element4.2EmptyRecommended" xml:lang="en">E2(4.2)_Element 4.2-Size is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(4.4.1.1)_Element4.4.1.1EmptyRecommended" xml:lang="en">SE2(4.4.1.1)_Element 4.4.1.1-Type is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(4.4.1.2)_Element4.4.1.2EmptyRecommended" xml:lang="en">SE2(4.4.1.2)_Element 4.4.1.2-Name is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(4.4.1.3)_Element4.4.1.3EmptyRecommended" xml:lang="en">SE2(4.4.1.3)_Element 4.4.1.3-Minimum Version is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(4.4.1.4)_Element4.4.1.4EmptyRecommended" xml:lang="en">SE2(4.4.1.4)_Element 4.4.1.4-Maximum Version is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.5)_Element4.5EmptyRecommended" xml:lang="en">E2(4.5)_Element 4.5-InstallationRemarks is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.6)_Element4.6EmptyRecommended" xml:lang="en">E2(4.6)_Element 4.6-OtherPlatformRequirements is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.7)_Element4.7EmptyRecommended" xml:lang="en">E2(4.7)_Element 4.7-Duration is empty.  This element is recommended.</iso:diagnostic>
@@ -766,6 +807,11 @@
         <!-- Conditional Mandatory Elements (Rights) -->
         <iso:diagnostic id="Element6.3MandatoryBecause6.2Yes" xml:lang="en">As element 6.2-CopyrightAndOtherRestrictions's value is 'yes', the element 6.3-Description is mandatory.</iso:diagnostic>
 
+        <!-- Recommended Elements (Relation) -->
+        <iso:diagnostic id="SE2(7.2.1.1)_Element7.2.1.1EmptyRecommended" xml:lang="en">SE2(7.2.1.1)_Element 7.2.1.1-Catalog is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(7.2.1.2)_Element7.2.1.2EmptyRecommended" xml:lang="en">SE2(7.2.1.2)_Element 7.2.1.2-Entry is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="SE2(7.2.2)_Element7.2.2EmptyRecommended" xml:lang="en">SE2(7.2.2)_Element 7.2.2-Description is empty.  This element is recommended.</iso:diagnostic>
+
         <!-- Recommended Elements (Annotation) -->
         <iso:diagnostic id="E2(8.1)_Element8.1EmptyRecommended" xml:lang="en">E2(8.1)_Element 8.1-Entity is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(8.2)_Element8.2EmptyRecommended" xml:lang="en">E2(8.2)_Element 8.2-Date is empty.  This element is recommended.</iso:diagnostic>
@@ -777,11 +823,11 @@
         <iso:diagnostic id="E2(9.1)_Element9.1EmptyMandatory" xml:lang="en">E2(9.1)_Element 9.1-Purpose is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(9.2.1)_Element9.2.1UndefinedMandatory" xml:lang="en">SE(9.2.1)_Element 9.2.1-Source is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element9.2.2UndefinedMandatory" xml:lang="en">Element 9.2.2-Taxon is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element9.2.1EmptyMandatory" xml:lang="en">Element 9.2.1-Source is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE2(9.2.1)_Element9.2.1EmptyMandatory" xml:lang="en">SE2(9.2.1)_Element 9.2.1-Source is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(9.2.2.1)_Element9.2.2.1UndefinedMandatory" xml:lang="en">SE1(9.2.2.1)_Element 9.2.2.1-Id is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(9.2.2.2)_Element9.2.2.2UndefinedMandatory" xml:lang="en">SE1(9.2.2.2)_Element 9.2.2.2-Entry is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element9.2.2.1EmptyMandatory" xml:lang="en">Element 9.2.2.1-Id is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element9.2.2.2EmptyMandatory" xml:lang="en">Element 9.2.2.2-Entry is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE2(9.2.2.1)_Element9.2.2.1EmptyMandatory" xml:lang="en">SE2(9.2.2.1)_Element 9.2.2.1-Id is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="SE2(9.2.2.2)_Element9.2.2.2EmptyMandatory" xml:lang="en">SE2(9.2.2.2)_Element 9.2.2.2-Entry is empty.  This element is mandatory.</iso:diagnostic>
 
         <!-- Recommended Elements (Classification) -->
         <iso:diagnostic id="E2(9.3)_Element9.3EmptyRecommended" xml:lang="en">Element 9.3-Keyword is empty.  This element is recommended.</iso:diagnostic>
