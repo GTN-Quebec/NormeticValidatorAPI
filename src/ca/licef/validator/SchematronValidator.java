@@ -60,6 +60,7 @@ class SchematronValidator {
             "ConditionalMandatoryElements",
             "ConditionalMandatoryElements.2", // Optional phase.
             "Vocabularies",
+            "RecommendedAttributes",
             "LanguageAttributes",
             "RecommendedCategories",
             "RecommendedElements"

@@ -1,4 +1,5 @@
 Clean the tests.  Ideally, there should be only one issue for each test.
+Remove error messages found in oXygen concerning identifiers of diagnostics.  They should not contains parenthesis.
 Just for info:  There are 316 validation rules in the xls file.
 When validating the file 1.2_Titre/E1_Titre.xml, I get an error message with {0} marks.  These marks should be subsituted.  Why not?  The strings are in etc directory.
 Localized as many strings as possible.
