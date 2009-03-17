@@ -83,6 +83,142 @@
         <iso:active pattern="RecommendedElements.Classification"/>
     </iso:phase>
 
+    <iso:phase id="RecommendedAttributes">
+        <iso:active pattern="RecommendedAttributes.General"/>
+        <iso:active pattern="RecommendedAttributes.LifeCycle"/>
+        <iso:active pattern="RecommendedAttributes.MetaMetadata"/>
+        <iso:active pattern="RecommendedAttributes.Technical"/>
+        <iso:active pattern="RecommendedAttributes.Educational"/>
+        <iso:active pattern="RecommendedAttributes.Rights"/>
+        <iso:active pattern="RecommendedAttributes.Relation"/>
+        <iso:active pattern="RecommendedAttributes.Annotation"/>
+        <iso:active pattern="RecommendedAttributes.Classification"/>
+    </iso:phase>
+
+    <iso:pattern id="RecommendedAttributes.General">
+        <iso:title>Validating General category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:general/lom:title/lom:string">
+            <iso:assert test="@language" diagnostics="P1(1.2)_Attribute1.2LanguageUndefinedRecommended">P1(1.2)_Attribute1.2LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(1.2)_Attribute1.2LanguageEmptyRecommended">P2(1.2)_Attribute1.2LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:general/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(1.4)_Attribute1.4LanguageUndefinedRecommended">P1(1.4)_Attribute1.4LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(@language) = ''" diagnostics="P2(1.4)_Attribute1.4LanguageEmptyRecommended">P2(1.4)_Attribute1.4LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:general/lom:keyword/lom:string">
+            <iso:assert test="@language" diagnostics="P1(1.5)_Attribute1.5LanguageUndefinedRecommended">P1(1.5)_Attribute1.5LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(@language) = ''" diagnostics="P2(1.5)_Attribute1.5LanguageEmptyRecommended">P2(1.5)_Attribute1.5LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:general/lom:coverage/lom:string">
+            <iso:assert test="@language" diagnostics="P1(1.6)_Attribute1.6LanguageUndefinedRecommended">P1(1.6)_Attribute1.6LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(@language) = ''" diagnostics="P2(1.6)_Attribute1.6LanguageEmptyRecommended">P2(1.6)_Attribute1.6LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:general/lom:coverage/lom:string">
+            <iso:assert test="@source" diagnostics="P1(1.7)_Attribute1.7SourceUndefinedRecommended">P1(1.7)_Attribute1.7SourceUndefinedRecommended</iso:assert>
+            <iso:report test="@source and normalize-space(@source) = ''" diagnostics="P2(1.7)_Attribute1.7SourceEmptyRecommended">P2(1.7)_Attribute1.7SourceEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.LifeCycle">
+        <iso:title>Validating LifeCycle category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:lifeCycle/lom:version/lom:string">
+            <iso:assert test="@language" diagnostics="P1(2.1)_Attribute2.1LanguageUndefinedRecommended">P1(2.1)_Attribute2.1LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(2.1)_Attribute2.1LanguageEmptyRecommended">P2(2.1)_Attribute2.1LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:date/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(2.3.3)_Attribute2.3.3DateDescriptionLanguageUndefinedRecommended">P1(2.3.3)_Attribute2.3.3DateDescriptionLanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(2.3.3)_Attribute2.3.3DateDescriptionLanguageEmptyRecommended">P2(2.3.3)_Attribute2.3.3DateDescriptionLanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.MetaMetadata">
+        <iso:title>Validating MetaMetadata category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:date/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(3.2.3)_Attribute3.2.3DateDescriptionLanguageUndefinedRecommended">P1(3.2.3)_Attribute3.2.3DateDescriptionLanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(3.2.3)_Attribute3.2.3DateDescriptionLanguageEmptyRecommended">P2(3.2.3)_Attribute3.2.3DateDescriptionLanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.Technical">
+        <iso:title>Validating Technical category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:technical/lom:installationRemarks/lom:string">
+            <iso:assert test="@language" diagnostics="P1(4.5)_Attribute4.5LanguageUndefinedRecommended">P1(4.5)_Attribute4.5LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(4.5)_Attribute4.5LanguageEmptyRecommended">P2(4.5)_Attribute4.5LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:technical/lom:otherPlatformRequirements/lom:string">
+            <iso:assert test="@language" diagnostics="P1(4.6)_Attribute4.6LanguageUndefinedRecommended">P1(4.6)_Attribute4.6LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(4.6)_Attribute4.6LanguageEmptyRecommended">P2(4.6)_Attribute4.6LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:technical/lom:duration/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(4.7)_Attribute4.7LanguageUndefinedRecommended">P1(4.7)_Attribute4.7LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(4.7)_Attribute4.7LanguageEmptyRecommended">P2(4.7)_Attribute4.7LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.Educational">
+        <iso:title>Validating Educational category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:educational/lom:typicalAgeRange/lom:string">
+            <iso:assert test="@language" diagnostics="P1(5.7)_Attribute5.7LanguageUndefinedRecommended">P1(5.7)_Attribute5.7LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(5.7)_Attribute5.7LanguageEmptyRecommended">P2(5.7)_Attribute5.7LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:educational/lom:typicalLearningTime/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(5.9)_Attribute5.9LanguageUndefinedRecommended">P1(5.9)_Attribute5.9LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(5.9)_Attribute5.9LanguageEmptyRecommended">P2(5.9)_Attribute5.9LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:educational/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(5.10)_Attribute5.10LanguageUndefinedRecommended">P1(5.10)_Attribute5.10LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(5.10)_Attribute5.10LanguageEmptyRecommended">P2(5.10)_Attribute5.10LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.Rights">
+        <iso:title>Validating Rights category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:rights/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(6.3)_Attribute6.3LanguageUndefinedRecommended">P1(6.3)_Attribute6.3LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(6.3)_Attribute6.3LanguageEmptyRecommended">P2(6.3)_Attribute6.3LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.Relation">
+        <iso:title>Validating Relation category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:relation/lom:resource/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(7.2.2)_Attribute7.2.2LanguageUndefinedRecommended">P1(7.2.2)_Attribute7.2.2LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(7.2.2)_Attribute7.2.2LanguageEmptyRecommended">P2(7.2.2)_Attribute7.2.2LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.Annotation">
+        <iso:title>Validating Annotation category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:annotation/lom:date/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(8.2)_Attribute8.2LanguageUndefinedRecommended">P1(8.2)_Attribute8.2LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(8.2)_Attribute8.2LanguageEmptyRecommended">P2(8.2)_Attribute8.2LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:annotation/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(8.3)_Attribute8.3LanguageUndefinedRecommended">P1(8.3)_Attribute8.3LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(8.3)_Attribute8.3LanguageEmptyRecommended">P2(8.3)_Attribute8.3LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
+    <iso:pattern id="RecommendedAttributes.Classification">
+        <iso:title>Validating Classification category's recommended attributes</iso:title>
+        <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:source/lom:string">
+            <iso:assert test="@language" diagnostics="P1(9.2.1)_Attribute9.2.1LanguageUndefinedRecommended">P1(9.2.1)_Attribute9.2.1LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(9.2.1)_Attribute9.2.1LanguageEmptyRecommended">P2(9.2.1)_Attribute9.2.1LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon/lom:entry/lom:string">
+            <iso:assert test="@language" diagnostics="P1(9.2.2.2)_Attribute9.2.2.2LanguageUndefinedRecommended">P1(9.2.2.2)_Attribute9.2.2.2LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(9.2.2.2)_Attribute9.2.2.2LanguageEmptyRecommended">P2(9.2.2.2)_Attribute9.2.2.2LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:classification/lom:description/lom:string">
+            <iso:assert test="@language" diagnostics="P1(9.3)_Attribute9.3LanguageUndefinedRecommended">P1(9.3)_Attribute9.3LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(9.3)_Attribute9.3LanguageEmptyRecommended">P2(9.3)_Attribute9.3LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+        <iso:rule context="lom:lom/lom:classification/lom:keyword/lom:string">
+            <iso:assert test="@language" diagnostics="P1(9.4)_Attribute9.4LanguageUndefinedRecommended">P1(9.4)_Attribute9.4LanguageUndefinedRecommended</iso:assert>
+            <iso:report test="@language and normalize-space(current()/@language) = ''" diagnostics="P2(9.4)_Attribute9.4LanguageEmptyRecommended">P2(9.4)_Attribute9.4LanguageEmptyRecommended</iso:report>
+        </iso:rule>
+    </iso:pattern>
+
     <iso:phase id="Vocabularies">
         <!--iso:active pattern="Vocabularies.General"/-->
         <!--iso:active pattern="Vocabularies.LifeCycle"/-->
@@ -180,9 +316,17 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:general/lom:structure">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(1.7)_Element1.7EmptyRecommended">E2(1.7)_Element1.7EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(1.7)_Element1.7UndefinedSourceRecommended">P1Source(1.7)_Element1.7UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(1.7)_Element1.7EmptySourceRecommended">P2Source(1.7)_Element1.7EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(1.7)_Element1.7UndefinedValueRecommended">P1Value(1.7)_Element1.7UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(1.7)_Element1.7EmptyValueRecommended">P2Value(1.7)_Element1.7EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:general/lom:aggregationLevel">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(1.8)_Element1.8EmptyRecommended">E2(1.8)_Element1.8EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(1.8)_Element1.8UndefinedSourceRecommended">P1Source(1.8)_Element1.8UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(1.8)_Element1.8EmptySourceRecommended">P2Source(1.8)_Element1.8EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(1.8)_Element1.8UndefinedValueRecommended">P1Value(1.8)_Element1.8UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(1.8)_Element1.8EmptyValueRecommended">P2Value(1.8)_Element1.8ValueSourceRecommended</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -201,6 +345,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:role">
             <iso:assert test="normalize-space() != ''" diagnostics="Element2.3.1EmptyMandatory">Element2.3.1EmptyMandatory</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(2.3.1)_Element2.3.1UndefinedSourceMandatory">P1Source(2.3.1)_Element2.3.1UndefinedSourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(2.3.1)_Element2.3.1EmptySourceMandatory">P2Source(2.3.1)_Element2.3.1EmptySourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(2.3.1)_Element2.3.1UndefinedValueMandatory">P1Value(2.3.1)_Element2.3.1UndefinedValueMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(2.3.1)_Element2.3.1EmptyValueMandatory">P2Value(2.3.1)_Element2.3.1EmptyValueMandatory</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:entity">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(2.3.2)_Element2.3.2EmptyMandatory">SE2(2.3.2)_Element2.3.2EmptyMandatory</iso:assert>
@@ -225,6 +373,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:status">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(2.2)_Element2.2EmptyRecommended">E2(2.2)_Element2.2EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(2.2)_Element2.2UndefinedSourceRecommended">P1Source(2.2)_Element2.2UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(2.2)_Element2.2EmptySourceRecommended">P2Source(2.2)_Element2.2EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(2.2)_Element2.2UndefinedValueRecommended">P1Value(2.2)_Element2.2UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(2.2)_Element2.2EmptyValueRecommended">P2Value(2.2)_Element2.2EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute">
             <iso:assert test="lom:date/lom:dateTime or lom:date/lom:description/lom:string[normalize-space(text())='non disponible']" diagnostics="Element2.3.3UndefinedRecommended">Element2.3.3UndefinedRecommended</iso:assert>
@@ -270,6 +422,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:role">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2.1)_Element3.2.1EmptyRecommended">SE2(3.2.1)_Element3.2.1EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(3.2.1)_Element3.2.1UndefinedSourceRecommended">P1Source(3.2.1)_Element3.2.1UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(3.2.1)_Element3.2.1EmptySourceRecommended">P2Source(3.2.1)_Element3.2.1EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(3.2.1)_Element3.2.1UndefinedValueRecommended">P1Value(3.2.1)_Element3.2.1UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(3.2.1)_Element3.2.1EmptyValueRecommended">P2Value(3.2.1)_Element3.2.1EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:entity">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2.2)_Element3.2.2EmptyRecommended">SE2(3.2.2)_Element3.2.2EmptyRecommended</iso:assert>
@@ -317,9 +473,17 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:type">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.1)_Element4.4.1.1EmptyRecommended">SE2(4.4.1.1)_Element4.4.1.1EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(4.4.1.1)_Element4.4.1.1UndefinedSourceRecommended">P1Source(4.4.1.1)_Element4.4.1.1UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(4.4.1.1)_Element4.4.1.1EmptySourceRecommended">P2Source(4.4.1.1)_Element4.4.1.1EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(4.4.1.1)_Element4.4.1.1UndefinedValueRecommended">P1Value(4.4.1.1)_Element4.4.1.1UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(4.4.1.1)_Element4.4.1.1EmptyValueRecommended">P2Value(4.4.1.1)_Element4.4.1.1EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:name">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.2)_Element4.4.1.2EmptyRecommended">SE2(4.4.1.2)_Element4.4.1.2EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(4.4.1.2)_Element4.4.1.2UndefinedSourceRecommended">P1Source(4.4.1.2)_Element4.4.1.2UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(4.4.1.2)_Element4.4.1.2EmptySourceRecommended">P2Source(4.4.1.2)_Element4.4.1.2EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(4.4.1.2)_Element4.4.1.2UndefinedValueRecommended">P1Value(4.4.1.2)_Element4.4.1.2UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(4.4.1.2)_Element4.4.1.2EmptyValueRecommended">P2Value(4.4.1.2)_Element4.4.1.2EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:minimumVersion">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(4.4.1.3)_Element4.4.1.3EmptyRecommended">SE2(4.4.1.3)_Element4.4.1.3EmptyRecommended</iso:assert>
@@ -369,21 +533,41 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:interactivityType">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.1)_Element5.1EmptyRecommended">E2(5.1)_Element5.1EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.1)_Element5.1UndefinedSourceRecommended">P1Source(5.1)_Element5.1UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.1)_Element5.1EmptySourceRecommended">P2Source(5.1)_Element5.1EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.1)_Element5.1UndefinedValueRecommended">P1Value(5.1)_Element5.1UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.1)_Element5.1EmptyValueRecommended">P2Value(5.1)_Element5.1EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:interactivityLevel">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.3)_Element5.3EmptyRecommended">E2(5.3)_Element5.3EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.3)_Element5.3UndefinedSourceRecommended">P1Source(5.3)_Element5.3UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.3)_Element5.3EmptySourceRecommended">P2Source(5.3)_Element5.3EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.3)_Element5.3UndefinedValueRecommended">P1Value(5.3)_Element5.3UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.3)_Element5.3EmptyValueRecommended">P2Value(5.3)_Element5.3EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:semanticDensity">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.4)_Element5.4EmptyRecommended">E2(5.4)_Element5.4EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.4)_Element5.4UndefinedSourceRecommended">P1Source(5.4)_Element5.4UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.4)_Element5.4EmptySourceRecommended">P2Source(5.4)_Element5.4EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.4)_Element5.4UndefinedValueRecommended">P1Value(5.4)_Element5.4UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.4)_Element5.4EmptyValueRecommended">P2Value(5.4)_Element5.4EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:intendedEndUserRole">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.5)_Element5.5EmptyRecommended">E2(5.5)_Element5.5EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.5)_Element5.5UndefinedSourceRecommended">P1Source(5.5)_Element5.5UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.5)_Element5.5EmptySourceRecommended">P2Source(5.5)_Element5.5EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.5)_Element5.5UndefinedValueRecommended">P1Value(5.5)_Element5.5UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.5)_Element5.5EmptyValueRecommended">P2Value(5.5)_Element5.5EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:typicalAgeRange">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.7)_Element5.7EmptyRecommended">E2(5.7)_Element5.7EmptyRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:difficulty">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.8)_Element5.8EmptyRecommended">E2(5.8)_Element5.8EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.8)_Element5.8UndefinedSourceRecommended">P1Source(5.8)_Element5.8UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.8)_Element5.8EmptySourceRecommended">P2Source(5.8)_Element5.8EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.8)_Element5.8UndefinedValueRecommended">P1Value(5.8)_Element5.8UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.8)_Element5.8EmptyValueRecommended">P2Value(5.8)_Element5.8EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:typicalLearningTime">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.9)_Element5.9EmptyRecommended">E2(5.9)_Element5.9EmptyRecommended</iso:assert>
@@ -718,13 +902,25 @@
         <iso:diagnostic id="SE2(1.1.2)_Element1.1.2EmptyRecommended" xml:lang="en">SE2(1.1.2)_Element 1.1.2-Entry is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(1.6)_Element1.6EmptyRecommended" xml:lang="en">E2(1.6)_Element 1.6-Coverage is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(1.7)_Element1.7EmptyRecommended" xml:lang="en">E2(1.7)_Element 1.7-Structure is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(1.7)_Element1.7UndefinedSourceRecommended" xml:lang="en">P1Source(1.7)_Element Source of 1.7-Structure is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(1.7)_Element1.7EmptySourceRecommended" xml:lang="en">P2Source(1.7)_Element Source of 1.7-Structure is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(1.7)_Element1.7UndefinedValueRecommended" xml:lang="en">P1Value(1.7)_Element Value of 1.7-Structure is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(1.7)_Element1.7EmptyValueRecommended" xml:lang="en">P2Value(1.7)_Element Value of 1.7-Structure is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(1.8)_Element1.8EmptyRecommended" xml:lang="en">E2(1.8)_Element 1.8-Aggregation Level is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(1.8)_Element1.8UndefinedSourceRecommended" xml:lang="en">P1Source(1.8)_Element Source of 1.8-AggregationLevel is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(1.8)_Element1.8EmptySourceRecommended" xml:lang="en">P2Source(1.8)_Element Source of 1.8-AggregationLevel is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(1.8)_Element1.8UndefinedValueRecommended" xml:lang="en">P1Value(1.8)_Element Value of 1.8-AggregationLevel is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(1.8)_Element1.8EmptyValueRecommended" xml:lang="en">P2Value(1.8)_Element Value of 1.8-AggregationLevel is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (LifeCycle) -->
         <iso:diagnostic id="E1(2.1)_Element2.1UndefinedMandatory" xml:lang="en">Element 2.1-Version is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(2.3)_Element2.3UndefinedMandatory" xml:lang="en">Element 2.3-Contribute is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(2.1)_Element2.1EmptyMandatory" xml:lang="en">Element 2.1-Version is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(2.3.1)_Element2.3.1UndefinedMandatory" xml:lang="en">SE1(2.3.1)_Element 2.3.1-Role is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(2.3.1)_Element2.3.1UndefinedSourceMandatory" xml:lang="en">P1Source(2.3.1)_Element Source of 2.3.1-Role is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(2.3.1)_Element2.3.1EmptySourceMandatory" xml:lang="en">P2Source(2.3.1)_Element Source of 2.3.1-Role is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(2.3.1)_Element2.3.1UndefinedValueMandatory" xml:lang="en">P1Value(2.3.1)_Element Value of 2.3.1-Role is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(2.3.1)_Element2.3.1EmptyValueMandatory" xml:lang="en">P2Value(2.3.1)_Element Value of 2.3.1-Role is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE1(2.3.2)_Element2.3.2UndefinedMandatory" xml:lang="en">SE1(2.3.2)_Element 2.3.2-Entity is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.1EmptyMandatory" xml:lang="en">Element 2.3.1-Role is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE2(2.3.2)_Element2.3.2EmptyMandatory" xml:lang="en">SE2(2.3.2)_Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
@@ -735,6 +931,10 @@
         <!-- Recommended Elements (LifeCycle) -->
         <iso:diagnostic id="Element2.2UndefinedRecommended" xml:lang="en">Element 2.2-Status is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(2.2)_Element2.2EmptyRecommended" xml:lang="en">E2(2.2)_Element 2.2-Status is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(2.2)_Element2.2UndefinedSourceRecommended" xml:lang="en">P1Source(2.2)_Element Source of 2.2-Status is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(2.2)_Element2.2EmptySourceRecommended" xml:lang="en">P2Source(2.2)_Element Source of 2.2-Status is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(2.2)_Element2.2UndefinedValueRecommended" xml:lang="en">P1Value(2.2)_Element Value of 2.2-Status is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(2.2)_Element2.2EmptyValueRecommended" xml:lang="en">P2Value(2.2)_Element Value of 2.2-Status is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.3UndefinedRecommended" xml:lang="en">Element 2.3.3-Date is not defined.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.3EmptyRecommended" xml:lang="en">Element 2.3.3-Date is empty.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
 
@@ -751,6 +951,10 @@
         <!-- Recommended Elements (MetaMetadata) -->
         <iso:diagnostic id="SE2(3.2)_Element3.2EmptyRecommended" xml:lang="en">SE2(3.2)_Element 3.2-Contribute is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(3.2.1)_Element3.2.1EmptyRecommended" xml:lang="en">SE2(3.2.1)_Element 3.2.1-Role is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(3.2.1)_Element3.2.1UndefinedSourceRecommended" xml:lang="en">P1Source(3.2.1)_Element Source of 3.2.1-Role is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(3.2.1)_Element3.2.1EmptySourceRecommended" xml:lang="en">P2Source(3.2.1)_Element Source of 3.2.1-Role is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(3.2.1)_Element3.2.1UndefinedValueRecommended" xml:lang="en">P1Value(3.2.1)_Element Value of 3.2.1-Role is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(3.2.1)_Element3.2.1EmptyValueRecommended" xml:lang="en">P2Value(3.2.1)_Element Value of 3.2.1-Role is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(3.2.2)_Element3.2.2EmptyRecommended" xml:lang="en">SE2(3.2.2)_Element 3.2.2-Entity is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(3.2.3)_Element3.2.3EmptyRecommended" xml:lang="en">SE2(3.2.3)_Element 3.2.3-Date is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(3.4)_Element3.4EmptyRecommended" xml:lang="en">E2(3.4)_Element 3.4-Language is empty.  This element is recommended.</iso:diagnostic>
@@ -767,7 +971,15 @@
         <iso:diagnostic id="Element4.6UndefinedRecommended" xml:lang="en">Element 4.6-OtherPlatformRequirements is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.2)_Element4.2EmptyRecommended" xml:lang="en">E2(4.2)_Element 4.2-Size is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(4.4.1.1)_Element4.4.1.1EmptyRecommended" xml:lang="en">SE2(4.4.1.1)_Element 4.4.1.1-Type is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(4.4.1.1)_Element4.4.1.1UndefinedSourceRecommended" xml:lang="en">P1Source(4.4.1.1)_Element Source of 4.4.1.1-Type is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(4.4.1.1)_Element4.4.1.1EmptySourceRecommended" xml:lang="en">P2Source(4.4.1.1)_Element Source of 4.4.1.1-Type is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(4.4.1.1)_Element4.4.1.1UndefinedValueRecommended" xml:lang="en">P1Value(4.4.1.1)_Element Value of 4.4.1.1-Type is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(4.4.1.1)_Element4.4.1.1EmptyValueRecommended" xml:lang="en">P2Value(4.4.1.1)_Element Value of 4.4.1.1-Type is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(4.4.1.2)_Element4.4.1.2EmptyRecommended" xml:lang="en">SE2(4.4.1.2)_Element 4.4.1.2-Name is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(4.4.1.2)_Element4.4.1.2UndefinedSourceRecommended" xml:lang="en">P1Source(4.4.1.2)_Element Source of 4.4.1.2-Name is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(4.4.1.2)_Element4.4.1.2EmptySourceRecommended" xml:lang="en">P2Source(4.4.1.2)_Element Source of 4.4.1.2-Name is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(4.4.1.2)_Element4.4.1.2UndefinedValueRecommended" xml:lang="en">P1Value(4.4.1.2)_Element Value of 4.4.1.2-Name is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(4.4.1.2)_Element4.4.1.2EmptyValueRecommended" xml:lang="en">P2Value(4.4.1.2)_Element Value of 4.4.1.2-Name is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(4.4.1.3)_Element4.4.1.3EmptyRecommended" xml:lang="en">SE2(4.4.1.3)_Element 4.4.1.3-Minimum Version is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(4.4.1.4)_Element4.4.1.4EmptyRecommended" xml:lang="en">SE2(4.4.1.4)_Element 4.4.1.4-Maximum Version is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.5)_Element4.5EmptyRecommended" xml:lang="en">E2(4.5)_Element 4.5-InstallationRemarks is empty.  This element is recommended.</iso:diagnostic>
@@ -785,11 +997,31 @@
         <iso:diagnostic id="Element5.7UndefinedRecommended" xml:lang="en">Element 5.7-TypicalAgeRange is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element5.9UndefinedRecommended" xml:lang="en">Element 5.9-TypicalLearningTime is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.1)_Element5.1EmptyRecommended" xml:lang="en">E2(5.1)_Element 5.1-InteractivityType is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.1)_Element5.1UndefinedSourceRecommended" xml:lang="en">P1Source(5.1)_Element Source of 5.1-Interactivity type is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.1)_Element5.1EmptySourceRecommended" xml:lang="en">P2Source(5.1)_Element Source of 5.1-Interactivity type is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.1)_Element5.1UndefinedValueRecommended" xml:lang="en">P1Value(5.1)_Element Value of 5.1-Interactivity type is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.1)_Element5.1EmptyValueRecommended" xml:lang="en">P2Value(5.1)_Element Value of 5.1-Interactivity type is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.3)_Element5.3EmptyRecommended" xml:lang="en">E2(5.3)_Element 5.3-InteractivityLevel is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.3)_Element5.3UndefinedSourceRecommended" xml:lang="en">P1Source(5.3)_Element Source of 5.3-Interactivity level is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.3)_Element5.3EmptySourceRecommended" xml:lang="en">P2Source(5.3)_Element Source of 5.3-Interactivity level is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.3)_Element5.3UndefinedValueRecommended" xml:lang="en">P1Value(5.3)_Element Value of 5.3-Interactivity level is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.3)_Element5.3EmptyValueRecommended" xml:lang="en">P2Value(5.3)_Element Value of 5.3-Interactivity level is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.4)_Element5.4EmptyRecommended" xml:lang="en">E2(5.4)_Element 5.4-SemanticDensity is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.4)_Element5.4UndefinedSourceRecommended" xml:lang="en">P1Source(5.4)_Element Source of 5.4-Semantic density is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.4)_Element5.4EmptySourceRecommended" xml:lang="en">P2Source(5.4)_Element Source of 5.4-Semantic density is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.4)_Element5.4UndefinedValueRecommended" xml:lang="en">P1Value(5.4)_Element Value of 5.4-Semantic density is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.4)_Element5.4EmptyValueRecommended" xml:lang="en">P2Value(5.4)_Element Value of 5.4-Semantic density is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.5)_Element5.5EmptyRecommended" xml:lang="en">E2(5.5)_Element 5.5-IntendedEndUserRole is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.5)_Element5.5UndefinedSourceRecommended" xml:lang="en">P1Source(5.5)_Element Source of 5.5-Intended end user role is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.5)_Element5.5EmptySourceRecommended" xml:lang="en">P2Source(5.5)_Element Source of 5.5-Intended end user role is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.5)_Element5.5UndefinedValueRecommended" xml:lang="en">P1Value(5.5)_Element Value of 5.5-Intended end user role is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.5)_Element5.5EmptyValueRecommended" xml:lang="en">P2Value(5.5)_Element Value of 5.5-Intended end user role is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.7)_Element5.7EmptyRecommended" xml:lang="en">E2(5.7)_Element 5.7-TypicalAgeRange is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.8)_Element5.8EmptyRecommended" xml:lang="en">E2(5.8)_Element 5.8-Difficulty is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.8)_Element5.8UndefinedSourceRecommended" xml:lang="en">P1Source(5.8)_Element Source of 5.8-Difficulty is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.8)_Element5.8EmptySourceRecommended" xml:lang="en">P2Source(5.8)_Element Source of 5.8-Difficulty is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.8)_Element5.8UndefinedValueRecommended" xml:lang="en">P1Value(5.8)_Element Value of 5.8-Difficulty is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.8)_Element5.8EmptyValueRecommended" xml:lang="en">P2Value(5.8)_Element Value of 5.8-Difficulty is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.9)_Element5.9EmptyRecommended" xml:lang="en">E2(5.9)_Element 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.10)_Element5.10EmptyRecommended" xml:lang="en">E2(5.10)_Element 5.10-Description is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.11)_Element5.11EmptyRecommended" xml:lang="en">E2(5.11)_Element 5.11-Language is empty.  This element is recommended.</iso:diagnostic>
@@ -833,6 +1065,66 @@
         <iso:diagnostic id="E2(9.3)_Element9.3EmptyRecommended" xml:lang="en">Element 9.3-Keyword is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(9.4)_Element9.4EmptyRecommended" xml:lang="en">Element 9.4-Keyword is empty.  This element is recommended.</iso:diagnostic>
 
+
+        <!-- Recommended Attributes (General) -->
+        <iso:diagnostic id="P1(1.2)_Attribute1.2LanguageUndefinedRecommended" xml:lang="en">P1(1.2)_Attribute1.2LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(1.2)_Attribute1.2LanguageEmptyRecommended" xml:lang="en">P2(1.2)_Attribute1.2LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(1.4)_Attribute1.4LanguageUndefinedRecommended" xml:lang="en">P1(1.4)_Attribute1.4LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(1.4)_Attribute1.4LanguageEmptyRecommended" xml:lang="en">P2(1.4)_Attribute1.4LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(1.5)_Attribute1.5LanguageUndefinedRecommended" xml:lang="en">P1(1.5)_Attribute1.5LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(1.5)_Attribute1.5LanguageEmptyRecommended" xml:lang="en">P2(1.5)_Attribute1.5LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(1.6)_Attribute1.6LanguageUndefinedRecommended" xml:lang="en">P1(1.6)_Attribute1.6LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(1.6)_Attribute1.6LanguageEmptyRecommended" xml:lang="en">P2(1.6)_Attribute1.6LanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (LifeCycle) -->
+        <iso:diagnostic id="P1(2.1)_Attribute2.1LanguageUndefinedRecommended" xml:lang="en">P1(2.1)_Attribute2.1LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(2.1)_Attribute2.1LanguageEmptyRecommended" xml:lang="en">P2(2.1)_Attribute2.1LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(2.3.3)_Attribute2.3.3DateDescriptionLanguageUndefinedRecommended" xml:lang="en">P1(2.3.3)_Attribute2.3.3DateDescriptionLanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(2.3.3)_Attribute2.3.3DateDescriptionLanguageEmptyRecommended" xml:lang="en">P2(2.3.3)_Attribute2.3.3DateDescriptionLanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (MetaMetadata) -->
+        <iso:diagnostic id="P1(3.2.3)_Attribute3.2.3DateDescriptionLanguageUndefinedRecommended" xml:lang="en">P1(3.2.3)_Attribute3.2.3DateDescriptionLanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(3.2.3)_Attribute3.2.3DateDescriptionLanguageEmptyRecommended" xml:lang="en">P2(3.2.3)_Attribute3.2.3DateDescriptionLanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (Technical) -->
+        <iso:diagnostic id="P1(4.5)_Attribute4.5LanguageUndefinedRecommended" xml:lang="en">P1(4.5)_Attribute4.5LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(4.5)_Attribute4.5LanguageEmptyRecommended" xml:lang="en">P2(4.5)_Attribute4.5LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(4.6)_Attribute4.6LanguageUndefinedRecommended" xml:lang="en">P1(4.6)_Attribute4.6LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(4.6)_Attribute4.6LanguageEmptyRecommended" xml:lang="en">P2(4.6)_Attribute4.6LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(4.7)_Attribute4.7LanguageUndefinedRecommended" xml:lang="en">P1(4.7)_Attribute4.7LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(4.7)_Attribute4.7LanguageEmptyRecommended" xml:lang="en">P2(4.7)_Attribute4.7LanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (Educational) -->
+        <iso:diagnostic id="P1(5.7)_Attribute5.7LanguageUndefinedRecommended" xml:lang="en">P1(5.7)_Attribute5.7LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(5.7)_Attribute5.7LanguageEmptyRecommended" xml:lang="en">P2(5.7)_Attribute5.7LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(5.9)_Attribute5.9LanguageUndefinedRecommended" xml:lang="en">P1(5.9)_Attribute5.9LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(5.9)_Attribute5.9LanguageEmptyRecommended" xml:lang="en">P2(5.9)_Attribute5.9LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(5.10)_Attribute5.10LanguageUndefinedRecommended" xml:lang="en">P1(5.10)_Attribute5.10LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(5.10)_Attribute5.10LanguageEmptyRecommended" xml:lang="en">P2(5.10)_Attribute5.10LanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (Rights) -->
+        <iso:diagnostic id="P1(6.3)_Attribute6.3LanguageUndefinedRecommended" xml:lang="en">P1(6.3)_Attribute6.3LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(6.3)_Attribute6.3LanguageEmptyRecommended" xml:lang="en">P2(6.3)_Attribute6.3LanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (Relation) -->
+        <iso:diagnostic id="P1(7.2.2)_Attribute7.2.2LanguageUndefinedRecommended" xml:lang="en">P1(7.2.2)_Attribute7.2.2LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(7.2.2)_Attribute7.2.2LanguageEmptyRecommended" xml:lang="en">P2(7.2.2)_Attribute7.2.2LanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (Annotation) -->
+        <iso:diagnostic id="P1(8.2)_Attribute8.2LanguageUndefinedRecommended" xml:lang="en">P1(8.2)_Attribute8.2LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(8.2)_Attribute8.2LanguageEmptyRecommended" xml:lang="en">P2(8.2)_Attribute8.2LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(8.3)_Attribute8.3LanguageUndefinedRecommended" xml:lang="en">P1(8.3)_Attribute8.3LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(8.3)_Attribute8.3LanguageEmptyRecommended" xml:lang="en">P2(8.3)_Attribute8.3LanguageEmptyRecommended</iso:diagnostic>
+
+        <!-- Recommended Attributes (Classification) -->
+        <iso:diagnostic id="P1(9.2.1)_Attribute9.2.1LanguageUndefinedRecommended" xml:lang="en">P1(9.2.1)_Attribute9.2.1LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(9.2.1)_Attribute9.2.1LanguageEmptyRecommended" xml:lang="en">P2(9.2.1)_Attribute9.2.1LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(9.2.2.2)_Attribute9.2.2.2LanguageUndefinedRecommended" xml:lang="en">P1(9.2.2.2)_Attribute9.2.2.2LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(9.2.2.2)_Attribute9.2.2.2LanguageEmptyRecommended" xml:lang="en">P2(9.2.2.2)_Attribute9.2.2.2LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(9.3)_Attribute9.3LanguageUndefinedRecommended" xml:lang="en">P1(9.3)_Attribute9.3LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(9.3)_Attribute9.3LanguageEmptyRecommended" xml:lang="en">P2(9.3)_Attribute9.3LanguageEmptyRecommended</iso:diagnostic>
+        <iso:diagnostic id="P1(9.4)_Attribute9.4LanguageUndefinedRecommended" xml:lang="en">P1(9.4)_Attribute9.4LanguageUndefinedRecommended</iso:diagnostic>
+        <iso:diagnostic id="P2(9.4)_Attribute9.4LanguageEmptyRecommended" xml:lang="en">P2(9.4)_Attribute9.4LanguageEmptyRecommended</iso:diagnostic>
 
         <!-- Language Attributes --> 
         <iso:diagnostic id="ElementWithIllegalLangString" xml:lang="en">Element <iso:name/> has a LangString element with an illegal language attribute.</iso:diagnostic>
