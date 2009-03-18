@@ -510,9 +510,17 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:learningResourceType">
             <iso:assert test="normalize-space() != ''" diagnostics="Element5.2EmptyMandatory">Element5.2EmptyMandatory</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.2)_Element5.2UndefinedSourceMandatory">P1Source(5.2)_Element5.2UndefinedSourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.2)_Element5.2EmptySourceMandatory">P2Source(5.2)_Element5.2EmptySourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.2)_Element5.2UndefinedValueMandatory">P1Value(5.2)_Element5.2UndefinedValueMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.2)_Element5.2EmptyValueMandatory">P2Value(5.2)_Element5.2EmptyValueMandatory</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:context">
             <iso:assert test="normalize-space() != ''" diagnostics="Element5.6EmptyMandatory">Element5.6EmptyMandatory</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(5.6)_Element5.6UndefinedSourceMandatory">P1Source(5.6)_Element5.6UndefinedSourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(5.6)_Element5.6EmptySourceMandatory">P2Source(5.6)_Element5.6EmptySourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(5.6)_Element5.6UndefinedValueMandatory">P1Value(5.6)_Element5.6UndefinedValueMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(5.6)_Element5.6EmptyValueMandatory">P2Value(5.6)_Element5.6EmptyValueMandatory</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -588,9 +596,17 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:rights/lom:cost">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(6.1)_Element6.1EmptyMandatory">E2(6.1)_Element6.1EmptyMandatory</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(6.1)_Element6.1UndefinedSourceMandatory">P1Source(6.1)_Element6.1UndefinedSourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(6.1)_Element6.1EmptySourceMandatory">P2Source(6.1)_Element6.1EmptySourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(6.1)_Element6.1UndefinedValueMandatory">P1Value(6.1)_Element6.1UndefinedValueMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(6.1)_Element6.1EmptyValueMandatory">P2Value(6.1)_Element6.1EmptyValueMandatory</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:rights/lom:copyrightAndOtherRestrictions">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(6.2)_Element6.2EmptyMandatory">E2(6.2)_Element6.2EmptyMandatory</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(6.2)_Element6.2UndefinedSourceMandatory">P1Source(6.2)_Element6.2UndefinedSourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(6.2)_Element6.2EmptySourceMandatory">P2Source(6.2)_Element6.2EmptySourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(6.2)_Element6.2UndefinedValueMandatory">P1Value(6.2)_Element6.2UndefinedValueMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(6.2)_Element6.2EmptyValueMandatory">P2Value(6.2)_Element6.2EmptyValueMandatory</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -628,6 +644,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:relation/lom:kind">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(7.1)_Element7.1EmptyRecommended">E2(7.1)_Element7.1EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(7.1)_Element7.1UndefinedSourceRecommended">P1Source(7.1)_Element7.1UndefinedSourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(7.1)_Element7.1EmptySourceRecommended">P2Source(7.1)_Element7.1EmptySourceRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(7.1)_Element7.1UndefinedValueRecommended">P1Value(7.1)_Element7.1UndefinedValueRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(7.1)_Element7.1EmptyValueRecommended">P2Value(7.1)_Element7.1EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:relation/lom:resource/lom:identifier/lom:catalog">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(7.2.1.1)_Element7.2.1.1EmptyRecommended">SE2(7.2.1.1)_Element7.2.1.1EmptyRecommended</iso:assert>
@@ -673,6 +693,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:purpose">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(9.1)_Element9.1EmptyMandatory">E2(9.1)_Element9.1EmptyMandatory</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="P1Source(9.1)_Element9.1UndefinedSourceMandatory">P1Source(9.1)_Element9.1UndefinedSourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:source and normalize-space(lom:source) = ''" diagnostics="P2Source(9.1)_Element9.1EmptySourceMandatory">P2Source(9.1)_Element9.1EmptySourceMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:value)" diagnostics="P1Value(9.1)_Element9.1UndefinedValueMandatory">P1Value(9.1)_Element9.1UndefinedValueMandatory</iso:report>
+            <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value(9.1)_Element9.1EmptyValueMandatory">P2Value(9.1)_Element9.1EmptyValueMandatory</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath">
             <iso:assert test="lom:source" diagnostics="SE1(9.2.1)_Element9.2.1UndefinedMandatory">SE1(9.2.1)_Element9.2.1UndefinedMandatory</iso:assert>
@@ -767,17 +791,17 @@
         <iso:rule context="lom:lom/lom:educational/lom:learningResourceType">
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
-            <iso:assert test="$source = 'LOMv1.0' or $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.2">UnrecognizedVocabularySourceForElement5.2</iso:assert>
-            <iso:report test="$source = 'LOMv1.0' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.2">InvalidVocabularyForElement5.2</iso:report>
-            <iso:report test="$source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.2">InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://www.normetic.org/vdex/typeressourcev1_2.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.2">UnrecognizedVocabularySourceForElement5.2</iso:report>
+            <iso:report test="$value and $source = 'LOMv1.0' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value(5.2)_InvalidVocabularyForElement5.2">P3Value(5.2)_InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="$value and $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value(5.2)_InvalidVocabularyForElement5.2">P3Value(5.2)_InvalidVocabularyForElement5.2</iso:report>
         </iso:rule>
 
         <iso:rule context="lom:lom/lom:educational/lom:context">
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
-            <iso:assert test="$source = 'LOMv1.0' or $source = 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.6">UnrecognizedVocabularySourceForElement5.6</iso:assert>
-            <iso:report test="$source = 'LOMv1.0' and not(document('LOMv1.0_element_5_6_context_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.6">InvalidVocabularyForElement5.6</iso:report>
-            <iso:report test="$source = 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml' and not(document('NORMETICv1.0_element_5_6_contexte_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="InvalidVocabularyForElement5.6">InvalidVocabularyForElement5.6</iso:report>
+            <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.6">UnrecognizedVocabularySourceForElement5.6</iso:report>
+            <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_6_context_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value(5.6)_InvalidVocabularyForElement5.6">P3Value(5.6)_InvalidVocabularyForElement5.6</iso:report>
+            <iso:report test="$value and $source = 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml' and not(document('NORMETICv1.0_element_5_6_contexte_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value(5.6)_InvalidVocabularyForElement5.6">P3Value(5.6)_InvalidVocabularyForElement5.6</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -917,10 +941,10 @@
         <iso:diagnostic id="E1(2.3)_Element2.3UndefinedMandatory" xml:lang="en">Element 2.3-Contribute is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(2.1)_Element2.1EmptyMandatory" xml:lang="en">Element 2.1-Version is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(2.3.1)_Element2.3.1UndefinedMandatory" xml:lang="en">SE1(2.3.1)_Element 2.3.1-Role is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="P1Source(2.3.1)_Element2.3.1UndefinedSourceMandatory" xml:lang="en">P1Source(2.3.1)_Element Source of 2.3.1-Role is undefined.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="P2Source(2.3.1)_Element2.3.1EmptySourceMandatory" xml:lang="en">P2Source(2.3.1)_Element Source of 2.3.1-Role is empty.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="P1Value(2.3.1)_Element2.3.1UndefinedValueMandatory" xml:lang="en">P1Value(2.3.1)_Element Value of 2.3.1-Role is undefined.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="P2Value(2.3.1)_Element2.3.1EmptyValueMandatory" xml:lang="en">P2Value(2.3.1)_Element Value of 2.3.1-Role is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(2.3.1)_Element2.3.1UndefinedSourceMandatory" xml:lang="en">P1Source(2.3.1)_Element Source of 2.3.1-Role is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(2.3.1)_Element2.3.1EmptySourceMandatory" xml:lang="en">P2Source(2.3.1)_Element Source of 2.3.1-Role is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(2.3.1)_Element2.3.1UndefinedValueMandatory" xml:lang="en">P1Value(2.3.1)_Element Value of 2.3.1-Role is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(2.3.1)_Element2.3.1EmptyValueMandatory" xml:lang="en">P2Value(2.3.1)_Element Value of 2.3.1-Role is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(2.3.2)_Element2.3.2UndefinedMandatory" xml:lang="en">SE1(2.3.2)_Element 2.3.2-Entity is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element2.3.1EmptyMandatory" xml:lang="en">Element 2.3.1-Role is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE2(2.3.2)_Element2.3.2EmptyMandatory" xml:lang="en">SE2(2.3.2)_Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
@@ -988,7 +1012,15 @@
 
         <!-- Mandatory Elements (Educational) -->
         <iso:diagnostic id="E1(5.2)_Element5.2UndefinedMandatory" xml:lang="en">Element 5.2-LearningResourceType is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.2)_Element5.2UndefinedSourceMandatory" xml:lang="en">P1Source(5.2)_Element Source of 5.2-LearningResourceType is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.2)_Element5.2EmptySourceMandatory" xml:lang="en">P2Source(5.2)_Element Source of 5.2-LearningResourceType is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.2)_Element5.2UndefinedValueMandatory" xml:lang="en">P1Value(5.2)_Element Value of 5.2-LearningResourceType is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.2)_Element5.2EmptyValueMandatory" xml:lang="en">P2Value(5.2)_Element Value of 5.2-LearningResourceType is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(5.6)_Element5.6UndefinedMandatory" xml:lang="en">Element 5.6-Context is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(5.6)_Element5.6UndefinedSourceMandatory" xml:lang="en">P1Source(5.6)_Element Source of 5.6-Context is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(5.6)_Element5.6EmptySourceMandatory" xml:lang="en">P2Source(5.6)_Element Source of 5.6-Context is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(5.6)_Element5.6UndefinedValueMandatory" xml:lang="en">P1Value(5.6)_Element Value of 5.6-Context is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(5.6)_Element5.6EmptyValueMandatory" xml:lang="en">P2Value(5.6)_Element Value of 5.6-Context is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element5.2EmptyMandatory" xml:lang="en">Element 5.2-LearningResourceType is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="Element5.6EmptyMandatory" xml:lang="en">Element 5.6-Context is empty.  This element is mandatory.</iso:diagnostic>
 
@@ -1029,12 +1061,24 @@
         <!-- Recommended Elements (Educational) --> 
         <iso:diagnostic id="Element7.1UndefinedRecommended" xml:lang="en">Element 7.1-Type is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(7.1)_Element7.1EmptyRecommended" xml:lang="en">E2(7.1)_Element 7.1-Type is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(7.1)_Element7.1UndefinedSourceRecommended" xml:lang="en">P1Source(7.1)_Element Source of 7.1-Kind is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(7.1)_Element7.1EmptySourceRecommended" xml:lang="en">P2Source(7.1)_Element Source of 7.1-Kind is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(7.1)_Element7.1UndefinedValueRecommended" xml:lang="en">P1Value(7.1)_Element Value of 7.1-Kind is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(7.1)_Element7.1EmptyValueRecommended" xml:lang="en">P2Value(7.1)_Element Value of 7.1-Kind is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (Rights) --> 
         <iso:diagnostic id="E1(6.1)_Element6.1UndefinedMandatory" xml:lang="en">E1(6.1)_Element 6.1-Cost is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(6.2)_Element6.2UndefinedMandatory" xml:lang="en">E1(6.2)_Element 6.2-CopyrightAndOtherRestrictions is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(6.1)_Element6.1EmptyMandatory" xml:lang="en">E2(6.1)_Element 6.1-Cost is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(6.1)_Element6.1UndefinedSourceMandatory" xml:lang="en">P1Source(6.1)_Element Source of 6.1-Cost is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(6.1)_Element6.1EmptySourceMandatory" xml:lang="en">P2Source(6.1)_Element Source of 6.1-Cost is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(6.1)_Element6.1UndefinedValueMandatory" xml:lang="en">P1Value(6.1)_Element Value of 6.1-Cost is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(6.1)_Element6.1EmptyValueMandatory" xml:lang="en">P2Value(6.1)_Element Value of 6.1-Cost is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(6.2)_Element6.2EmptyMandatory" xml:lang="en">E2(6.2)_Element 6.2-CopyrightAndOtherRestrictions is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(6.2)_Element6.2UndefinedSourceMandatory" xml:lang="en">P1Source(6.2)_Element Source of 6.2-CopyrightAndOtherRestrictions is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(6.2)_Element6.2EmptySourceMandatory" xml:lang="en">P2Source(6.2)_Element Source of 6.2-CopyrightAndOtherRestrictions is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(6.2)_Element6.2UndefinedValueMandatory" xml:lang="en">P1Value(6.2)_Element Value of 6.2-CopyrightAndOtherRestrictions is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(6.2)_Element6.2EmptyValueMandatory" xml:lang="en">P2Value(6.2)_Element Value of 6.2-CopyrightAndOtherRestrictions is empty.  This element is mandatory.</iso:diagnostic>
 
         <!-- Conditional Mandatory Elements (Rights) -->
         <iso:diagnostic id="Element6.3MandatoryBecause6.2Yes" xml:lang="en">As element 6.2-CopyrightAndOtherRestrictions's value is 'yes', the element 6.3-Description is mandatory.</iso:diagnostic>
@@ -1051,6 +1095,10 @@
 
         <!-- Mandatory Elements (Classification) --> 
         <iso:diagnostic id="E1(9.1)_Element9.1UndefinedMandatory" xml:lang="en">E1(9.1)_Element 9.1-Purpose is not defined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Source(9.1)_Element9.1UndefinedSourceMandatory" xml:lang="en">P1Source(9.1)_Element Source of 9.1-Purpose is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Source(9.1)_Element9.1EmptySourceMandatory" xml:lang="en">P2Source(9.1)_Element Source of 9.1-Purpose is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P1Value(9.1)_Element9.1UndefinedValueMandatory" xml:lang="en">P1Value(9.1)_Element Value of 9.1-Purpose is undefined.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="P2Value(9.1)_Element9.1EmptyValueMandatory" xml:lang="en">P2Value(9.1)_Element Value of 9.1-Purpose is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1(9.2)_Element9.2UndefinedMandatory" xml:lang="en">E1(9.2)_Element 9.2-TaxonPath is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E2(9.1)_Element9.1EmptyMandatory" xml:lang="en">E2(9.1)_Element 9.1-Purpose is empty.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="SE1(9.2.1)_Element9.2.1UndefinedMandatory" xml:lang="en">SE(9.2.1)_Element 9.2.1-Source is not defined.  This element is mandatory.</iso:diagnostic>
@@ -1133,9 +1181,9 @@
 
         <!-- Vocabularies (Educational) -->
         <iso:diagnostic id="UnrecognizedVocabularySourceForElement5.2" xml:lang="en">Unrecognized source for element 5.2-LearningResourceType.</iso:diagnostic>
-        <iso:diagnostic id="InvalidVocabularyForElement5.2" xml:lang="en">Invalid vocabulary definition for element 5.2-LearningResourceType.</iso:diagnostic>
+        <iso:diagnostic id="P3Value(5.2)_InvalidVocabularyForElement5.2" xml:lang="en">P3Value(5.2)_Invalid vocabulary definition for element 5.2-LearningResourceType.</iso:diagnostic>
         <iso:diagnostic id="UnrecognizedVocabularySourceForElement5.6" xml:lang="en">Unrecognized source for element 5.6-Context.</iso:diagnostic>
-        <iso:diagnostic id="InvalidVocabularyForElement5.6" xml:lang="en">Invalid vocabulary definition for element 5.6-Context.</iso:diagnostic>
+        <iso:diagnostic id="P3Value(5.6)_InvalidVocabularyForElement5.6" xml:lang="en">P3Value(5.6)_Invalid vocabulary definition for element 5.6-Context.</iso:diagnostic>
     </iso:diagnostics>
 
 </iso:schema>
