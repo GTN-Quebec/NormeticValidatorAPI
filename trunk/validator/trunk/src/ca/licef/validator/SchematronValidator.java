@@ -117,7 +117,8 @@ class SchematronValidator {
                     String[] localeMetadata = localeMetadataString.split( "\\|" ); 
 
                     error.setAlternateMessage( localeMetadata[ 0 ] );
-                    error.setExplanation( localeMetadata[ 1 ] );
+                    if( localeMetadata.length >= 2 ) 
+                        error.setExplanation( localeMetadata[ 1 ] );
                 }
             }
         }
