@@ -432,6 +432,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:contribute/lom:date">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2(3.2.3)_Element3.2.3EmptyRecommended">SE2(3.2.3)_Element3.2.3EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:dateTime)" diagnostics="P1DateTime(3.2.3)_Element3.2.3UndefinedDateTimeRecommended">P1DateTime(3.2.3)_Element3.2.3UndefinedDateTimeRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:dateTime and normalize-space(lom:dateTime) = ''" diagnostics="P2DateTime(3.2.3)_Element3.2.3EmptyDateTimeRecommended">P2DateTime(3.2.3)_Element3.2.3EmptyDateTimeRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:description)" diagnostics="P1Description(3.2.3)_Element3.2.3UndefinedDescriptionRecommended">P1Description(3.2.3)_Element3.2.3UndefinedDescriptionRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:description and normalize-space(lom:description) = ''" diagnostics="P2Description(3.2.3)_Element3.2.3EmptyDescriptionRecommended">P2Description(3.2.3)_Element3.2.3EmptyDescriptionRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:metaMetadata/lom:language">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(3.4)_Element3.4EmptyRecommended">E2(3.4)_Element3.4EmptyRecommended</iso:assert>
@@ -499,6 +503,8 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:duration">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(4.7)_Element4.7EmptyRecommended">E2(4.7)_Element4.7EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:duration)" diagnostics="P1Duration(4.7)_Element4.7UndefinedDurationRecommended">P1Duration(4.7)_Element4.7UndefinedDurationRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:duration and normalize-space(lom:duration) = ''" diagnostics="P2Duration(4.7)_Element4.7EmptyDurationRecommended">P2Duration(4.7)_Element4.7EmptyDurationRecommended</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -579,6 +585,8 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:typicalLearningTime">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.9)_Element5.9EmptyRecommended">E2(5.9)_Element5.9EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:duration)" diagnostics="P1Duration(5.9)_Element5.9UndefinedDurationRecommended">P1Duration(5.9)_Element5.9UndefinedDurationRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:duration and normalize-space(lom:duration) = ''" diagnostics="P2Duration(5.9)_Element5.9EmptyDurationRecommended">P2Duration(5.9)_Element5.9EmptyDurationRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:description">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(5.10)_Element5.10EmptyRecommended">E2(5.10)_Element5.10EmptyRecommended</iso:assert>
@@ -679,6 +687,10 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:annotation/lom:date">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(8.2)_Element8.2EmptyRecommended">E2(8.2)_Element8.2EmptyRecommended</iso:assert>
+            <iso:report test="normalize-space() != '' and not(lom:dateTime)" diagnostics="P1DateTime(8.2)_Element8.2UndefinedDateTimeRecommended">P1DateTime(8.2)_Element8.2UndefinedDateTimeRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:dateTime and normalize-space(lom:dateTime) = ''" diagnostics="P2DateTime(8.2)_Element8.2EmptyDateTimeRecommended">P2DateTime(8.2)_Element8.2EmptyDateTimeRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:description)" diagnostics="P1Description(8.2)_Element8.2UndefinedDescriptionRecommended">P1Description(8.2)_Element8.2UndefinedDescriptionRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:description and normalize-space(lom:description) = ''" diagnostics="P2Description(8.2)_Element8.2EmptyDescriptionRecommended">P2Description(8.2)_Element8.2EmptyDescriptionRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:annotation/lom:description">
             <iso:assert test="normalize-space() != ''" diagnostics="E2(8.3)_Element8.3EmptyRecommended">E2(8.3)_Element8.3EmptyRecommended</iso:assert>
@@ -981,6 +993,11 @@
         <iso:diagnostic id="P2Value(3.2.1)_Element3.2.1EmptyValueRecommended" xml:lang="en">P2Value(3.2.1)_Element Value of 3.2.1-Role is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(3.2.2)_Element3.2.2EmptyRecommended" xml:lang="en">SE2(3.2.2)_Element 3.2.2-Entity is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="SE2(3.2.3)_Element3.2.3EmptyRecommended" xml:lang="en">SE2(3.2.3)_Element 3.2.3-Date is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1DateTime(3.2.3)_Element3.2.3UndefinedDateTimeRecommended" xml:lang="en">P1DateTime(3.2.3)_Element DateTime of 3.2.3-Date is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2DateTime(3.2.3)_Element3.2.3EmptyDateTimeRecommended" xml:lang="en">P2DateTime(3.2.3)_Element DateTime of 3.2.3-Date is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Description(3.2.3)_Element3.2.3UndefinedDescriptionRecommended" xml:lang="en">P1Description(3.2.3)_Element Description of 3.2.3-Date is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Description(3.2.3)_Element3.2.3EmptyDescriptionRecommended" xml:lang="en">P2Description(3.2.3)_Element Description of 3.2.3-Date is empty.  This element is recommended.</iso:diagnostic>
+
         <iso:diagnostic id="E2(3.4)_Element3.4EmptyRecommended" xml:lang="en">E2(3.4)_Element 3.4-Language is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (Technical) -->
@@ -1009,6 +1026,8 @@
         <iso:diagnostic id="E2(4.5)_Element4.5EmptyRecommended" xml:lang="en">E2(4.5)_Element 4.5-InstallationRemarks is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.6)_Element4.6EmptyRecommended" xml:lang="en">E2(4.6)_Element 4.6-OtherPlatformRequirements is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(4.7)_Element4.7EmptyRecommended" xml:lang="en">E2(4.7)_Element 4.7-Duration is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Duration(4.7)_Element4.7UndefinedDurationRecommended" xml:lang="en">P1Duration(4.7)_Element Duration of 4.7-Duration is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Duration(4.7)_Element4.7EmptyDurationRecommended" xml:lang="en">P2Duration(4.7)_Element Duration of 4.7-Duration is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (Educational) -->
         <iso:diagnostic id="E1(5.2)_Element5.2UndefinedMandatory" xml:lang="en">Element 5.2-LearningResourceType is not defined.  This element is mandatory.</iso:diagnostic>
@@ -1055,6 +1074,8 @@
         <iso:diagnostic id="P1Value(5.8)_Element5.8UndefinedValueRecommended" xml:lang="en">P1Value(5.8)_Element Value of 5.8-Difficulty is undefined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="P2Value(5.8)_Element5.8EmptyValueRecommended" xml:lang="en">P2Value(5.8)_Element Value of 5.8-Difficulty is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.9)_Element5.9EmptyRecommended" xml:lang="en">E2(5.9)_Element 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Duration(5.9)_Element5.9UndefinedDurationRecommended" xml:lang="en">P1Duration(5.9)_Element Duration of 5.9-TypicalLearningTime is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Duration(5.9)_Element5.9EmptyDurationRecommended" xml:lang="en">P2Duration(5.9)_Element Duration of 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.10)_Element5.10EmptyRecommended" xml:lang="en">E2(5.10)_Element 5.10-Description is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(5.11)_Element5.11EmptyRecommended" xml:lang="en">E2(5.11)_Element 5.11-Language is empty.  This element is recommended.</iso:diagnostic>
 
@@ -1091,6 +1112,10 @@
         <!-- Recommended Elements (Annotation) -->
         <iso:diagnostic id="E2(8.1)_Element8.1EmptyRecommended" xml:lang="en">E2(8.1)_Element 8.1-Entity is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(8.2)_Element8.2EmptyRecommended" xml:lang="en">E2(8.2)_Element 8.2-Date is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1DateTime(8.2)_Element8.2UndefinedDateTimeRecommended" xml:lang="en">P1DateTime(8.2)_Element DateTime of 8.2-Date is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2DateTime(8.2)_Element8.2EmptyDateTimeRecommended" xml:lang="en">P2DateTime(8.2)_Element DateTime of 8.2-Date is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P1Description(8.2)_Element8.2UndefinedDescriptionRecommended" xml:lang="en">P1Description(8.2)_Element Description of 8.2-Date is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="P2Description(8.2)_Element8.2EmptyDescriptionRecommended" xml:lang="en">P2Description(8.2)_Element Description of 8.2-Date is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2(8.3)_Element8.3EmptyRecommended" xml:lang="en">E2(8.3)_Element 8.3-Description is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (Classification) --> 
