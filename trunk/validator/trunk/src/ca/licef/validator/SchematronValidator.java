@@ -101,10 +101,10 @@ class SchematronValidator {
                     String metadataString = key.substring( 0, indexOfMetadataDelimiter );
                     key = key.substring( indexOfMetadataDelimiter + 1 );
                     String kind = null;
-                    int indexOfParenthesis = metadataString.indexOf( "(" );
+                    int indexOfParenthesis = metadataString.indexOf( "-" );
                     if( indexOfParenthesis != -1 ) {
                         kind = metadataString.substring( 0, indexOfParenthesis );
-                        String relatedFieldNumber = metadataString.substring( indexOfParenthesis + 1, metadataString.indexOf( ")" ) );
+                        String relatedFieldNumber = metadataString.substring( indexOfParenthesis + 1 );
                         error.setRelatedFieldNumber( relatedFieldNumber );
                     }
                     else 

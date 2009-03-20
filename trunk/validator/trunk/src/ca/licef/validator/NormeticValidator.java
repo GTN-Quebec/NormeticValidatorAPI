@@ -53,21 +53,16 @@ public class NormeticValidator {
 
                 Matcher fileLineMatcher = fileLinePattern.matcher( line );
                 if( fileLineMatcher.find() ) {
-System.out.println( "matches file" );                    
                     String fileToValidate = fileLineMatcher.group( 1 );
                     String expectedResult = fileLineMatcher.group( 2 );
                     File childLomFile = new File( lomFolder, fileToValidate );
                     report.append( strValidatingLom + childLomFile + "\n\n" );
                     if( !childLomFile.exists() )
                         throw( new ValidatorException( "File to validate '" + childLomFile + "' not found.  Error in control file of directory:" + lomFolder ) );
-System.out.println( "1" );                    
                     ValidationReport childLomFileReport = validate( childLomFile );
-System.out.println( "2" );                    
                     report.append( childLomFileReport );
                     String actualResult = getValidationStatus( childLomFileReport );
-System.out.println( "3" );                    
                     boolean isPassed = isValidationOk( expectedResult, actualResult );
-System.out.println( "4" );                    
                     report.append( "\n" );
                     report.append( strExpectedResult + expectedResult );
                     report.append( "\n" );
@@ -79,7 +74,6 @@ System.out.println( "4" );
                 else {
                     Matcher folderLineMatcher = folderLinePattern.matcher( line );
                     if( folderLineMatcher.find() ) {
-System.out.println( "matches folder" );                        
                         String folderToValidate = folderLineMatcher.group( 1 );
                         File childLomFolder = new File( lomFolder, folderToValidate );  
                         report.append( strValidatingFolder + childLomFolder + "\n\n" );
@@ -241,7 +235,6 @@ System.out.println( "matches folder" );
         int indexOfActualIssueListDelimiter = actualStatus.indexOf( "[" );
         if( indexOfActualIssueListDelimiter != -1 )
             actualStatus = actualStatus.substring( 0, indexOfActualIssueListDelimiter );
-System.out.println( "expectedStatus="+expectedStatus+" =? actualStatus="+actualStatus + " res=" + expectedStatus.equals( actualStatus ) );
 
         if( !expectedStatus.equals( actualStatus ) )
             return( false );
@@ -279,10 +272,8 @@ System.out.println( "expectedStatus="+expectedStatus+" =? actualStatus="+actualS
                     actualIssueFieldNumber = actualIssue.substring( indexOfActualIssueFieldNumberDelimiter + 1, actualIssue.indexOf( ")" ) );
                 }
 
-System.out.println( "eik="+expectedIssueKind+" vs aik="+actualIssueKind+" =?" + ( expectedIssueKind.equals( actualIssueKind ) ) );                
                 if( !expectedIssueKind.equals( actualIssueKind ) )
                     continue;
-System.out.println( "eifn="+expectedIssueFieldNumber+" vs aifn="+actualIssueFieldNumber );
 
                 if( ( expectedIssueFieldNumber == null && actualIssueFieldNumber != null ) ||
                     ( expectedIssueFieldNumber != null && ( actualIssueFieldNumber == null || !expectedIssueFieldNumber.equals( actualIssueFieldNumber ) ) ) )
