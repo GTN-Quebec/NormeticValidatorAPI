@@ -358,7 +358,7 @@
     <iso:pattern id="ConditionalMandatoryElements.LifeCycle">
         <iso:title>Validating LifeCycle category's conditional mandatory elements</iso:title>
         <iso:rule context="lom:lom/lom:lifeCycle">
-            <iso:assert test="count(lom:contribute/lom:date) > 0 and (string-length( string-join( for $s in lom:contribute/lom:date/lom:dateTime return( normalize-space( $s ) ), '' ) ) > 0 or //lom:date/lom:description/lom:string[normalize-space(text())='non disponible'] )" diagnostics="Element2.3.3UndefinedMandatory">Element2.3.3UndefinedMandatory</iso:assert>
+            <iso:assert test="count(lom:contribute/lom:date) > 0 and (string-length( string-join( for $s in lom:contribute/lom:date/lom:dateTime return( normalize-space( $s ) ), '' ) ) > 0 or //lom:date/lom:description/lom:string[normalize-space(text())='non disponible'] )" diagnostics="RC1-2.3.3_Element2.3.3UndefinedMandatory">RC1-2.3.3_Element2.3.3UndefinedMandatory</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -379,10 +379,16 @@
             <iso:report test="normalize-space() != '' and lom:value and normalize-space(lom:value) = ''" diagnostics="P2Value-2.2_Element2.2EmptyValueRecommended">P2Value-2.2_Element2.2EmptyValueRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute">
-            <iso:assert test="lom:date/lom:dateTime or lom:date/lom:description/lom:string[normalize-space(text())='non disponible']" diagnostics="Element2.3.3UndefinedRecommended">Element2.3.3UndefinedRecommended</iso:assert>
+            <iso:let name="isAtLeastOneDateSpecified" value="count(..//lom:date) > 0 and (string-length( string-join( for $s in ..//lom:date/lom:dateTime return( normalize-space( $s ) ), '' ) ) > 0 or ..//lom:date/lom:description/lom:string[normalize-space(text()) = 'non disponible'] )"/> 
+            <!-- The first part of the condition makes sure that we apply this rule only if there is already a date specified.
+                 Otherwise, this rule is not needed.  Another rule will be used instead. -->
+            <iso:report test="$isAtLeastOneDateSpecified and (not(lom:date/lom:dateTime) and not(lom:date/lom:description/lom:string[normalize-space(text()) = 'non disponible']))" diagnostics="RC2-2.3.3_Element2.3.3UndefinedRecommended">RC2-2.3.3_Element2.3.3UndefinedRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:lifeCycle/lom:contribute/lom:date">
-            <iso:assert test="normalize-space(lom:dateTime) != '' or normalize-space(lom:description/lom:string) != ''" diagnostics="Element2.3.3EmptyRecommended">Element2.3.3EmptyRecommended</iso:assert>
+            <iso:let name="isAtLeastOneDateSpecified" value="count(/lom:lom/lom:lifeCycle//lom:date) > 0 and (string-length( string-join( for $s in /lom:lom/lom:lifeCycle//lom:date/lom:dateTime return( normalize-space( $s ) ), '' ) ) > 0 or /lom:lom/lom:lifeCycle//lom:date/lom:description/lom:string[normalize-space(text()) = 'non disponible'] )"/> 
+            <!-- The first part of the condition makes sure that we apply this rule only if there is already a date specified.
+                 Otherwise, this rule is not needed.  Another rule will be used instead. -->
+            <iso:report test="$isAtLeastOneDateSpecified and ( (lom:dateTime and normalize-space(lom:dateTime) = '') or (lom:description and normalize-space(lom:description/lom:string) = '') )" diagnostics="RC3-2.3.3_Element2.3.3EmptyRecommended">RC3-2.3.3_Element2.3.3EmptyRecommended</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -962,7 +968,7 @@
         <iso:diagnostic id="SE2-2.3.2_Element2.3.2EmptyMandatory" xml:lang="en">SE2-2.3.2_Element 2.3.2-Entity is empty.  This element is mandatory.</iso:diagnostic>
 
         <!-- Conditional Mandatory Elements (LifeCycle) -->
-        <iso:diagnostic id="Element2.3.3UndefinedMandatory" xml:lang="en">Element 2.3.3-Date is not defined.  This element is mandatory for at least one contributor.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
+        <iso:diagnostic id="RC1-2.3.3_Element2.3.3UndefinedMandatory" xml:lang="en">RC1-2.3.3_Element 2.3.3-Date is not defined.  This element is mandatory for at least one contributor.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
 
         <!-- Recommended Elements (LifeCycle) -->
         <iso:diagnostic id="Element2.2UndefinedRecommended" xml:lang="en">Element 2.2-Status is not defined.  This element is recommended.</iso:diagnostic>
@@ -971,8 +977,8 @@
         <iso:diagnostic id="P2Source-2.2_Element2.2EmptySourceRecommended" xml:lang="en">P2Source-2.2_Element Source of 2.2-Status is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="P1Value-2.2_Element2.2UndefinedValueRecommended" xml:lang="en">P1Value-2.2_Element Value of 2.2-Status is undefined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="P2Value-2.2_Element2.2EmptyValueRecommended" xml:lang="en">P2Value-2.2_Element Value of 2.2-Status is empty.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.3UndefinedRecommended" xml:lang="en">Element 2.3.3-Date is not defined.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
-        <iso:diagnostic id="Element2.3.3EmptyRecommended" xml:lang="en">Element 2.3.3-Date is empty.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
+        <iso:diagnostic id="RC2-2.3.3_Element2.3.3UndefinedRecommended" xml:lang="en">RC2-2.3.3_Element 2.3.3-Date is not defined.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
+        <iso:diagnostic id="RC3-2.3.3_Element2.3.3EmptyRecommended" xml:lang="en">RC3-2.3.3_Element 2.3.3-Date is empty.  This element is recommended.  In case you don't know the date of contribution, please enter 'non disponible' in the description field.</iso:diagnostic>
 
         <!-- Mandatory Elements (MetaMetadata) -->
         <iso:diagnostic id="E1-3.1_Element3.1UndefinedMandatory" xml:lang="en">Element 3.1-Identifier is not defined.  This element is mandatory.</iso:diagnostic>
