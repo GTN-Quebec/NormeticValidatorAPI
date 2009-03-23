@@ -56,20 +56,23 @@ public class NormeticValidator {
                     String fileToValidate = fileLineMatcher.group( 1 );
                     String expectedResult = fileLineMatcher.group( 2 );
                     File childLomFile = new File( lomFolder, fileToValidate );
-                    report.append( strValidatingLom + childLomFile + "\n\n" );
+                    report.append( strTest + ( testCount + 1 ) + " - " + strValidatingLom + childLomFile + "\n\n" );
                     if( !childLomFile.exists() )
                         throw( new ValidatorException( "File to validate '" + childLomFile + "' not found.  Error in control file of directory:" + lomFolder ) );
                     ValidationReport childLomFileReport = validate( childLomFile );
                     report.append( childLomFileReport );
                     String actualResult = getValidationStatus( childLomFileReport );
                     boolean isPassed = isValidationOk( expectedResult, actualResult );
+                    testCount++;
+                    if( !isPassed )
+                        failedTestCount++;
                     report.append( "\n" );
                     report.append( strExpectedResult + expectedResult );
                     report.append( "\n" );
                     report.append( strActualResult + actualResult );
                     report.append( "\n" );
                     report.append( strIsTestValid + ( isPassed ? strTrue : strFalse ) );
-                    report.append( "\n\n" );
+                    report.append( "\n\n\n\n" );
                 }
                 else {
                     Matcher folderLineMatcher = folderLinePattern.matcher( line );
@@ -85,6 +88,11 @@ public class NormeticValidator {
         }
         catch( FileNotFoundException fnfe ) {
             throw( new ValidatorException( "Control file not found in directory: " + lomFolder ) );
+        }
+        catch( Exception e ) {
+            ValidatorException validatorException = new ValidatorException( "An exception occurred when processing control file: " + controlFile );
+            validatorException.initCause( e );
+            throw( validatorException );
         }
         finally {
             try {
@@ -124,6 +132,7 @@ public class NormeticValidator {
         strExpectedResult = bundle.getString( "ExpectedResult" );
         strActualResult = bundle.getString( "ActualResult" );
         strIsTestValid = bundle.getString( "IsTestValid" );
+        strTest = bundle.getString( "Test" );
         strTrue = bundle.getString( "True" );
         strFalse = bundle.getString( "False" );
     }
@@ -182,6 +191,14 @@ public class NormeticValidator {
         return( report );
     }
 
+    public int getTestCount() {
+        return( testCount );
+    }
+
+    public int getFailedTestCount() {
+        return( failedTestCount );
+    }
+
     public static void main( String[] args ) throws Exception {
         String locationParam = null;
         String languageParam = null;
@@ -225,7 +242,7 @@ public class NormeticValidator {
         System.exit( 0 );
     }
 
-    boolean isValidationOk( String expectedResult, String actualResult ) {
+    private boolean isValidationOk( String expectedResult, String actualResult ) {
         String expectedStatus = expectedResult;
         int indexOfExpectedIssueListDelimiter = expectedStatus.indexOf( "[" );
         if( indexOfExpectedIssueListDelimiter != -1 )
@@ -321,16 +338,20 @@ public class NormeticValidator {
         return( str.toString() );
     }
 
-    private Locale              locale = Locale.ENGLISH;
-    private boolean             isXSDEnabled = true;
-    private boolean             isSchematronEnabled = true;
+    private Locale      locale = Locale.ENGLISH;
+    private boolean     isXSDEnabled = true;
+    private boolean     isSchematronEnabled = true;
 
-    private String strValidatingFolder;
-    private String strValidatingLom;
-    private String strExpectedResult;
-    private String strActualResult;
-    private String strIsTestValid;
-    private String strTrue;
-    private String strFalse;
+    private int     testCount = 0; 
+    private int     failedTestCount = 0;
+
+    private String  strValidatingFolder;
+    private String  strTest;
+    private String  strValidatingLom;
+    private String  strExpectedResult;
+    private String  strActualResult;
+    private String  strIsTestValid;
+    private String  strTrue;
+    private String  strFalse;
 
 }
