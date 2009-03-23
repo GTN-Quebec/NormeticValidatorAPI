@@ -145,6 +145,9 @@ public class GraphicalNormeticValidator {
         strError = bundle.getString( "Error" );
         msgLocationNotFound = bundle.getString( "MsgLocationNotFound" );
         msgNoValidationTypeSpecified = bundle.getString( "MsgNoValidationTypeSpecified" );
+        strTestCount = bundle.getString( "TestCount" );
+        strFailedTestCount = bundle.getString( "FailedTestCount" );
+        strIssueCount = bundle.getString( "IssueCount" );
     }
 
     public Locale getLocale() {
@@ -171,13 +174,19 @@ public class GraphicalNormeticValidator {
             validator.setSchematronValidationEnabled( false );
         try {
             ValidationReport report = validator.validate( location );
-            textAreaReport.setText( report.toHumanReadableString() );
+            textAreaReport.append( report.toHumanReadableString() );
+            if( location.isDirectory() ) {
+                textAreaReport.append( "\n\n" );
+                textAreaReport.append( strTestCount + validator.getTestCount() + "\n" );
+                textAreaReport.append( strFailedTestCount + validator.getFailedTestCount() + "\n" );
+                textAreaReport.append( strIssueCount + report.getIssueCount() + "\n" );
+            }
         }
         catch( SAXException e ) {
             // Ignore the exception for now.  It's been written in the report anyway.
         }
         catch( Exception e ) {
-            JOptionPane.showMessageDialog( frame,  e.toString(), strError,JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( frame,  e.toString() + "\n\n" + e.getCause(), strError, JOptionPane.ERROR_MESSAGE );
         }
     }
 
@@ -199,9 +208,12 @@ public class GraphicalNormeticValidator {
 
     private Locale locale = Locale.ENGLISH;
 
-    private String strError = null;
-    private String msgLocationNotFound = null;
-    private String msgNoValidationTypeSpecified = null;
+    private String strError;
+    private String msgLocationNotFound;
+    private String msgNoValidationTypeSpecified;
+    private String strTestCount;
+    private String strFailedTestCount;
+    private String strIssueCount;
 
     private JFrame frame;
     private JPanel panelMain;
