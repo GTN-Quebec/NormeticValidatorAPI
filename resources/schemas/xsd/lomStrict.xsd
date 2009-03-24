@@ -14,22 +14,22 @@
          2) Uniqueness constraints defined by LOMv1.0 base schema
          3) No existenace of any defined XML attribute/element extensions
       </xs:documentation>
-        <xs:documentation>
+    <xs:documentation>
          This file was modified slightly to validate Normetic application profile v1.1.
          Modified by: Frédéric Bergeron &lt;frederic.bergeron@licef.teluq.uqam.ca&gt;
          Date: 2007/05
       </xs:documentation>
     </xs:annotation>
     <!-- Learning Object Metadata -->
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/anyElement.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="http://demo.licef.ca/xsd/normetic/unique/strict.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/vocab" schemaLocation="http://demo.licef.ca/xsd/normetic/vocab/strict.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend" schemaLocation="http://demo.licef.ca/xsd/normetic/extend/strict.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/dataTypes.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/elementNames.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/elementTypes.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/rootElement.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/vocabValues.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/common/vocabTypes.xsd"/>
-    <xs:include schemaLocation="http://demo.licef.ca/xsd/normetic/normetic/vocabValues.xsd"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/anyElement.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/unique/strict.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/vocab" schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/vocab/strict.xsd.jsp"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend" schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/extend/strict.xsd"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/dataTypes.xsd.jsp"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/elementNames.xsd"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/elementTypes.xsd.jsp"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/rootElement.xsd"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/vocabValues.xsd"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/vocabTypes.xsd.jsp"/>
+    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/normetic/vocabValues.xsd"/>
 </xs:schema>
