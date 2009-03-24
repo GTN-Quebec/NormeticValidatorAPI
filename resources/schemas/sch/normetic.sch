@@ -810,7 +810,7 @@
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
             <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://www.normetic.org/vdex/typeressourcev1_2.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.2">UnrecognizedVocabularySourceForElement5.2</iso:report>
-            <iso:report test="$value and $source = 'LOMv1.0' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.2_InvalidVocabularyForElement5.2">P3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_2_learning_resource_type_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.2_InvalidVocabularyForElement5.2">P3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
             <iso:report test="$value and $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.2_InvalidVocabularyForElement5.2">P3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
         </iso:rule>
 
