@@ -259,7 +259,7 @@
     <iso:pattern id="MandatoryElements.General">
         <iso:title>Validating General category's mandatory elements</iso:title>
         <iso:rule context="lom:lom/lom:general">
-            <iso:assert test="lom:title" diagnostics="E1-1.2_Element1.2UndefinedMandatory">E1-1.2_Element1.2UndefinedMandatory</iso:assert>
+            <iso:assert test="lom:title" diagnostics="E1-1.2_Element1.1.2EmptyRecommended">E1-1.2_Element1.2UndefinedMandatory</iso:assert>
             <iso:assert test="lom:language" diagnostics="E1-1.3_Element1.3UndefinedMandatory">E1-1.3_Element1.3UndefinedMandatory</iso:assert>
             <iso:assert test="lom:description" diagnostics="E1-1.4_Element1.4UndefinedMandatory">E1-1.4_Element1.4UndefinedMandatory</iso:assert>
         </iso:rule>
@@ -654,7 +654,7 @@
     <iso:pattern id="RecommendedElements.Relation">
         <iso:title>Validating Relation category's recommended elements</iso:title>
         <iso:rule context="lom:lom/lom:relation">
-            <iso:assert test="lom:kind" diagnostics="Element7.1UndefinedRecommended">Element7.1UndefinedRecommended</iso:assert>
+            <iso:assert test="lom:kind" diagnostics="E1-7.1_Element7.1UndefinedRecommended">E1-7.1_Element7.1UndefinedRecommended</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:relation/lom:kind">
             <iso:assert test="normalize-space() != ''" diagnostics="E2-7.1_Element7.1EmptyRecommended">E2-7.1_Element7.1EmptyRecommended</iso:assert>
@@ -724,14 +724,16 @@
             <iso:assert test="normalize-space() != ''" diagnostics="SE2-9.2.1_Element9.2.1EmptyMandatory">SE2-9.2.1_Element9.2.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon">
+            <iso:let name="isEntryRequired" value="../lom:purpose/lom:value[normalize-space(text())='discipline' or normalize-space(text())='idea'] or not(lom:identifier) or normalize-space(lom:identifier) = ''"/>
             <iso:assert test="lom:id" diagnostics="SE1-9.2.2.1_Element9.2.2.1UndefinedMandatory">SE1-9.2.2.1_Element9.2.2.1UndefinedMandatory</iso:assert>
-            <iso:assert test="lom:entry" diagnostics="SE1-9.2.2.2_Element9.2.2.2UndefinedMandatory">SE1-9.2.2.2_Element9.2.2.2UndefinedMandatory</iso:assert>
+            <iso:report test="$isEntryRequired and not(lom:entry)" diagnostics="SE1-9.2.2.2_Element9.2.2.2UndefinedMandatory">SE1-9.2.2.2_Element9.2.2.2UndefinedMandatory</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon/lom:id">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2-9.2.2.1_Element9.2.2.1EmptyMandatory">SE2-9.2.2.1_Element9.2.2.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:classification/lom:taxonPath/lom:taxon/lom:entry">
-            <iso:assert test="normalize-space() != ''" diagnostics="SE2-9.2.2.2_Element9.2.2.2EmptyMandatory">SE2-9.2.2.2_Element9.2.2.2EmptyMandatory</iso:assert>
+            <iso:let name="isEntryRequired" value="../../lom:purpose/lom:value[normalize-space(text())='discipline' or normalize-space(text())='idea'] or not(../lom:identifier) or normalize-space(../lom:identifier) = ''"/>
+            <iso:report test="$isEntryRequired and normalize-space() = ''" diagnostics="SE2-9.2.2.2_Element9.2.2.2EmptyMandatory">SE2-9.2.2.2_Element9.2.2.2EmptyMandatory</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -1086,7 +1088,7 @@
         <iso:diagnostic id="E2-5.11_Element5.11EmptyRecommended" xml:lang="en">E2-5.11_Element 5.11-Language is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Recommended Elements (Educational) --> 
-        <iso:diagnostic id="Element7.1UndefinedRecommended" xml:lang="en">Element 7.1-Type is not defined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="E1-7.1_Element7.1UndefinedRecommended" xml:lang="en">E1-7.1_Element 7.1-Type is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2-7.1_Element7.1EmptyRecommended" xml:lang="en">E2-7.1_Element 7.1-Type is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="P1Source-7.1_Element7.1UndefinedSourceRecommended" xml:lang="en">P1Source-7.1_Element Source of 7.1-Kind is undefined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="P2Source-7.1_Element7.1EmptySourceRecommended" xml:lang="en">P2Source-7.1_Element Source of 7.1-Kind is empty.  This element is recommended.</iso:diagnostic>

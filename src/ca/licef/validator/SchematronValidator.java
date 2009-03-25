@@ -119,6 +119,10 @@ class SchematronValidator {
                     error.setAlternateMessage( localeMetadata[ 0 ] );
                     if( localeMetadata.length >= 2 ) 
                         error.setExplanation( localeMetadata[ 1 ] );
+                    if( localeMetadata.length >= 3 )
+                        error.setReference( localeMetadata[ 2 ] );
+                    if( localeMetadata.length >= 4 )
+                        error.setLexicalField( localeMetadata[ 3 ] );
                 }
             }
         }
