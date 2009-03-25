@@ -41,6 +41,10 @@
         </jar>
     </target>
 
+    <target name="deploy" depends="build">
+        <copy file="${build}/${ant.project.name}.jar" todir="../../NormeticValidator/trunk/web/WEB-INF/lib"/>
+    </target>
+
     <target name="run" depends="build">
         <java classname="ca.licef.validator.NormeticValidator">
             <classpath>
