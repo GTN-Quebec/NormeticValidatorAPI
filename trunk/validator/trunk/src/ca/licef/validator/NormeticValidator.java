@@ -181,7 +181,7 @@ public class NormeticValidator {
         //    report.append( rngValidator.getReport().getIssues() );
         //}
 
-        if( isValid && isSchematronEnabled ) {
+        if( /*isValid &&*/ isSchematronEnabled ) {
             SchematronValidator schValidator = new SchematronValidator();
             schValidator.setLocale( locale );
             isValid = schValidator.validate( lom );
