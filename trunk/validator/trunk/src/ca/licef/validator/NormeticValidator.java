@@ -157,6 +157,14 @@ public class NormeticValidator {
         isSchematronEnabled = isSchematronValidationEnabled;
     }
 
+    public boolean isForcedValidationEnabled() {
+        return( isForcedValidationEnabled );
+    }
+
+    public void setForcedValidationEnabled( boolean isForcedValidationEnabled ) {
+        this.isForcedValidationEnabled = isForcedValidationEnabled;
+    }
+
     public ValidationReport validate( String lom ) throws IOException, TransformerConfigurationException, TransformerException, SAXException {
         ValidationReport report = new ValidationReport();
 
@@ -166,7 +174,6 @@ public class NormeticValidator {
             XsdValidator xsdValidator = new XsdValidator();
             xsdValidator.setLocale( locale );
             isValid = xsdValidator.validate( lom );
-
             report.append( xsdValidator.getReport().getIssues() );
         }
 
@@ -181,11 +188,23 @@ public class NormeticValidator {
         //    report.append( rngValidator.getReport().getIssues() );
         //}
 
-        if( /*isValid &&*/ isSchematronEnabled ) {
+        if( ( isValid || isForcedValidationEnabled() ) && isSchematronEnabled ) {
             SchematronValidator schValidator = new SchematronValidator();
             schValidator.setLocale( locale );
-            isValid = schValidator.validate( lom );
-            report.append( schValidator.getReport().getIssues() );
+            try {
+                isValid = schValidator.validate( lom );
+                report.append( schValidator.getReport().getIssues() );
+            }
+            catch( TransformerException te ) {
+                // If a TransformerException occurs, this means that the Schematron validation phase
+                // could not be performed.  Most probably that this is due to errors found by the XSD validation phase.
+                // If the XSD validation phase is disabled, we issue an error message.
+                if( !isXSDEnabled ) {
+                    ValidationIssue issue = new ValidationIssue( "Unable to instanciate the Schematron Validator." );
+                    issue.setExplanation( "Enable XSD validation to find errors causing this problem." );
+                    report.append( issue );
+                }
+            }
         }
 
         return( report );
@@ -204,6 +223,7 @@ public class NormeticValidator {
         String languageParam = null;
         boolean isXSDEnabled = true;
         boolean isSchematronEnabled = true;
+        boolean isValidationForced = false;
 
         for( int i = 0; i < args.length; i++ ) {
             if( "-location".equals( args[ i ] ) )
@@ -214,6 +234,8 @@ public class NormeticValidator {
                 isXSDEnabled = false;
             else if( "-noSCH".equals( args[ i ] ) )
                 isSchematronEnabled = false;
+            else if( "-force".equals( args[ i ] ) )
+                isValidationForced = true;
         }
 
         if( !isXSDEnabled && !isSchematronEnabled )
@@ -226,6 +248,8 @@ public class NormeticValidator {
             validator.setXSDValidationEnabled( false );
         if( !isSchematronEnabled )
             validator.setSchematronValidationEnabled( false );
+        if( isValidationForced )
+            validator.setForcedValidationEnabled( true );
 
         if( locationParam != null ) {
             File location = new File( locationParam );
@@ -341,6 +365,7 @@ public class NormeticValidator {
     private Locale      locale = Locale.ENGLISH;
     private boolean     isXSDEnabled = true;
     private boolean     isSchematronEnabled = true;
+    private boolean     isForcedValidationEnabled = false;
 
     private int     testCount = 0; 
     private int     failedTestCount = 0;

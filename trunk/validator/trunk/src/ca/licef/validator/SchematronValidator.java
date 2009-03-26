@@ -36,6 +36,7 @@ class SchematronValidator {
 
     public void setLocale( Locale locale ) {
         this.locale = locale;
+        bundle = ResourceBundle.getBundle( getClass().getName(), locale );
     }
 
     public Locale getLocale() {
@@ -85,12 +86,17 @@ class SchematronValidator {
         return( report );
     }
 
+    private ResourceBundle getBundle() {
+        if( bundle == null )
+            setLocale( locale );
+        return( bundle );
+    }
+
     /*
      * Add additional information extracted from the key of the error message.
      * Also improve easy-friendliness and translate message if possible.
      */
     private void decorateIssues( ValidationIssue[] errors ) {
-        ResourceBundle bundle = ResourceBundle.getBundle( getClass().getName(), locale );
         for( int i = 0; i < errors.length; i++ ) {
             ValidationIssue error = errors[ i ];
             int indexOfColon = error.getMessage().indexOf( ":" );
@@ -112,7 +118,7 @@ class SchematronValidator {
 
                     error.setKind( kind );
                 }
-                if( bundle.containsKey( key ) ) {
+                if( getBundle().containsKey( key ) ) {
                     String localeMetadataString = bundle.getString( key );
                     String[] localeMetadata = localeMetadataString.split( "\\|" ); 
 
@@ -251,6 +257,7 @@ class SchematronValidator {
     }
 
     private Locale              locale = Locale.ENGLISH;
+    private ResourceBundle      bundle; 
     private ValidationReport    report;
     private Hashtable           hSchXslStyleSheet = new Hashtable();
     private boolean             isOptionalPhaseRequired;
