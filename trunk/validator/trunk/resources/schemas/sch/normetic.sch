@@ -246,13 +246,13 @@
     <iso:pattern id="MandatoryCategories.All">
         <iso:title>Validating mandatory categories</iso:title>
         <iso:rule context="lom:lom">
-            <iso:assert test="lom:general" diagnostics="GeneralCategoryMandatory">GeneralCategoryMandatory</iso:assert>
-            <iso:assert test="lom:lifeCycle" diagnostics="LifeCycleCategoryMandatory">LifeCycleCategoryMandatory</iso:assert>
-            <iso:assert test="lom:metaMetadata" diagnostics="MetaMetaDataCategoryMandatory">MetaMetaDataCategoryMandatory</iso:assert>
-            <iso:assert test="lom:technical" diagnostics="TechnicalCategoryMandatory">TechnicalCategoryMandatory</iso:assert>
-            <iso:assert test="lom:educational" diagnostics="EducationalCategoryMandatory">EducationalCategoryMandatory</iso:assert>
-            <iso:assert test="lom:rights" diagnostics="RightsCategoryMandatory">RightsCategoryMandatory</iso:assert>
-            <iso:assert test="lom:classification" diagnostics="ClassificationCategoryMandatory">ClassificationCategoryMandatory</iso:assert>
+            <iso:assert test="lom:general" diagnostics="C1-1_GeneralCategoryMandatory">C1-1_GeneralCategoryMandatory</iso:assert>
+            <iso:assert test="lom:lifeCycle" diagnostics="C1-2_LifeCycleCategoryMandatory">C1-2_LifeCycleCategoryMandatory</iso:assert>
+            <iso:assert test="lom:metaMetadata" diagnostics="C1-3_MetaMetaDataCategoryMandatory">C1-3_MetaMetaDataCategoryMandatory</iso:assert>
+            <iso:assert test="lom:technical" diagnostics="C1-4_TechnicalCategoryMandatory">C1-4_TechnicalCategoryMandatory</iso:assert>
+            <iso:assert test="lom:educational" diagnostics="C1-5_EducationalCategoryMandatory">C1-5_EducationalCategoryMandatory</iso:assert>
+            <iso:assert test="lom:rights" diagnostics="C1-6_RightsCategoryMandatory">C1-6_RightsCategoryMandatory</iso:assert>
+            <iso:assert test="lom:classification" diagnostics="C1-9_ClassificationCategoryMandatory">C1-9_ClassificationCategoryMandatory</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -915,13 +915,13 @@
     <!--iso:include href="diagnostics.inc"/-->
     <iso:diagnostics>
         <!-- Mandatory Categories -->
-        <iso:diagnostic id="GeneralCategoryMandatory" xml:lang="en">Category 1-General is not defined.  This category is mandatory.</iso:diagnostic>  
-        <iso:diagnostic id="LifeCycleCategoryMandatory" xml:lang="en">Category 2-LifeCycle is not defined.  This category is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="MetaMetaDataCategoryMandatory" xml:lang="en">Category 3-MetaMetadata is not defined.  This category is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="TechnicalCategoryMandatory" xml:lang="en">Category 4-Technical is not defined.  This category is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="EducationalCategoryMandatory" xml:lang="en">Category 5-Educational is not defined.  This category is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="RightsCategoryMandatory" xml:lang="en">Category 6-Rights is not defined.  This category is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="ClassificationCategoryMandatory" xml:lang="en">Category 9-Classification is not defined.  This category is mandatory.</iso:diagnostic> 
+        <iso:diagnostic id="C1-1_GeneralCategoryMandatory" xml:lang="en">Category 1-General is not defined.  This category is mandatory.</iso:diagnostic>  
+        <iso:diagnostic id="C1-2_LifeCycleCategoryMandatory" xml:lang="en">Category 2-LifeCycle is not defined.  This category is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="C1-3_MetaMetaDataCategoryMandatory" xml:lang="en">Category 3-MetaMetadata is not defined.  This category is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="C1-4_TechnicalCategoryMandatory" xml:lang="en">Category 4-Technical is not defined.  This category is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="C1-5_EducationalCategoryMandatory" xml:lang="en">Category 5-Educational is not defined.  This category is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="C1-6_RightsCategoryMandatory" xml:lang="en">Category 6-Rights is not defined.  This category is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="C1-9_ClassificationCategoryMandatory" xml:lang="en">Category 9-Classification is not defined.  This category is mandatory.</iso:diagnostic> 
 
         <!-- Mandatory Elements (General) -->
         <iso:diagnostic id="E1-1.2_Element1.2UndefinedMandatory" xml:lang="en">Element 1.2-Title is not defined.  This element is mandatory.</iso:diagnostic>
