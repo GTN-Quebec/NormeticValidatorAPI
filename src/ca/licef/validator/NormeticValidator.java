@@ -165,6 +165,14 @@ public class NormeticValidator {
         this.isForcedValidationEnabled = isForcedValidationEnabled;
     }
 
+    public boolean isShowRecommendationsEnabled() {
+        return( isShowRecommendationsEnabled );
+    }
+
+    public void setShowRecommendationsEnabled( boolean isShowRecommendationsEnabled ) {
+        this.isShowRecommendationsEnabled = isShowRecommendationsEnabled;
+    }
+
     public ValidationReport validate( String lom ) throws IOException, TransformerConfigurationException, TransformerException, SAXException {
         ValidationReport report = new ValidationReport();
 
@@ -191,6 +199,7 @@ public class NormeticValidator {
         if( ( isValid || isForcedValidationEnabled() ) && isSchematronEnabled ) {
             SchematronValidator schValidator = new SchematronValidator();
             schValidator.setLocale( locale );
+            schValidator.setShowRecommendationsEnabled( isShowRecommendationsEnabled() );
             try {
                 isValid = schValidator.validate( lom );
                 report.append( schValidator.getReport().getIssues() );
@@ -224,6 +233,7 @@ public class NormeticValidator {
         boolean isXSDEnabled = true;
         boolean isSchematronEnabled = true;
         boolean isValidationForced = false;
+        boolean isShowRecommendationsEnabled = true;
 
         for( int i = 0; i < args.length; i++ ) {
             if( "-location".equals( args[ i ] ) )
@@ -236,6 +246,8 @@ public class NormeticValidator {
                 isSchematronEnabled = false;
             else if( "-force".equals( args[ i ] ) )
                 isValidationForced = true;
+            else if( "-noRecommend".equals( args[ i ] ) )
+                isShowRecommendationsEnabled = false;
         }
 
         if( !isXSDEnabled && !isSchematronEnabled )
@@ -250,6 +262,8 @@ public class NormeticValidator {
             validator.setSchematronValidationEnabled( false );
         if( isValidationForced )
             validator.setForcedValidationEnabled( true );
+        if( !isShowRecommendationsEnabled )
+            validator.setShowRecommendationsEnabled( false );
 
         if( locationParam != null ) {
             File location = new File( locationParam );
@@ -366,6 +380,7 @@ public class NormeticValidator {
     private boolean     isXSDEnabled = true;
     private boolean     isSchematronEnabled = true;
     private boolean     isForcedValidationEnabled = false;
+    private boolean     isShowRecommendationsEnabled = true;
 
     private int     testCount = 0; 
     private int     failedTestCount = 0;

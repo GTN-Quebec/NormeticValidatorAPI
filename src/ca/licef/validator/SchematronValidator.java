@@ -43,6 +43,14 @@ class SchematronValidator {
         return( this.locale );
     }
 
+    public boolean isShowRecommendationsEnabled() {
+        return( isShowRecommendationsEnabled );
+    }
+
+    public void setShowRecommendationsEnabled( boolean isShowRecommendationsEnabled ) {
+        this.isShowRecommendationsEnabled = isShowRecommendationsEnabled;
+    }
+
     protected void finalize() throws Throwable {
         for( Enumeration e = hSchXslStyleSheet.elements(); e.hasMoreElements(); ) {
             File schXslStyleSheet = (File)e.nextElement();
@@ -70,7 +78,10 @@ class SchematronValidator {
         boolean isValid = true;
 
         for (int i = 0; i < phases.length; i++) {
-            if( !"ConditionalMandatoryElements.2".equals( phases[ i ] ) || isOptionalPhaseRequired ) {
+            // Depending on some options or situations, we filter the validation phases to perform.
+            boolean isPhaseNeeded = ( phases[ i ].indexOf( "Recommended" ) == -1 || isShowRecommendationsEnabled );
+            isPhaseNeeded = isPhaseNeeded && ( !"ConditionalMandatoryElements.2".equals( phases[ i ] ) || isOptionalPhaseRequired );
+            if( isPhaseNeeded ) {
                 isValid = validatePhase( lom, phases[ i ] );
                 //if( !isValid )
                 //    return( false );
@@ -261,5 +272,6 @@ class SchematronValidator {
     private ValidationReport    report;
     private Hashtable           hSchXslStyleSheet = new Hashtable();
     private boolean             isOptionalPhaseRequired;
+    private boolean             isShowRecommendationsEnabled = true;
 
 }
