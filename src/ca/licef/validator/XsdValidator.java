@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
@@ -21,7 +22,8 @@ class XsdValidator {
 
     public void setLocale( Locale locale ) {
         this.locale = locale;
-        Locale.setDefault( locale );
+        Locale.setDefault( locale ); // Required because we use the error messages that are embedded in the JRE.
+        bundle = ResourceBundle.getBundle( getClass().getName(), locale );
     }
 
     public Locale getLocale() {
@@ -33,7 +35,7 @@ class XsdValidator {
 
         Validator validator = getValidator();
         //System.out.println( "prop flocale=" + validator.getProperty( "fLocale" ) );
-        validator.setErrorHandler( new ValidationIssueHandler( ValidationIssue.ValidationType.XSD, report ) );
+        validator.setErrorHandler( new ValidationIssueHandler( ValidationIssue.ValidationType.XSD, report, bundle, lom ) );
 
         StringReader stringReader = new StringReader( lom );
         BufferedReader lomReader = new BufferedReader( stringReader );
@@ -78,6 +80,7 @@ class XsdValidator {
     }
 
     private Locale              locale = Locale.ENGLISH;
+    private ResourceBundle      bundle;
     private ValidationReport    report;
     private Validator           validator;
 

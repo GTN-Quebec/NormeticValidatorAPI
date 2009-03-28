@@ -1,0 +1,6 @@
+file: FB_E1_Cost.xml expectedResult: Invalid[E1(6.1)]
+file: FB_E2_Cost.xml expectedResult: Invalid[E2(6.1)]
+file: P1Source.xml expectedResult: Invalid[P1Source(6.1)]
+file: P2Source.xml expectedResult: Invalid[P2Source(6.1)]
+file: P1Value.xml expectedResult: Invalid[P1Value(6.1)]
+file: P2Value.xml expectedResult: Invalid[P2Value(6.1)]

@@ -1,0 +1,10 @@
+file: SE1.xml expectedResult: Invalid[SE1(9.2.2.2)]
+file: SE1WithEmptyId.xml expectedResult: Invalid[SE1(9.2.2.2)]
+file: SE1WithoutId.xml expectedResult: Invalid[SE1(9.2.2.2)]
+file: SE1WithWrongPurpose.xml expectedResult: Invalid[SE1(9.2.2.2)]
+file: SE2.xml expectedResult: Invalid[SE2(9.2.2.2)]
+file: SE2WithoutId.xml expectedResult: Invalid[SE2(9.2.2.2)]
+file: SE2WithWrongPurpose.xml expectedResult: Invalid[SE2(9.2.2.2)]
+file: P1.xml expectedResult: OkWithWarnings[P1(9.2.2.2)]
+file: P2.xml expectedResult: OkWithWarnings[P2(9.2.2.2)]
+file: ValidBecauseOfPurpose.xml expectedResult:Ok

@@ -1,0 +1,9 @@
+folder: 1.1.1_Catalog
+folder: 1.1.2_Entry
+folder: 1.2_Title
+folder: 1.3_Language
+folder: 1.4_Description
+folder: 1.5_Keyword
+folder: 1.6_Coverage
+folder: 1.7_Structure
+folder: 1.8_AggregationLevel

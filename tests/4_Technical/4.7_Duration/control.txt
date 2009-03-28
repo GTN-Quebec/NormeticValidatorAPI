@@ -1,0 +1,5 @@
+file: E2.xml expectedResult: OkWithWarnings[E2(4.7)]
+file: P1String.xml expectedResult: OkWithWarnings[P1(4.7)]
+file: P2String.xml expectedResult: OkWithWarnings[P2(4.7)]
+file: P1Duration.xml expectedResult: OkWithWarnings[P1Duration(4.7)]
+file: P2Duration.xml expectedResult: OkWithWarnings[P2Duration(4.7)]

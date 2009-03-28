@@ -1,0 +1,9 @@
+folder: 3.1_Identifier
+folder: 3.1.1_Catalog
+folder: 3.1.2_Entry
+folder: 3.2_Contribute
+folder: 3.2.1_Role
+folder: 3.2.2_Entity
+folder: 3.2.3_Date
+folder: 3.3_MetadataSchema
+folder: 3.4_Language

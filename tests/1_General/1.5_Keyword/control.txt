@@ -1,0 +1,3 @@
+file: P1.xml expectedResult: OkWithWarnings[P1(1.5)]
+file: P2.xml expectedResult: Invalid[P2Language(1.5)]
+file: P3.xml expectedResult: Invalid[P3Language(1.5)]

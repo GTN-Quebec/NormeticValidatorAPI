@@ -1,0 +1,6 @@
+file: FB_E1_CopyrightAndOtherRestrictions.xml expectedResult: Invalid[E1(6.2)]
+file: FB_E2_CopyrightAndOtherRestrictions.xml expectedResult: Invalid[E2(6.2)]
+file: P1Source.xml expectedResult: Invalid[P1Source(6.2)]
+file: P2Source.xml expectedResult: Invalid[P2Source(6.2)]
+file: P1Value.xml expectedResult: Invalid[P1Value(6.2)]
+file: P2Value.xml expectedResult: Invalid[P2Value(6.2)]

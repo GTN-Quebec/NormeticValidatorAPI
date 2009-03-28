@@ -1,0 +1,2 @@
+file: P1.xml expectedResult: OkWithWarnings[P1(6.3)]
+file: P2.xml expectedResult: OkWithWarnings[P2(6.3)]

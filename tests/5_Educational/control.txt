@@ -1,0 +1,11 @@
+folder: 5.1_InteractivityType
+folder: 5.2_LearningResourceType
+folder: 5.3_InteractivityLevel
+folder: 5.4_SemanticDensity
+folder: 5.5_IntendedEndUserRole
+folder: 5.6_Context
+folder: 5.7_TypicalAgeRange
+folder: 5.8_Difficulty
+folder: 5.9_TypicalLearningTime
+folder: 5.10_Description
+folder: 5.11_Language
