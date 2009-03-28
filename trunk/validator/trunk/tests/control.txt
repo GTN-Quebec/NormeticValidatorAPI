@@ -1,0 +1,9 @@
+folder: 1_General
+folder: 2_LifeCycle
+folder: 3_MetaMetadata
+folder: 4_Technical
+folder: 5_Educational
+folder: 6_Rights
+folder: 7_Relation
+folder: 8_Annotation
+folder: 9_Classification

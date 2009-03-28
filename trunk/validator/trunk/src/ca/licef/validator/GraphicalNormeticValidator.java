@@ -172,6 +172,7 @@ public class GraphicalNormeticValidator {
             validator.setXSDValidationEnabled( false );
         if( !checkboxIsSchematronEnabled.isSelected() )
             validator.setSchematronValidationEnabled( false );
+        //validator.setForcedValidationEnabled( true );
         try {
             ValidationReport report = validator.validate( location );
             textAreaReport.append( report.toHumanReadableString() );

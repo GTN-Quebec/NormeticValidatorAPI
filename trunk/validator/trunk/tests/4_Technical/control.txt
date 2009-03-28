@@ -1,0 +1,10 @@
+folder: 4.1_Format
+folder: 4.2_Size
+folder: 4.3_Location
+folder: 4.4.1.1_Type
+folder: 4.4.1.2_Name
+folder: 4.4.1.3_MinimumVersion
+folder: 4.4.1.4_MaximumVersion
+folder: 4.5_InstallationRemarks
+folder: 4.6_OtherPlatformRequirements
+folder: 4.7_Duration

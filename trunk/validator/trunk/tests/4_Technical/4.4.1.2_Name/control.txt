@@ -1,0 +1,5 @@
+file: SE2.xml expectedResult: OkWithWarnings[SE2(4.4.1.2)]
+file: P1Source.xml expectedResult: OkWithWarnings[P1Source(4.4.1.2)]
+file: P2Source.xml expectedResult: OkWithWarnings[P2Source(4.4.1.2)]
+file: P1Value.xml expectedResult: OkWithWarnings[P1Value(4.4.1.2)]
+file: P2Value.xml expectedResult: OkWithWarnings[P2Value(4.4.1.2)]
