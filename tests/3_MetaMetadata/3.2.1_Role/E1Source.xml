@@ -63,7 +63,7 @@ END:VCARD
         <contribute>
             <role>
 
-                <value>author</value>
+                <value>creator</value>
             </role>
             <entity>BEGIN:VCARD
 VERSION:3.0

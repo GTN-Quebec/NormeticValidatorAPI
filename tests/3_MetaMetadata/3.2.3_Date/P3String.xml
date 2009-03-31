@@ -54,24 +54,28 @@ END:VCARD
         </contribute>
     </lifeCycle>
     <metaMetadata>
-<contribute>
-<role>
-<source>LOMv1.0</source>
-<value>creator</value>
-</role>
-<entity/>
-<date>
-<dateTime>2009-03-13</dateTime>
-<description><string language="fr">Petite description</string></description>
-</date>
-</contribute>
-
         <identifier>
             <catalog>URI</catalog>
             <entry>oai:aquops.qc.ca:videos:8</entry>
         </identifier>
         <metadataSchema>LOMv1.0</metadataSchema>
         <language>fr-CA</language>
+        <contribute>
+            <role>
+                <source>LOMv1.0</source>
+                <value>creator</value>
+            </role>
+            <entity>BEGIN:VCARD
+VERSION:3.0
+FN:AQUOPS
+EMAIL;TYPE=INTERNET:fred@toto.com
+END:VCARD
+</entity>
+            <date>
+                <dateTime>2009-10-23</dateTime>
+                <description><string language="aseljfalsdfj">non disponible</string></description>
+            </date>
+        </contribute>
     </metaMetadata>
     <technical>
         <size>123123</size>

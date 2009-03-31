@@ -1,6 +1,6 @@
 folder: 1_General
 folder: 2_LifeCycle
-#folder: 3_MetaMetadata
+folder: 3_MetaMetadata
 #folder: 4_Technical
 #folder: 5_Educational
 #folder: 6_Rights
