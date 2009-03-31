@@ -3,6 +3,7 @@ package ca.licef.validator;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Enumeration;
 import java.util.ResourceBundle;
 import java.util.Stack;
 import java.util.regex.Matcher;
@@ -33,19 +34,19 @@ public class ValidationIssueHandler implements ErrorHandler {
 
     public void error( SAXParseException e ) throws SAXException {
         ValidationIssue error = new ValidationIssue( type, ValidationIssue.Severity.ERROR, e.getLineNumber(), e.getColumnNumber(), e.getMessage() );
-        decorateIssue( error, e );
+        //decorateIssue( error, e );
         report.append( error );
     }
 
     public void fatalError( SAXParseException e ) throws SAXException {
         ValidationIssue error = new ValidationIssue( type, ValidationIssue.Severity.FATAL_ERROR, e.getLineNumber(), e.getColumnNumber(), e.getMessage() );
-        decorateIssue( error, e );
+        //decorateIssue( error, e );
         report.append( error );
     }
 
     public void warning( SAXParseException e ) throws SAXException {
         ValidationIssue error = new ValidationIssue( type, ValidationIssue.Severity.WARNING, e.getLineNumber(), e.getColumnNumber(), e.getMessage() );
-        decorateIssue( error, e );
+        //decorateIssue( error, e );
         report.append( error );
     }
 
@@ -81,6 +82,15 @@ System.out.println( "Match!! value=" + value + " type="+type );
         }
 
         if( isMatchingSpecialPattern ) {
+//            Object[] locationData = getLocationData( saxException.getLineNumber(), saxException.getColumnNumber() );
+//System.out.println( "locationData="+locationData );
+//if( locationData != null ) {
+//    System.out.println( "locationData[0]=" + locationData[ 0 ] + " locationData[1]=" + locationData[ 1 ] );
+//    if( locationData[ 0 ] != null )
+//        System.out.println( StringUtil.join( (Object[])locationData[ 0 ], '/' ) );
+//}
+
+
             String[] fields = getFields( saxException.getLineNumber(), saxException.getColumnNumber() );
 System.out.println( "fields="+fields+" attribute="+attribute );                    
             if( fields != null ) {
@@ -91,23 +101,25 @@ System.out.println( "fields=" + parentField + "/" + field );
                 String key = StringUtil.capitalize( parentField ) + StringUtil.capitalize( field );
                 if( "".equals( value ) ) {
                     key = "Empty" + key;
-                    if( attribute != null && !attribute.equals( field ) )
+                    if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) )
                         issue.setKind( "P2" + StringUtil.capitalize( attribute ) );
                     else
                         issue.setKind( "E2" + StringUtil.capitalize( field ) );
                 }
                 else {
                     key = "Wrong" + key;
-                    if( attribute != null && !attribute.equals( field ) ) 
+                    if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) ) 
                         issue.setKind( "P3"+ StringUtil.capitalize( attribute ) );
                     else 
                         issue.setKind( "E3"+ StringUtil.capitalize( field ) );
                 }
-                if( attribute != null && !attribute.equals( field ) )
+                if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) )
                     key = key + StringUtil.capitalize( attribute );
 
 System.out.println( "key="+key );                    
-                if( bundle.containsKey( key ) ) {
+
+                if( bundleContainsKey( key ) ) {
+                //if( bundle.containsKey( key ) ) {
                     String localeMetadataString = bundle.getString( key );
                     String[] localeMetadata = localeMetadataString.split( "\\|" );
 
@@ -123,6 +135,88 @@ System.out.println( "key="+key );
                 }
             }
         }
+    }
+
+    /*
+     * The method ResourceBundle.containsKey() is only available since JRE 1.6.
+     * As we must use JRE 1.5, here is temporary implementation.
+     */
+    private boolean bundleContainsKey( String key ) {
+        for( Enumeration e = bundle.getKeys(); e.hasMoreElements(); ) {
+            String k = (String)e.nextElement();
+            if( k.equals( key ) )
+                return( true );
+        }
+        return( false );
+    }
+
+    private Object[] getLocationData( int lineNumber, int columnNumber ) {
+System.out.println( "getLocationData lineNumber="+lineNumber+" columnNumber="+columnNumber );        
+        String xpath;
+        String field;
+        String attribute;
+
+        int index = getIndexOfLocation( lineNumber, columnNumber );
+System.out.println( "indexOfLocation="+index );        
+        if( index == -1 )
+            return( null );
+
+        String truncatedLom = lom.substring( 0, index ); 
+        //String parentField = getParentField( truncatedLom.substring( 0, indexOfOpeningTag ), new Stack() );
+        String parentField = getParentField( truncatedLom, new Stack() );
+return( new Object[] { parentField, null } );
+//        String truncatedLom = lom.substring( 0, index ); 
+//        int indexOfOpeningTag = truncatedLom.lastIndexOf( "<", truncatedLom.length() - 1 );
+//        if( indexOfOpeningTag == -1 )
+//            return( null );
+//
+//        int indexOfPreviousTagClosingMark = truncatedLom.indexOf( ">", indexOfOpeningTag );
+//        if( indexOfPreviousTagClosingMark == -1 )
+//            return( null );
+//
+//        String currentTag = truncatedLom.substring( indexOfOpeningTag, indexOfPreviousTagClosingMark + 1 );
+//System.out.println( "#"+ currentTag + "#" );
+//
+//        Pattern emptyTagPattern = Pattern.compile( "<\\b(.+?)\b.*/>" );
+//        Matcher tagMatcher = emptyTagPattern.matcher( currentTag );
+//        if( tagMatcher.find() ) {
+//            String emptyTag = tagMatcher.group( 1 );
+//System.out.println( "Matched empty tag="+emptyTag );
+//            field = tagMatcher.group( 1 );
+//            //indexOfOpeningTag = truncatedLom.lastIndexOf( "<", indexOfOpeningTag - 1 );
+//        }
+//        else {
+//System.out.println( "else1" );            
+//            Pattern openingTagPattern = Pattern.compile( "<\\b(.+?)\\b.*>" );
+//            Matcher openingTagMatcher = openingTagPattern.matcher( currentTag );
+//            if( openingTagMatcher.find() ) {
+//                field = openingTagMatcher.group( 1 );
+//System.out.println( "Matched opening tag=" + field);
+//            }
+//            else {
+//System.out.println( "else2" );                
+//                Pattern closingTagPattern = Pattern.compile( "</\\b(.+?)\\b.*>" );
+//                Matcher closingTagMatcher = closingTagPattern.matcher( currentTag );
+//System.out.println( "before find" );                
+//                if( closingTagMatcher.find() ) {
+//System.out.println( "after find" );                    
+//                    field = closingTagMatcher.group( 1 );
+//                    indexOfOpeningTag = truncatedLom.lastIndexOf( "<", indexOfOpeningTag - 1 );
+//System.out.println( "Matched closing tag="+field+" indexOfOpeningTag=" + indexOfOpeningTag );                    
+//                }
+//                else {
+//System.out.println( "Oops!" );                    
+//                    return( null );
+//                }
+//            }
+//        }
+//
+//        String parentField = getParentField( truncatedLom.substring( 0, indexOfOpeningTag ), new Stack() );
+//        if( parentField == null )
+//            return( null );
+//
+//        return( new String[] { field, parentField } );
+//        return( null );
     }
 
     private int getIndexOfLocation( int locationLineNumber, int locationColumnNumber ) {
@@ -151,6 +245,49 @@ System.out.println( "line="+line+ " length="+line.length() + " index="+index );
             }
         }
         return( index );
+    }
+
+    private String buildPathRec( String truncatedLom, Stack visitedElements ) {
+//System.out.println( "buildPathRec visitedElements="+visitedElements );        
+////System.out.println( "truncatedLom=@"+truncatedLom+"@");
+//        int indexOfPreviousTag = truncatedLom.lastIndexOf( "<", truncatedLom.length() - 1 );
+////System.out.println( "indexOfPreviousTag="+indexOfPreviousTag );        
+//        if( indexOfPreviousTag == -1 )
+//            return( null );
+//
+//        int indexOfPreviousTagClosingMark = truncatedLom.indexOf( ">", indexOfPreviousTag );
+//        Pattern emptyTagPattern = Pattern.compile( "<\\b(.+?)\b.*/>" );
+//        Matcher tagMatcher = emptyTagPattern.matcher( truncatedLom.substring( indexOfPreviousTag, indexOfPreviousTagClosingMark + 1 ) );
+//        if( tagMatcher.find() ) {
+//            String emptyTag = tagMatcher.group( 1 );
+////System.out.println( "Matched empty tag="+emptyTag );
+//            return( buildPathRec( truncatedLom.substring( indexOfPreviousTag ), visitedElements ) );
+//        }
+//
+//        Pattern closingTagPattern = Pattern.compile( "</\\b(.+?)\\b.*>" );
+//        Matcher closingTagMatcher = closingTagPattern.matcher( truncatedLom.substring( indexOfPreviousTag, indexOfPreviousTagClosingMark + 1 ) );
+//        if( closingTagMatcher.find() ) {
+//            String closingTag = closingTagMatcher.group( 1 );
+////System.out.println( "Matched closing tag="+closingTag );            
+//            
+//            visitedElements.push( closingTag );
+//            return( buildPathRec( truncatedLom.substring( 0, indexOfPreviousTag ), visitedElements ) );
+//        }
+//       
+//        Pattern openingTagPattern = Pattern.compile( "<\\b(.+?)\\b.*>" );
+////System.out.println( "@"+truncatedLom.substring( indexOfPreviousTag, indexOfPreviousTagClosingMark + 1 )+"@" );        
+//        Matcher openingTagMatcher = openingTagPattern.matcher( truncatedLom.substring( indexOfPreviousTag, indexOfPreviousTagClosingMark + 1 ) );
+//        if( openingTagMatcher.find() ) {
+//            String openingTag = openingTagMatcher.group( 1 );
+////System.out.println( "Matched opening tag="+openingTag );            
+//            if( visitedElements.isEmpty() )
+//                return( openingTag );
+//            String lastVisitedTag = (String)visitedElements.pop();
+//            if( !openingTag.equals( lastVisitedTag ) )
+//                throw new RuntimeException( "Unexpected last visited tag.  Error in buildPathRec() method." );
+//            return( buildPathRec( truncatedLom.substring( 0, indexOfPreviousTag  ), visitedElements ) );
+//        }
+        return( null );
     }
 
     private String getParentField( String truncatedLom, Stack visitedElements ) {
