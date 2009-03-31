@@ -1,5 +1,12 @@
-#file: P1.xml expectedResult: OkWithWarnings[P1(2.3.3)]
-file: P2.xml expectedResult: OkWithWarnings[P2(2.3.3)]
+#file: E1DateTime.xml expectedResult: OkWithWarnings[E1DateTime(2.3.3)]
+file: E2DateTime.xml expectedResult: Invalid[E2DateTime(2.3.3)]
+file: E3DateTime.xml expectedResult: Invalid[E3DateTime(2.3.3)]
+#file: E1Description.xml expectedResult: OkWithWarnings[E1Description(2.3.3)]
+file: E2Description.xml expectedResult: OkWithWarnings[E2Description(2.3.3)]
+file: P1Language.xml expectedResult: OkWithWarnings[P1Language(2.3.3)]
+file: P2Language.xml expectedResult: Invalid[P2Language(2.3.3)]
+file: P3Language.xml expectedResult: Invalid[P3Language(2.3.3)]
+
 #file: OneContributeDate.xml expectedResult: Ok
 #file: NoContributeDateElement.xml expectedResult: Invalid[RC1(2.3.3)]
 #file: NoContributeDateAndManyContributes.xml expectedResult: Invalid[RC1(2.3.3)]
