@@ -1,3 +1,4 @@
+Improve language validation.  For now, the XSD phase will detect very obvious errors (like a value of 'asdlfjadfojaeriofa').  Using Schematron (maybe duplicate or generate rules if required) to check valid values.
 Try to handle vocab errors and empty tag errors at the XSD level.  
 Search for all messages of this pattern .*=.*|.* (with just one pipe...  We need at least 2 pipes).
 All message keys must be of this format .*-5.3_.* otherwise the help reference won't be shown.

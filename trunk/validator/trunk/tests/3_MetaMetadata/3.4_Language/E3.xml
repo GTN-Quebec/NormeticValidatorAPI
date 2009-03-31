@@ -54,27 +54,15 @@ END:VCARD
         </contribute>
     </lifeCycle>
     <metaMetadata>
-<contribute>
-<role>
-<source>LOMv1.0</source>
-<value>creator</value>
-</role>
-<entity/>
-<date>
-<dateTime>2009-03-13</dateTime>
-<description><string language="fr">Petite description</string></description>
-</date>
-</contribute>
-
         <identifier>
             <catalog>URI</catalog>
             <entry>oai:aquops.qc.ca:videos:8</entry>
         </identifier>
         <metadataSchema>LOMv1.0</metadataSchema>
-        <language>fr-CA</language>
+        <language>adfadffasdfasd</language>
     </metaMetadata>
     <technical>
-        <size>123123</size>
+        <size>1234</size>
         <format>video/quicktime</format>
         <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-640-s.mov</location>
         <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-480-s.mov</location>
@@ -126,10 +114,6 @@ END:VCARD
         </description>
     </rights>
     <relation>
-    <kind>
-      <source>LOMv1.0</source>
-      <value>ispartof</value>
-    </kind>
     <resource>
       <identifier>
         <catalog>TEST</catalog>
