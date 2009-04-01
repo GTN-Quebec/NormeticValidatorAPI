@@ -1,1 +1,2 @@
-file: E2.xml expectedResult: OkWithWarnings[E2(4.2)]
+file: E2.xml expectedResult: Invalid[E2Size(4.2)]
+file: E3.xml expectedResult: Invalid[E3Size(4.2)]
