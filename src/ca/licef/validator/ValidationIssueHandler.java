@@ -180,23 +180,31 @@ System.out.println( "key="+key );
 
     private String getPath( int lineNumber, int columnNumber ) {
         int index = getIndexOfLocation( lineNumber, columnNumber );
-System.out.println( "getPath lineNumber="+lineNumber+" columnNumber="+columnNumber+ "indexOfLocation="+index );        
+//System.out.println( "getPath lineNumber="+lineNumber+" columnNumber="+columnNumber+ "indexOfLocation="+index );        
         if( index == -1 )
             return( null );
 
         String truncatedLom = lom.substring( 0, index ); 
+//System.out.println( "truncatedLom=@"+truncatedLom+"@" );        
         return( buildPathRec( truncatedLom, new Stack(), true ) );
     }
 
     private int getIndexOfLocation( int locationLineNumber, int locationColumnNumber ) {
         int index = -1;
+//System.out.println( "LENGTH="+lom.length() );        
         BufferedReader reader = new BufferedReader( new StringReader( lom ) );
         try {
             for( int lineNumber = 0; lineNumber < locationLineNumber - 1; lineNumber++ ) {
                 String line = reader.readLine();
                 if( line == null )
                     break;
-                index += line.length() + 1; // Add 1 for newline characters.
+                index += line.length();
+                // The line delimiter may vary whether the lom is uploaded or typed in the input field.
+                // Possible values are "\r\n", "\r" or "\n".  
+                // The loop is probably not very efficient but it will do for now.
+                while( lom.charAt( index ) != '\n' )
+                    index++;
+//System.out.println( "line=@"+line+"@ length="+(line.length()+1) +" index="+index+ " chatAtIndex=@"+ lom.charAt( index )+"@"  );                
             }
             index += locationColumnNumber;
         }
@@ -214,8 +222,8 @@ System.out.println( "getPath lineNumber="+lineNumber+" columnNumber="+columnNumb
     }
 
     private String buildPathRec( String truncatedLom, Stack visitedElements, boolean isFirstTag ) {
-System.out.println( "buildPathRec visitedElements="+visitedElements );        
-System.out.println( "truncatedLom=@"+truncatedLom+"@");
+//System.out.println( "buildPathRec visitedElements="+visitedElements );        
+//System.out.println( "truncatedLom=@"+truncatedLom+"@");
         int indexOfPreviousTag = truncatedLom.lastIndexOf( "<", truncatedLom.length() - 1 );
 //System.out.println( "indexOfPreviousTag="+indexOfPreviousTag );        
         if( indexOfPreviousTag == -1 || truncatedLom.charAt( indexOfPreviousTag + 1 ) == '?' )
@@ -224,7 +232,7 @@ System.out.println( "truncatedLom=@"+truncatedLom+"@");
         int indexOfPreviousTagClosingMark = truncatedLom.indexOf( ">", indexOfPreviousTag );
 
         String currentTagString = truncatedLom.substring( indexOfPreviousTag, indexOfPreviousTagClosingMark + 1 );
-System.out.println( "currentTag="+currentTagString );
+//System.out.println( "currentTag="+currentTagString );
 
         Pattern selfClosingTagPattern = Pattern.compile( "<\\b(.+?)\\b.*/>" );
         Matcher tagMatcher = selfClosingTagPattern.matcher( currentTagString );
