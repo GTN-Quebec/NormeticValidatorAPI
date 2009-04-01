@@ -455,10 +455,10 @@
             <iso:assert test="lom:location" diagnostics="E1-4.3_Element4.3UndefinedMandatory">E1-4.3_Element4.3UndefinedMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:format">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element4.1EmptyMandatory">Element4.1EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="E2-4.1_Element4.1EmptyMandatory">E2-4.1_Element4.1EmptyMandatory</iso:assert>
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:location">
-            <iso:assert test="normalize-space() != ''" diagnostics="Element4.3EmptyMandatory">Element4.3EmptyMandatory</iso:assert>
+            <iso:assert test="normalize-space() != ''" diagnostics="E2-4.3_Element4.3EmptyMandatory">E2-4.3_Element4.3EmptyMandatory</iso:assert>
         </iso:rule>
     </iso:pattern>
 
@@ -477,9 +477,9 @@
             <iso:assert test="lom:installationRemarks" diagnostics="Element4.5UndefinedRecommended">Element4.5UndefinedRecommended</iso:assert>
             <iso:assert test="lom:otherPlatformRequirements" diagnostics="Element4.6UndefinedRecommended">Element4.6UndefinedRecommended</iso:assert>
         </iso:rule>
-        <iso:rule context="lom:lom/lom:technical/lom:size">
+        <!--iso:rule context="lom:lom/lom:technical/lom:size">
             <iso:assert test="normalize-space() != ''" diagnostics="E2-4.2_Element4.2EmptyRecommended">E2-4.2_Element4.2EmptyRecommended</iso:assert>
-        </iso:rule>
+        </iso:rule-->
         <iso:rule context="lom:lom/lom:technical/lom:requirement/lom:orComposite/lom:type">
             <iso:assert test="normalize-space() != ''" diagnostics="SE2-4.4.1.1_Element4.4.1.1EmptyRecommended">SE2-4.4.1.1_Element4.4.1.1EmptyRecommended</iso:assert>
             <iso:report test="normalize-space() != '' and not(lom:source)" diagnostics="E1Source-4.4.1.1_Element4.4.1.1UndefinedSourceRecommended">E1Source-4.4.1.1_Element4.4.1.1UndefinedSourceRecommended</iso:report>
@@ -508,7 +508,7 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:technical/lom:duration">
             <iso:assert test="normalize-space() != ''" diagnostics="E2-4.7_Element4.7EmptyRecommended">E2-4.7_Element4.7EmptyRecommended</iso:assert>
-            <iso:report test="normalize-space() != '' and not(lom:duration)" diagnostics="P1Duration-4.7_Element4.7UndefinedDurationRecommended">P1Duration-4.7_Element4.7UndefinedDurationRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:duration)" diagnostics="E1Duration-4.7_Element4.7UndefinedDurationRecommended">E1Duration-4.7_Element4.7UndefinedDurationRecommended</iso:report>
             <iso:report test="normalize-space() != '' and lom:duration and normalize-space(lom:duration) = ''" diagnostics="P2Duration-4.7_Element4.7EmptyDurationRecommended">P2Duration-4.7_Element4.7EmptyDurationRecommended</iso:report>
         </iso:rule>
     </iso:pattern>
@@ -1013,14 +1013,14 @@
         <!-- Mandatory Elements (Technical) -->
         <iso:diagnostic id="E1-4.1_Element4.1UndefinedMandatory" xml:lang="en">Element 4.1-Format is not defined.  This element is mandatory.</iso:diagnostic>
         <iso:diagnostic id="E1-4.3_Element4.3UndefinedMandatory" xml:lang="en">Element 4.3-Location is not defined.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element4.1EmptyMandatory" xml:lang="en">Element 4.1-Format is empty.  This element is mandatory.</iso:diagnostic>
-        <iso:diagnostic id="Element4.3EmptyMandatory" xml:lang="en">Element 4.3-Location is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="E2-4.1_Element4.1EmptyMandatory" xml:lang="en">E2-4.1_Element 4.1-Format is empty.  This element is mandatory.</iso:diagnostic>
+        <iso:diagnostic id="E2-4.3_Element4.3EmptyMandatory" xml:lang="en">E2-4.3_Element 4.3-Location is empty.  This element is mandatory.</iso:diagnostic>
 
         <!-- Recommended Elements (Technical) --> 
         <iso:diagnostic id="Element4.2UndefinedRecommended" xml:lang="en">Element 4.2-Size is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element4.5UndefinedRecommended" xml:lang="en">Element 4.5-InstallationRemarks is not defined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="Element4.6UndefinedRecommended" xml:lang="en">Element 4.6-OtherPlatformRequirements is not defined.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="E2-4.2_Element4.2EmptyRecommended" xml:lang="en">E2-4.2_Element 4.2-Size is empty.  This element is recommended.</iso:diagnostic>
+        <!--iso:diagnostic id="E2-4.2_Element4.2EmptyRecommended" xml:lang="en">E2-4.2_Element 4.2-Size is empty.  This element is recommended.</iso:diagnostic-->
         <iso:diagnostic id="SE2-4.4.1.1_Element4.4.1.1EmptyRecommended" xml:lang="en">SE2-4.4.1.1_Element 4.4.1.1-Type is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E1Source-4.4.1.1_Element4.4.1.1UndefinedSourceRecommended" xml:lang="en">E1Source-4.4.1.1_Element Source of 4.4.1.1-Type is undefined.  This element is recommended.</iso:diagnostic>
         <!--iso:diagnostic id="E2Source-4.4.1.1_Element4.4.1.1EmptySourceRecommended" xml:lang="en">E2Source-4.4.1.1_Element Source of 4.4.1.1-Type is empty.  This element is recommended.</iso:diagnostic-->
@@ -1036,7 +1036,7 @@
         <iso:diagnostic id="E2-4.5_Element4.5EmptyRecommended" xml:lang="en">E2-4.5_Element 4.5-InstallationRemarks is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2-4.6_Element4.6EmptyRecommended" xml:lang="en">E2-4.6_Element 4.6-OtherPlatformRequirements is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2-4.7_Element4.7EmptyRecommended" xml:lang="en">E2-4.7_Element 4.7-Duration is empty.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="P1Duration-4.7_Element4.7UndefinedDurationRecommended" xml:lang="en">P1Duration-4.7_Element Duration of 4.7-Duration is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="E1Duration-4.7_Element4.7UndefinedDurationRecommended" xml:lang="en">E1Duration-4.7_Element Duration of 4.7-Duration is undefined.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="P2Duration-4.7_Element4.7EmptyDurationRecommended" xml:lang="en">P2Duration-4.7_Element Duration of 4.7-Duration is empty.  This element is recommended.</iso:diagnostic>
 
         <!-- Mandatory Elements (Educational) -->

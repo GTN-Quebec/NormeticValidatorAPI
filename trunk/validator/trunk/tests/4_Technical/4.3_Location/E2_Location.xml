@@ -62,11 +62,9 @@ END:VCARD
         <language>fr-CA</language>
     </metaMetadata>
     <technical>
+        <location></location>
         <size>123123</size>
-        <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-640-s.mov</location>
-        <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-480-s.mov</location>
-        <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-320-s.mov</location>
-        <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-240-s.mov</location>
+        <format>video/quicktime</format>
         <installationRemarks><string language="fr">Ouais</string></installationRemarks>
         <otherPlatformRequirements><string language="fr">Test</string></otherPlatformRequirements>
         <duration>

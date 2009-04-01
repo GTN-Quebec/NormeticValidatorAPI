@@ -77,6 +77,15 @@ System.out.println( "mes="+saxException.getMessage() );
             }
         }
         if( !isMatchingSpecialPattern ) {
+            Pattern vocabErrorPattern = Pattern.compile( "cvc-datatype-valid.1.2.1: '(.*?)'.*'(.*)'.*" );
+            Matcher vocabErrorMatcher = vocabErrorPattern.matcher( saxException.getMessage() );
+            if( vocabErrorMatcher.find() ) {
+                isMatchingSpecialPattern = true;
+                value = vocabErrorMatcher.group( 1 );
+                type = vocabErrorMatcher.group( 2 );
+            }
+        }
+        if( !isMatchingSpecialPattern ) {
             Pattern vocabErrorPattern = Pattern.compile( "cvc-datatype-valid.1.2.3: '(.*?)'.*union.*'(.*)'.*" );
             Matcher vocabErrorMatcher = vocabErrorPattern.matcher( saxException.getMessage() );
             if( vocabErrorMatcher.find() ) {
@@ -112,7 +121,7 @@ System.out.println( "path=" + path + " attribute="+attribute );
                     key.append( StringUtil.capitalize( pathItem[ i ] ) );
                 if( "".equals( value ) ) {
                     key.insert( 0, "Empty" );
-                    if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) )
+                    if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) && !attribute.equals( "DurationString" ) )
                         issue.setKind( "P2" + StringUtil.capitalize( attribute ) );
                     else 
                         issue.setKind( "E2" + StringUtil.capitalize( field ) );
@@ -120,13 +129,13 @@ System.out.println( "path=" + path + " attribute="+attribute );
                 }
                 else {
                     key.insert( 0, "Wrong" );
-                    if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) ) 
+                    if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) && !attribute.equals( "DurationString" ) ) 
                         issue.setKind( "P3"+ StringUtil.capitalize( attribute ) );
                     else 
                         issue.setKind( "E3"+ StringUtil.capitalize( field ) );
                         //issue.setKind( ( pathDepth > 3 ? "SE" : "E" ) + "3"+ StringUtil.capitalize( field ) );
                 }
-                if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) )
+                if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) && !attribute.equals( "DurationString" ) )
                     key.append( StringUtil.capitalize( attribute ) );
 
 System.out.println( "key="+key );                    

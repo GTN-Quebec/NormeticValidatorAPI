@@ -63,6 +63,7 @@ END:VCARD
     </metaMetadata>
     <technical>
         <size>123123</size>
+        <format>video/quicktime</format>
         <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-640-s.mov</location>
         <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-480-s.mov</location>
         <location>http://xserve.scedu.umontreal.ca/~cyberscol/videos/v00008-320-s.mov</location>
@@ -71,6 +72,7 @@ END:VCARD
         <otherPlatformRequirements><string language="fr">Test</string></otherPlatformRequirements>
         <duration>
             <duration>PT02M25S</duration>
+            <description><string language="lajkldjfalsdkjf">Dummy</string></description>
         </duration>
     </technical>
     <educational>
