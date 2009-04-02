@@ -284,5 +284,10 @@ System.out.println( "key="+key );
     private Vector                          handledLocations = new Vector();
     private String                          lom;
 
+    //private static final String[] exceptionalAttributeType = {
+    //    "DateTimeString",
+    //    "DurationString"
+    //};
+
 }
 

@@ -590,8 +590,8 @@
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:typicalLearningTime">
             <iso:assert test="normalize-space() != ''" diagnostics="E2-5.9_Element5.9EmptyRecommended">E2-5.9_Element5.9EmptyRecommended</iso:assert>
-            <iso:report test="normalize-space() != '' and not(lom:duration)" diagnostics="P1Duration-5.9_Element5.9UndefinedDurationRecommended">P1Duration-5.9_Element5.9UndefinedDurationRecommended</iso:report>
-            <iso:report test="normalize-space() != '' and lom:duration and normalize-space(lom:duration) = ''" diagnostics="P2Duration-5.9_Element5.9EmptyDurationRecommended">P2Duration-5.9_Element5.9EmptyDurationRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and not(lom:duration)" diagnostics="E1Duration-5.9_Element5.9UndefinedDurationRecommended">E1Duration-5.9_Element5.9UndefinedDurationRecommended</iso:report>
+            <iso:report test="normalize-space() != '' and lom:duration and normalize-space(lom:duration) = ''" diagnostics="E2Duration-5.9_Element5.9EmptyDurationRecommended">E2Duration-5.9_Element5.9EmptyDurationRecommended</iso:report>
         </iso:rule>
         <iso:rule context="lom:lom/lom:educational/lom:description">
             <iso:assert test="normalize-space() != ''" diagnostics="E2-5.10_Element5.10EmptyRecommended">E2-5.10_Element5.10EmptyRecommended</iso:assert>
@@ -811,16 +811,16 @@
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
             <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://www.normetic.org/vdex/typeressourcev1_2.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.2">UnrecognizedVocabularySourceForElement5.2</iso:report>
-            <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_2_learning_resource_type_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.2_InvalidVocabularyForElement5.2">P3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
-            <iso:report test="$value and $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.2_InvalidVocabularyForElement5.2">P3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_2_learning_resource_type_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.2_InvalidVocabularyForElement5.2">E3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="$value and $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.2_InvalidVocabularyForElement5.2">E3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
         </iso:rule>
 
         <iso:rule context="lom:lom/lom:educational/lom:context">
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
             <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml'" diagnostics="UnrecognizedVocabularySourceForElement5.6">UnrecognizedVocabularySourceForElement5.6</iso:report>
-            <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_6_context_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.6_InvalidVocabularyForElement5.6">P3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
-            <iso:report test="$value and $source = 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml' and not(document('NORMETICv1.0_element_5_6_contexte_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="P3Value-5.6_InvalidVocabularyForElement5.6">P3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
+            <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_6_context_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.6_InvalidVocabularyForElement5.6">E3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
+            <iso:report test="$value and $source = 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml' and not(document('NORMETICv1.0_element_5_6_contexte_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.6_InvalidVocabularyForElement5.6">E3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
         </iso:rule>
     </iso:pattern>
 
@@ -1084,8 +1084,8 @@
         <iso:diagnostic id="E1Value-5.8_Element5.8UndefinedValueRecommended" xml:lang="en">P1Value-5.8_Element Value of 5.8-Difficulty is undefined.  This element is recommended.</iso:diagnostic>
         <!--iso:diagnostic id="P2Value-5.8_Element5.8EmptyValueRecommended" xml:lang="en">P2Value-5.8_Element Value of 5.8-Difficulty is empty.  This element is recommended.</iso:diagnostic-->
         <iso:diagnostic id="E2-5.9_Element5.9EmptyRecommended" xml:lang="en">E2-5.9_Element 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="P1Duration-5.9_Element5.9UndefinedDurationRecommended" xml:lang="en">P1Duration-5.9_Element Duration of 5.9-TypicalLearningTime is undefined.  This element is recommended.</iso:diagnostic>
-        <iso:diagnostic id="P2Duration-5.9_Element5.9EmptyDurationRecommended" xml:lang="en">P2Duration-5.9_Element Duration of 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="E1Duration-5.9_Element5.9UndefinedDurationRecommended" xml:lang="en">E1Duration-5.9_Element Duration of 5.9-TypicalLearningTime is undefined.  This element is recommended.</iso:diagnostic>
+        <iso:diagnostic id="E2Duration-5.9_Element5.9EmptyDurationRecommended" xml:lang="en">E2Duration-5.9_Element Duration of 5.9-TypicalLearningTime is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2-5.10_Element5.10EmptyRecommended" xml:lang="en">E2-5.10_Element 5.10-Description is empty.  This element is recommended.</iso:diagnostic>
         <iso:diagnostic id="E2-5.11_Element5.11EmptyRecommended" xml:lang="en">E2-5.11_Element 5.11-Language is empty.  This element is recommended.</iso:diagnostic>
 
@@ -1216,9 +1216,9 @@
 
         <!-- Vocabularies (Educational) -->
         <iso:diagnostic id="UnrecognizedVocabularySourceForElement5.2" xml:lang="en">Unrecognized source for element 5.2-LearningResourceType.</iso:diagnostic>
-        <iso:diagnostic id="P3Value-5.2_InvalidVocabularyForElement5.2" xml:lang="en">P3Value-5.2_Invalid vocabulary definition for element 5.2-LearningResourceType.</iso:diagnostic>
+        <iso:diagnostic id="E3Value-5.2_InvalidVocabularyForElement5.2" xml:lang="en">E3Value-5.2_Invalid vocabulary definition for element 5.2-LearningResourceType.</iso:diagnostic>
         <iso:diagnostic id="UnrecognizedVocabularySourceForElement5.6" xml:lang="en">Unrecognized source for element 5.6-Context.</iso:diagnostic>
-        <iso:diagnostic id="P3Value-5.6_InvalidVocabularyForElement5.6" xml:lang="en">P3Value-5.6_Invalid vocabulary definition for element 5.6-Context.</iso:diagnostic>
+        <iso:diagnostic id="E3Value-5.6_InvalidVocabularyForElement5.6" xml:lang="en">E3Value-5.6_Invalid vocabulary definition for element 5.6-Context.</iso:diagnostic>
     </iso:diagnostics>
 
 </iso:schema>
