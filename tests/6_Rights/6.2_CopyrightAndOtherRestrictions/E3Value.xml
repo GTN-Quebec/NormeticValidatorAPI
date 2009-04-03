@@ -98,7 +98,7 @@ END:VCARD
         <typicalLearningTime>
             <duration>P1M</duration>
         </typicalLearningTime>
-        <description><string language="lajsdflkasjdfa">Dummy description</string></description>
+
     </educational>
     <rights>
         <cost>
@@ -107,10 +107,10 @@ END:VCARD
         </cost>
         <copyrightAndOtherRestrictions>
             <source>LOMv1.0</source>
-            <value>yes</value>
+            <value>la;kf</value>
         </copyrightAndOtherRestrictions>
         <description>
-            <string language="lasjdklfjalsdjf">L'utilisation de ces vidéos se fait  uniquement par lintermédiaire de ce site et à des fins éducatives et non lucratives pour fin de consultation ou de présentation à des intervenants du milieu de léducation. Ces vidéos ne peuvent en aucun cas être copiées ou transférées sur support informatique.</string>
+            <string language="fr-CA">L'utilisation de ces vidéos se fait  uniquement par lintermédiaire de ce site et à des fins éducatives et non lucratives pour fin de consultation ou de présentation à des intervenants du milieu de léducation. Ces vidéos ne peuvent en aucun cas être copiées ou transférées sur support informatique.</string>
         </description>
     </rights>
     <relation>

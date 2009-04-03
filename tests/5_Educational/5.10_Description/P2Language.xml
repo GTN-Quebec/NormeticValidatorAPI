@@ -110,7 +110,7 @@ END:VCARD
             <value>yes</value>
         </copyrightAndOtherRestrictions>
         <description>
-            <string language="fr">L'utilisation de ces vidéos se fait  uniquement par lintermédiaire de ce site et à des fins éducatives et non lucratives pour fin de consultation ou de présentation à des intervenants du milieu de léducation. Ces vidéos ne peuvent en aucun cas être copiées ou transférées sur support informatique.</string>
+            <string language="">L'utilisation de ces vidéos se fait  uniquement par lintermédiaire de ce site et à des fins éducatives et non lucratives pour fin de consultation ou de présentation à des intervenants du milieu de léducation. Ces vidéos ne peuvent en aucun cas être copiées ou transférées sur support informatique.</string>
         </description>
     </rights>
     <relation>
