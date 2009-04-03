@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.Enumeration;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
@@ -179,7 +180,18 @@ public class GraphicalNormeticValidator {
             if( location.isDirectory() ) {
                 textAreaReport.append( "\n\n" );
                 textAreaReport.append( strTestCount + validator.getTestCount() + "\n" );
-                textAreaReport.append( strFailedTestCount + validator.getFailedTestCount() + "\n" );
+                textAreaReport.append( strFailedTestCount + validator.getFailedTestCount() );
+                if( validator.getFailedTestCount() > 0 ) {
+                    textAreaReport.append( " (" );
+                    String delimiter = "";
+                    for( Enumeration e = validator.getFailedTestNumbers(); e.hasMoreElements(); ) {
+                        textAreaReport.append( delimiter );
+                        textAreaReport.append( e.nextElement().toString() );
+                        delimiter = ",";
+                    }
+                    textAreaReport.append( ")" );
+                }
+                textAreaReport.append( "\n" );
                 textAreaReport.append( strIssueCount + report.getIssueCount() + "\n" );
             }
         }

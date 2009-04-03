@@ -8,8 +8,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.Enumeration;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.xml.transform.Source;
@@ -63,9 +65,11 @@ public class NormeticValidator {
                     report.append( childLomFileReport );
                     String actualResult = getValidationStatus( childLomFileReport );
                     boolean isPassed = isValidationOk( expectedResult, actualResult );
-                    testCount++;
-                    if( !isPassed )
+                    if( !isPassed ) {
                         failedTestCount++;
+                        failedTestNumbers.addElement( new Integer( testCount + 1 ) );
+                    }
+                    testCount++;
                     report.append( "\n" );
                     report.append( strExpectedResult + expectedResult );
                     report.append( "\n" );
@@ -227,6 +231,10 @@ public class NormeticValidator {
         return( failedTestCount );
     }
 
+    public Enumeration getFailedTestNumbers() {
+        return( failedTestNumbers.elements() );
+    }
+
     public static void main( String[] args ) throws Exception {
         String locationParam = null;
         String languageParam = null;
@@ -384,6 +392,7 @@ public class NormeticValidator {
 
     private int     testCount = 0; 
     private int     failedTestCount = 0;
+    private Vector  failedTestNumbers = new Vector();
 
     private String  strValidatingFolder;
     private String  strTest;
