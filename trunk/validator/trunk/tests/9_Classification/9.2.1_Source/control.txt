@@ -1,4 +1,5 @@
 file: SE1.xml expectedResult: Invalid[SE1(9.2.1)]
 file: SE2.xml expectedResult: Invalid[SE2(9.2.1)]
-file: P1.xml expectedResult: OkWithWarnings[P1(9.2.1)]
-file: P2.xml expectedResult: OkWithWarnings[P2(9.2.1)]
+file: P1Language.xml expectedResult: OkWithWarnings[P1(9.2.1)]
+file: P2Language.xml expectedResult: Invalid[P2Language(9.2.1)]
+file: P3Language.xml expectedResult: Invalid[P3Language(9.2.1)]

@@ -1,3 +1,4 @@
 file: E2_Description.xml expectedResult: OkWithWarnings[E2(9.3)]
-file: P1.xml expectedResult: OkWithWarnings[P1(9.3)]
-file: P2.xml expectedResult: OkWithWarnings[P2(9.3)]
+file: P1Language.xml expectedResult: OkWithWarnings[P1(9.3)]
+file: P2Language.xml expectedResult: Invalid[P2Language(9.3)]
+file: P3Language.xml expectedResult: Invalid[P3Language(9.3)]
