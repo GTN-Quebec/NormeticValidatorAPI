@@ -239,7 +239,7 @@ System.out.println( "key="+key );
         if( tagMatcher.find() ) {
             String selfClosingTag = tagMatcher.group( 1 );
 //System.out.println( "Matched empty tag="+selfClosingTag );
-            return( buildPathRec( truncatedLom.substring( 0, indexOfPreviousTag ), visitedElements, false ) );
+            return( buildPathRec( truncatedLom.substring( 0, indexOfPreviousTag ), visitedElements, false ) + ( isFirstTag ? "/" + selfClosingTag : "" ) );
         }
 
         Pattern closingTagPattern = Pattern.compile( "</\\b(.+?)\\b.*>" );
