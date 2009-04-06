@@ -53,10 +53,24 @@
                     <include name="**/*.jar"/>
                 </fileset>
             </classpath>
+            <arg value="-Dfile.encoding=UTF-8"/>
             <arg value="-lang"/>
             <arg path="fr"/>
-            <arg value="-lom"/>
+            <arg value="-location"/>
             <arg path="../../LOM/specimens/4.xml"/>
+        </java>
+    </target>
+
+    <target name="test" depends="build">
+        <java classname="ca.licef.validator.GraphicalNormeticValidator" spawn="true" fork="true">
+            <classpath>
+                <pathelement location="${build}/${ant.project.name}.jar"/>            
+                <fileset dir="${lib}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <arg value="-Dfile.encoding=UTF-8"/>
+            <arg value="-lang fr"/>
         </java>
     </target>
 

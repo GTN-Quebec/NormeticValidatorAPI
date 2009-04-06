@@ -3,12 +3,14 @@ README
 
 This is the validator verifіying if a LOM is compliant with Normetic profile v1.2.
 
+
 Dependencies
 ------------
 
-- Jing (20030619)
-- Saxon8 (8-9-0-4j)
+- Jing (20030619) * Not really used at the moment *
+- Saxon9 (1-0-5j)
 - JRE (1.6.0_03-b05)
+
 
 How to use
 ----------
@@ -24,10 +26,22 @@ To clean all old files :
 
 $ ant clean
 
+
 To build the project :
 
 $ ant build
 
+
+To generate the javadoc :
+
+$ ant javadoc
+
+
 To test the validator :
 
 $ ant run
+
+
+To launch the unit test tool :
+
+$ ant test
