@@ -1,4 +1,3 @@
-Bug: If there is a quote in a vocabulary value, the value will not be extracted properly.  The quote introduces ambiguosity.  We must use the whole message in the regular expressions for both languags (en and fr) :-(
 Comment out all P2 and E2 prefixed rules that are now implemented in XSDValidator.
 Improve language validation.  For now, the XSD phase will detect very obvious errors (like a value of 'asdlfjadfojaeriofa').  Using Schematron (maybe duplicate or generate rules if required) to check valid values.
 Try to handle vocab errors and empty tag errors at the XSD level.  
