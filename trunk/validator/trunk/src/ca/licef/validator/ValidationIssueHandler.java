@@ -67,6 +67,13 @@ public class ValidationIssueHandler implements ErrorHandler {
 
 //System.out.println( "mes="+saxException.getMessage() );        
         if( !isMatchingSpecialPattern ) {
+            if( saxException.getMessage().startsWith( "cvc-elt.1:" ) ) {
+                isMatchingSpecialPattern = true;
+                issue.setExplanation( bundle.getString( "cvc-elt.1_Explanation" ) );
+                return( true ); 
+            }
+        }
+        if( !isMatchingSpecialPattern ) {
             if( saxException.getMessage().startsWith( "cvc-attribute.3:" ) ||
                 saxException.getMessage().startsWith( "cvc-complex-type.2.2:" ) ) {
                 isMatchingSpecialPattern = true;
