@@ -77,7 +77,7 @@ public class ValidationIssueHandler implements ErrorHandler {
             }
         }
         if( !isMatchingSpecialPattern ) {
-            Pattern vocabErrorPattern = Pattern.compile( "cvc-datatype-valid.1.2.1: '(.*?)'.*'(.*)'.*" );
+            Pattern vocabErrorPattern = Pattern.compile( "cvc-datatype-valid.1.2.1: '(.*?)' .* '(.*)'\\." );
             Matcher vocabErrorMatcher = vocabErrorPattern.matcher( saxException.getMessage() );
             if( vocabErrorMatcher.find() ) {
                 isMatchingSpecialPattern = true;
@@ -86,7 +86,7 @@ public class ValidationIssueHandler implements ErrorHandler {
             }
         }
         if( !isMatchingSpecialPattern ) {
-            Pattern vocabErrorPattern = Pattern.compile( "cvc-datatype-valid.1.2.3: '(.*?)'.*union.*'(.*)'.*" );
+            Pattern vocabErrorPattern = Pattern.compile( "cvc-datatype-valid.1.2.3: '(.*?)' .*union.*'(.*)'\\." );
             Matcher vocabErrorMatcher = vocabErrorPattern.matcher( saxException.getMessage() );
             if( vocabErrorMatcher.find() ) {
                 isMatchingSpecialPattern = true;
@@ -95,7 +95,7 @@ public class ValidationIssueHandler implements ErrorHandler {
             }
         }
         if( !isMatchingSpecialPattern ) {
-            Pattern patternErrorPattern = Pattern.compile( "cvc-pattern-valid: .* '(.*?)' .*facet-valid.*pattern.*'(.*?)'.*'(.*?)'.*" );
+            Pattern patternErrorPattern = Pattern.compile( "cvc-pattern-valid: .* '(.*?)' .*facet-valid.*pattern.* '(.*?)' .*'(.*?)'\\." );
             Matcher patternErrorMatcher = patternErrorPattern.matcher( saxException.getMessage() );
             if( patternErrorMatcher.find() ) {
                 isMatchingSpecialPattern = true;
