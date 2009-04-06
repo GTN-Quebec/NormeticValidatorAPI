@@ -65,7 +65,7 @@ public class ValidationIssueHandler implements ErrorHandler {
         String type = null;
         String attribute = null;
 
-System.out.println( "mes="+saxException.getMessage() );        
+//System.out.println( "mes="+saxException.getMessage() );        
         if( !isMatchingSpecialPattern ) {
             if( saxException.getMessage().startsWith( "cvc-attribute.3:" ) ||
                 saxException.getMessage().startsWith( "cvc-complex-type.2.2:" ) ) {
@@ -110,7 +110,7 @@ System.out.println( "mes="+saxException.getMessage() );
             String path = getPath( saxException.getLineNumber(), saxException.getColumnNumber() );
             int pathDepth = getDepth( path );
 
-System.out.println( "path=" + path + " attribute="+attribute );                    
+//System.out.println( "path=" + path + " attribute="+attribute );                    
             if( path != null ) {
                 String[] pathItem = StringUtil.split( path, '/' );
                 String field = pathItem[ pathItem.length - 1 ];
@@ -138,7 +138,7 @@ System.out.println( "path=" + path + " attribute="+attribute );
                 if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) && !attribute.equals( "DurationString" ) )
                     key.append( StringUtil.capitalize( attribute ) );
 
-System.out.println( "key="+key );                    
+//System.out.println( "key="+key );                    
                 if( bundleContainsKey( key.toString() ) ) {
                 //if( bundle.containsKey( key ) ) {
                     String localeMetadataString = bundle.getString( key.toString() );
@@ -257,7 +257,7 @@ System.out.println( "key="+key );
         Matcher openingTagMatcher = openingTagPattern.matcher( currentTagString );
         if( openingTagMatcher.find() ) {
             String openingTag = openingTagMatcher.group( 1 );
-System.out.println( "Matched opening tag="+openingTag );            
+//System.out.println( "Matched opening tag="+openingTag );            
             if( visitedElements.isEmpty() ) {
                 return( buildPathRec( truncatedLom.substring( 0, indexOfPreviousTag), visitedElements, false ) + "/" + openingTag );
             }

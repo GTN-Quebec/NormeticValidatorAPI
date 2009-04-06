@@ -1,5 +1,9 @@
 ::
 :: Before using this script file, make sure that the environment variable VALIDATOR_HOME is properly initialized.
+:: It should point to the directory containing the build.xml file that builds the NormeticValidator.jar file.
+:: For example, on my computer, I have this :
+::
+:: %VALIDATOR_HOME%=o:\gtn-quebec\validator\trunk
 ::
 :: Here is a sample call : 
 ::
