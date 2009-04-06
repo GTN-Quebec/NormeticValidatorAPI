@@ -1,0 +1,16 @@
+Bug: If there is a quote in a vocabulary value, the value will not be extracted properly.  The quote introduces ambiguosity.  We must use the whole message in the regular expressions for both languags (en and fr) :-(
+Comment out all P2 and E2 prefixed rules that are now implemented in XSDValidator.
+Improve language validation.  For now, the XSD phase will detect very obvious errors (like a value of 'asdlfjadfojaeriofa').  Using Schematron (maybe duplicate or generate rules if required) to check valid values.
+Try to handle vocab errors and empty tag errors at the XSD level.  
+Search for all messages of this pattern .*=.*|.* (with just one pipe...  We need at least 2 pipes).
+All message keys must be of this format .*-5.3_.* otherwise the help reference won't be shown.
+Display a message saying that a lom is valid.
+Include test files in svn and Valid lom file too.  Document all this.
+Implement an associative array with error identifiers and error metadata (like referential page, etc.)
+There are some hardcoded references inside/to xsd files to localhost:8080/NormeticValidator.  Could it be possible to have a parameter instead.  It's not as easy as it seems.
+If we have this xml: <lom/>, we get the error: cvc-elt.1: Cannot find the declaration of element 'lom'. [1,6].  Could this be improved?  How to detect the absence of namespace and signal it in a user-friendly way.  <lom xmlns="http://ltsc.ieee.org/xsd/LOM"/> is better even though other rules are triggered for this too simple lom.
+Clean the tests.  Ideally, there should be only one issue for each test.
+Check the case when a file in the control file doesn't exist.
+Check the case when a folder in the control file doesn't exist.
+Refactor ValidationReport.toString() if needed.
+Localize the validation status.

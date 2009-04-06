@@ -1,0 +1,7 @@
+file: E1.xml expectedResult: OkWithWarnings[E1(7.1)]
+file: E2.xml expectedResult: OkWithWarnings[E2(7.1)]
+file: E1Source.xml expectedResult: OkWithWarnings[E1Source(7.1)]
+file: E2Source.xml expectedResult: Invalid[E2Source(7.1)]
+file: E1Value.xml expectedResult: OkWithWarnings[E1Value(7.1)]
+file: E2Value.xml expectedResult: Invalid[E2Value(7.1)]
+file: E3Value.xml expectedResult: Invalid[E3Value(7.1)]

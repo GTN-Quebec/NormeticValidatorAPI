@@ -1,0 +1,4 @@
+folder: 7.1_Kind
+folder: 7.2.1.1_Catalog
+folder: 7.2.1.2_Entry
+folder: 7.2.2_Description

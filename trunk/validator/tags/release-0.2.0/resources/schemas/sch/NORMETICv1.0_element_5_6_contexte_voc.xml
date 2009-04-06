@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="fr">
+  <vocabName>
+    <langstring language="fr">Vocabulaire NORMETICv1.0: élément 5.6 contexte</langstring>
+  </vocabName>
+  <vocabIdentifier isRegistered="false">http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml</vocabIdentifier>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>education pre scolaire</termIdentifier>
+    <caption>
+      <langstring language="en">kindergarten</langstring>
+      <langstring language="fr-CA">éducation pré scolaire</langstring>
+    </caption>
+    <description>
+      <langstring language="en">kindergarten</langstring>
+      <langstring language="fr-CA">éducation pré scolaire</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>education primaire</termIdentifier>
+    <caption>
+      <langstring language="en">primary education</langstring>
+      <langstring language="fr-CA">éducation primaire</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">éducation primaire</langstring>
+      <langstring language="en">primary education</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>education secondaire</termIdentifier>
+    <caption>
+      <langstring language="en">secondary education</langstring>
+      <langstring language="fr-CA">éducation secondaire</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">éducation secondaire</langstring>
+      <langstring language="en">secondary education</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>formation professionnelle</termIdentifier>
+    <caption>
+      <langstring language="en">vocational training</langstring>
+      <langstring language="fr-CA">formation professionnelle</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">formation professionnelle au secondaire</langstring>
+      <langstring language="en">vocational training at secondary school</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>cegep</termIdentifier>
+    <caption>
+      <langstring language="en">cegep</langstring>
+      <langstring language="fr-CA">cégep</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">collège d'enseignement général et professionnel</langstring>
+      <langstring language="en">college of general and vocational education</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>formation technique</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">formation technique</langstring>
+      <langstring language="en">technical education</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">formation professionnelle au cégep</langstring>
+      <langstring language="en">vocational training at cegep</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>universite premier cycle</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">université premier cycle</langstring>
+      <langstring language="en">undergraduate education</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">université premier cycle</langstring>
+      <langstring language="en">undergraduate education</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>universite second cycle</termIdentifier>
+    <caption>
+      <langstring language="en">graduate education</langstring>
+      <langstring language="fr-CA">université second cycle</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">université second cycle</langstring>
+      <langstring language="en">graduate education</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>universite troisieme cycle</termIdentifier>
+    <caption>
+      <langstring language="en">postgraduate education</langstring>
+      <langstring language="fr-CA">université troisième cycle</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">université troisième cycle</langstring>
+      <langstring language="en">postgraduate education</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>formation continue ou en entreprise</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">formation continue ou en entreprise</langstring>
+      <langstring language="en">continuous or corporate training</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">formation continue ou en entreprise</langstring>
+      <langstring language="en">continuous or corporate training</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>autre</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">autre</langstring>
+      <langstring language="en">other</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">autre</langstring>
+      <langstring language="en">other</langstring>
+    </description>
+  </term>
+  <metadata>
+    <vocabSource xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd"/>
+    <vocabIsSystem xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">true</vocabIsSystem>
+    <vocabIsRelationship xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">false</vocabIsRelationship>
+  </metadata>
+</vdex>

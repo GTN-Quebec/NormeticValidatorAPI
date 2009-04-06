@@ -1,0 +1,5 @@
+file: E2.xml expectedResult: OkWithWarnings[E2(5.9)]
+file: P1String.xml expectedResult: OkWithWarnings[P1(5.9)]
+file: P2String.xml expectedResult: Invalid[P2Language(5.9)]
+file: E1Duration.xml expectedResult: OkWithWarnings[E1Duration(5.9)]
+file: E2Duration.xml expectedResult: Invalid[E2Duration(5.9)]
