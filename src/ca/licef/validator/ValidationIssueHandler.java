@@ -121,8 +121,6 @@ public class ValidationIssueHandler implements ErrorHandler {
             if( path != null ) {
                 String[] pathItem = StringUtil.split( path, '/' );
                 String field = pathItem[ pathItem.length - 1 ];
-//                String parentField = fields[ 1 ];
-//System.out.println( "fields=" + parentField + "/" + field );
                 StringBuilder key = new StringBuilder();
                 for( int i = 0; i < pathItem.length; i++ )
                     key.append( StringUtil.capitalize( pathItem[ i ] ) );
@@ -145,9 +143,8 @@ public class ValidationIssueHandler implements ErrorHandler {
                 if( attribute != null && !attribute.equals( field ) && !attribute.equals( "DateTimeString" ) && !attribute.equals( "DurationString" ) )
                     key.append( StringUtil.capitalize( attribute ) );
 
-//System.out.println( "key="+key );                    
+//System.out.println( "key="+key+" found?=" + bundleContainsKey( key.toString() ) );                    
                 if( bundleContainsKey( key.toString() ) ) {
-                //if( bundle.containsKey( key ) ) {
                     String localeMetadataString = bundle.getString( key.toString() );
                     String[] localeMetadata = localeMetadataString.split( "\\|" );
                     
@@ -240,6 +237,12 @@ public class ValidationIssueHandler implements ErrorHandler {
 
         String currentTagString = truncatedLom.substring( indexOfPreviousTag, indexOfPreviousTagClosingMark + 1 );
 //System.out.println( "currentTag="+currentTagString );
+
+        Pattern commentPattern = Pattern.compile( "<!--.*-->" );
+        Matcher commentMatcher = commentPattern.matcher( currentTagString );
+        if( commentMatcher.find() ) {
+            return( buildPathRec( truncatedLom.substring( 0, indexOfPreviousTag ), visitedElements, false ) );
+        }
 
         Pattern selfClosingTagPattern = Pattern.compile( "<\\b(.+?)\\b.*/>" );
         Matcher tagMatcher = selfClosingTagPattern.matcher( currentTagString );
