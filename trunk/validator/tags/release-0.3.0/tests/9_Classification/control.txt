@@ -1,0 +1,7 @@
+folder: 9.1_Purpose
+folder: 9.2.1_Source
+folder: 9.2.2.1_Identifier
+folder: 9.2.2.2_Entry
+folder: 9.2_TaxonPath
+folder: 9.3_Description
+folder: 9.4_Keyword

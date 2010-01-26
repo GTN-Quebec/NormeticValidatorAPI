@@ -1,0 +1,7 @@
+file: SE1.xml expectedResult: Invalid[SE1(2.3.1)]
+file: E1Source.xml expectedResult: Invalid[E1Source(2.3.1)]
+file: E2Source.xml expectedResult: Invalid[E2Source(2.3.1)]
+file: E3Source.xml expectedResult: Invalid[E3Source(2.3.1)]
+file: E1Value.xml expectedResult: Invalid[E1Value(2.3.1)]
+file: E2Value.xml expectedResult: Invalid[E2Value(2.3.1)]
+file: E3Value.xml expectedResult: Invalid[E3Value(2.3.1)]

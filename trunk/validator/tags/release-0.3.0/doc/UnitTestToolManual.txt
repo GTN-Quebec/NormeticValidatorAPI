@@ -1,0 +1,94 @@
+How to use the Unit Test Tool
+=============================
+
+To launch the tool, you must set an environment variable named VALIDATOR_HOME that points to the location of the validator API project.  This corresponds to the folder containing build.xml file and various folders like bin, doc, src, etc.  For example, on my computer, I have this:
+
+%VALIDATOR_HOME%=o:\gtn-quebec\validator\trunk
+
+Once this variable is defined, you should be able to launch the Unit Test Tool by clicking the file bin\launchValidator.bat file.
+
+It's also possible to launch the Unit Test Tool using ant, by issuing the command: ant test
+
+
+The Unit Test Tool takes the following data as input:
+
+1) Path pointing to a folder or a file.
+2) Boolean indicating whether the XSD validator shoud be enabled or not during the validation process.
+3) Boolean indicating whether the Schematron validator should enabled or not during the validation process.
+
+For 1), we can type the path into the text field or select a location by clicking the ... button.  If the chosen path points to file, it must be a LOM XML file.  The Unit Test Tool will validate this file and produce validation errors found in the given LOM.  Otherwise, if the path points to a folder, the Unit Test Tool will process all the LOM files contained in the folder, recursively, according to control files therein.  For more details about control file, consult the section below.
+
+The checkbox can be checked or not to specify which phases of validation will be performed.  For better results, it's recommended to use all the validation phases.
+
+To perform the validation tests, we click the Validate button.  
+
+A convenient button at the bottom of the window allows the user to clean the content of the text area where the report messages are issued.
+
+
+Control file
+------------
+
+A control file consists of a text file named control.txt containing directive lines.  There are 2 kinds of directive lines.  One used to declaire a subfolder and another one to declare a file to be validated.
+
+A folder directive line looks like this:
+
+folder: <folderName>
+
+Where <folderName> corresponds to a subfolder's name.  
+
+For example, in the top level folder, the control file looks like:
+
+folder: 1_General
+folder: 2_LifeCycle
+folder: 3_MetaMetadata
+folder: 4_Technical
+folder: 5_Educational
+folder: 6_Rights
+folder: 7_Relation
+folder: 8_Annotation
+folder: 9_Classification
+
+If the path input parameter points to the folder containing this control.txt file, then the Unit Teѕt Tool will validate all the folders enumerated.  If other folders are contained in the pointed folder but are not mentioned in the control.txt file, they will be ignored by the tool.  To remove temporarily a folder declaration, it's possible to comment it out prefixing it with a sharp(#) character like this:
+
+folder: 1_General
+folder: 2_LifeCycle
+folder: 3_MetaMetadata
+folder: 4_Technical
+#folder: 5_Educational
+#folder: 6_Rights
+#folder: 7_Relation
+#folder: 8_Annotation
+#folder: 9_Classification
+
+In this case, only the first four folders will be processed.
+
+A file directive line looks like this:
+
+file: <fileName> expectedResult: <result>[<errorType>(<fieldNumber>)]
+
+Where <fileName> corresponds to a file contained in the folder containing the control.txt file.
+   <result> is one of the following 3 values: Ok, Invalid, OkWithWarnings.
+   <errorType> is an code like: E1, E2, E3, P1, P2, P3, etc.  The available error types are listed in an external Excel document.
+               Some error type also needs a suffix corresponding to the validated attribute or field.  This is needed for tests 
+               performed by the XSD validator.
+   <fieldNumber> is a number corresponding to a LOM field (e.g.: 6.1 for the Cost field).
+
+For example, in the 5.3_InteractivityLevel folder, the control.txt file looks like this:
+
+file: E2.xml expectedResult: OkWithWarnings[E2(5.3)]
+file: E1Source.xml expectedResult: OkWithWarnings[E1Source(5.3)]
+file: E2Source.xml expectedResult: Invalid[E2Source(5.3)]
+file: E1Value.xml expectedResult: OkWithWarnings[E1Value(5.3)]
+file: E2Value.xml expectedResult: Invalid[E2Value(5.3)]
+file: E3Value.xml expectedResult: Invalid[E3Value(5.3)]
+
+Once again, to remove temporarily a file declaration, it's possible to comment it out prefixing it with a sharp(#) character like this:
+
+#file: E2.xml expectedResult: OkWithWarnings[E2(5.3)]
+#file: E1Source.xml expectedResult: OkWithWarnings[E1Source(5.3)]
+#file: E2Source.xml expectedResult: Invalid[E2Source(5.3)]
+file: E1Value.xml expectedResult: OkWithWarnings[E1Value(5.3)]
+file: E2Value.xml expectedResult: Invalid[E2Value(5.3)]
+file: E3Value.xml expectedResult: Invalid[E3Value(5.3)]
+
+In this case, only the EnValue tests would be performed.
