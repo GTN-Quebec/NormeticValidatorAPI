@@ -14,7 +14,6 @@ import javax.xml.validation.Validator;
 import javax.xml.XMLConstants;
 
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
 class XsdValidator {
 

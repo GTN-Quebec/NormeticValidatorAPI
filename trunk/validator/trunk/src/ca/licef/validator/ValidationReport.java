@@ -2,10 +2,11 @@ package ca.licef.validator;
 
 import java.io.Serializable;
 import java.util.Enumeration;
-import java.util.ListIterator;
 import java.util.Vector;
 
 public class ValidationReport implements Serializable {
+
+    private static final long serialVersionUID = 5007771673076311467L;
 
     public ValidationReport() {
     }
@@ -29,8 +30,8 @@ public class ValidationReport implements Serializable {
 
     public int getIssueCount() {
         int count = 0;
-        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
-            Object item = e.nextElement();
+        for( Enumeration<Serializable> e = items.elements(); e.hasMoreElements(); ) {
+            Serializable item = e.nextElement();
             if( item instanceof ValidationIssue )
                 count++;
             else if( item instanceof ValidationReport ) {
@@ -55,8 +56,8 @@ public class ValidationReport implements Serializable {
 
     public int getIssueCount( ValidationIssue.Severity severity ) {
         int count = 0;
-        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
-            Object item = e.nextElement();
+        for( Enumeration<Serializable> e = items.elements(); e.hasMoreElements(); ) {
+            Serializable item = e.nextElement();
             if( item instanceof ValidationIssue ) {
                 ValidationIssue issue = (ValidationIssue)item;
                 if( issue.getSeverity() == severity )
@@ -71,9 +72,9 @@ public class ValidationReport implements Serializable {
     }
 
     public ValidationIssue[] getIssues() {
-        Vector issues = new Vector();
-        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
-            Object item = e.nextElement();
+        Vector<Serializable> issues = new Vector<Serializable>();
+        for( Enumeration<Serializable> e = items.elements(); e.hasMoreElements(); ) {
+            Serializable item = e.nextElement();
             if( item instanceof ValidationIssue )
                 issues.addElement( item );
             else if( item instanceof ValidationReport ) {
@@ -89,8 +90,8 @@ public class ValidationReport implements Serializable {
 
     public String toString() {
         StringBuilder str = new StringBuilder();
-        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
-            Object item = e.nextElement();
+        for( Enumeration<Serializable> e = items.elements(); e.hasMoreElements(); ) {
+            Serializable item = e.nextElement();
             if( item instanceof ValidationIssue ) {
                 ValidationIssue issue = (ValidationIssue)item;
                 str.append( issue.toString() );
@@ -108,8 +109,8 @@ public class ValidationReport implements Serializable {
 
     public String toHumanReadableString() {
         StringBuilder str = new StringBuilder();
-        for( Enumeration e = items.elements(); e.hasMoreElements(); ) {
-            Object item = e.nextElement();
+        for( Enumeration<Serializable> e = items.elements(); e.hasMoreElements(); ) {
+            Serializable item = e.nextElement();
             if( item instanceof ValidationIssue ) {
                 ValidationIssue issue = (ValidationIssue)item;
                 str.append( issue.toHumanReadableString() );
@@ -126,6 +127,6 @@ public class ValidationReport implements Serializable {
         return( str.toString() );
     }
 
-    private Vector items = new Vector();
+    private Vector<Serializable> items = new Vector<Serializable>();
 
 }

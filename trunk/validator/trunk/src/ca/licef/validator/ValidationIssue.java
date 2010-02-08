@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class ValidationIssue extends Object implements Serializable {
 
+    private static final long serialVersionUID = 5678456920012512602L;
+
     public enum ValidationType {
         UNKOWN,
         XSD,

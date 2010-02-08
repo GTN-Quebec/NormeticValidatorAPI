@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -14,13 +13,9 @@ import java.util.ResourceBundle;
 import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.xml.transform.Source;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.URIResolver;
-import javax.xml.transform.stream.StreamSource;
 
-import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 public class NormeticValidator {
@@ -120,9 +115,10 @@ public class NormeticValidator {
         BufferedWriter lomWriter = new BufferedWriter( lomString );
         String line = null;
         while( ( line = lomReader.readLine() ) != null ) {
-            lomString.write( line );
-            lomString.write( "\n" );
+            lomWriter.write( line );
+            lomWriter.write( "\n" );
         }
+        lomWriter.flush();
 
         return( validate( lomString.toString() ) );
     }
@@ -231,7 +227,7 @@ public class NormeticValidator {
         return( failedTestCount );
     }
 
-    public Enumeration getFailedTestNumbers() {
+    public Enumeration<Integer> getFailedTestNumbers() {
         return( failedTestNumbers.elements() );
     }
 
@@ -392,7 +388,7 @@ public class NormeticValidator {
 
     private int     testCount = 0; 
     private int     failedTestCount = 0;
-    private Vector  failedTestNumbers = new Vector();
+    private Vector<Integer>  failedTestNumbers = new Vector<Integer>();
 
     private String  strValidatingFolder;
     private String  strTest;

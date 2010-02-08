@@ -61,7 +61,6 @@ public class ValidationIssueHandler implements ErrorHandler {
 
         boolean isMatchingSpecialPattern = false;
         String value = null;
-        String pattern = null;
         String type = null;
         String attribute = null;
 
@@ -107,7 +106,7 @@ public class ValidationIssueHandler implements ErrorHandler {
             if( patternErrorMatcher.find() ) {
                 isMatchingSpecialPattern = true;
                 value = patternErrorMatcher.group( 1 );
-                pattern = patternErrorMatcher.group( 2 );
+                //String pattern = patternErrorMatcher.group( 2 );
                 type = patternErrorMatcher.group( 3 );
                 attribute = type;
             }
@@ -115,7 +114,7 @@ public class ValidationIssueHandler implements ErrorHandler {
 
         if( isMatchingSpecialPattern ) {
             String path = getPath( saxException.getLineNumber(), saxException.getColumnNumber() );
-            int pathDepth = getDepth( path );
+            //int pathDepth = getDepth( path );
 
 //System.out.println( "path=" + path + " attribute="+attribute );                    
             if( path != null ) {
@@ -174,8 +173,8 @@ public class ValidationIssueHandler implements ErrorHandler {
      * As we must use JRE 1.5, here is temporary implementation.
      */
     private boolean bundleContainsKey( String key ) {
-        for( Enumeration e = bundle.getKeys(); e.hasMoreElements(); ) {
-            String k = (String)e.nextElement();
+        for( Enumeration<String> e = bundle.getKeys(); e.hasMoreElements(); ) {
+            String k = e.nextElement();
             if( k.equals( key ) )
                 return( true );
         }
@@ -190,7 +189,7 @@ public class ValidationIssueHandler implements ErrorHandler {
 
         String truncatedLom = lom.substring( 0, index ); 
 //System.out.println( "truncatedLom=@"+truncatedLom+"@" );        
-        return( buildPathRec( truncatedLom, new Stack(), true ) );
+        return( buildPathRec( truncatedLom, new Stack<String>(), true ) );
     }
 
     private int getIndexOfLocation( int locationLineNumber, int locationColumnNumber ) {
@@ -225,7 +224,7 @@ public class ValidationIssueHandler implements ErrorHandler {
         return( index );
     }
 
-    private String buildPathRec( String truncatedLom, Stack visitedElements, boolean isFirstTag ) {
+    private String buildPathRec( String truncatedLom, Stack<String> visitedElements, boolean isFirstTag ) {
 //System.out.println( "buildPathRec visitedElements="+visitedElements );        
 //System.out.println( "truncatedLom=@"+truncatedLom+"@");
         int indexOfPreviousTag = truncatedLom.lastIndexOf( "<", truncatedLom.length() - 1 );
@@ -291,7 +290,7 @@ public class ValidationIssueHandler implements ErrorHandler {
     private ValidationIssue.ValidationType  type;
     private ValidationReport                report;
     private ResourceBundle                  bundle;
-    private Vector                          handledLocations = new Vector();
+    private Vector<String>                  handledLocations = new Vector<String>();
     private String                          lom;
 
     //private static final String[] exceptionalAttributeType = {
