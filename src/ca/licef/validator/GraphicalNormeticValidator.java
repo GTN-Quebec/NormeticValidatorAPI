@@ -184,7 +184,7 @@ public class GraphicalNormeticValidator {
                 if( validator.getFailedTestCount() > 0 ) {
                     textAreaReport.append( " (" );
                     String delimiter = "";
-                    for( Enumeration e = validator.getFailedTestNumbers(); e.hasMoreElements(); ) {
+                    for( Enumeration<Integer> e = validator.getFailedTestNumbers(); e.hasMoreElements(); ) {
                         textAreaReport.append( delimiter );
                         textAreaReport.append( e.nextElement().toString() );
                         delimiter = ",";

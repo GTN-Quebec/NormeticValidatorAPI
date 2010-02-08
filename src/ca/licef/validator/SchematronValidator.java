@@ -52,8 +52,8 @@ class SchematronValidator {
     }
 
     protected void finalize() throws Throwable {
-        for( Enumeration e = hSchXslStyleSheet.elements(); e.hasMoreElements(); ) {
-            File schXslStyleSheet = (File)e.nextElement();
+        for( Enumeration<File> e = hSchXslStyleSheet.elements(); e.hasMoreElements(); ) {
+            File schXslStyleSheet = e.nextElement();
             if (!schXslStyleSheet.delete()) 
                 throw( new Exception( "Could not delete temporary file: " + schXslStyleSheet ) );
         }
@@ -129,7 +129,7 @@ class SchematronValidator {
 
                     error.setKind( kind );
                 }
-                if( getBundle().containsKey( key ) ) {
+                try {
                     String localeMetadataString = bundle.getString( key );
                     String[] localeMetadata = localeMetadataString.split( "\\|" ); 
 
@@ -140,13 +140,15 @@ class SchematronValidator {
                         error.setReference( localeMetadata[ 2 ] );
                     if( localeMetadata.length >= 4 )
                         error.setLexicalField( localeMetadata[ 3 ] );
+                } catch (java.util.MissingResourceException e) {
+                  // pass
                 }
             }
         }
     }
 
     private File getSchematronValidatorStylesheet( String phase ) throws IOException, TransformerConfigurationException, TransformerException {
-        File schXslStyleSheet = (File)hSchXslStyleSheet.get( phase );
+        File schXslStyleSheet = hSchXslStyleSheet.get( phase );
         if( schXslStyleSheet == null ) {
             Configuration config = new Configuration();
             config.setAllNodesUntyped(true);
@@ -270,7 +272,7 @@ class SchematronValidator {
     private Locale              locale = Locale.ENGLISH;
     private ResourceBundle      bundle; 
     private ValidationReport    report;
-    private Hashtable           hSchXslStyleSheet = new Hashtable();
+    private Hashtable<String, File> hSchXslStyleSheet = new Hashtable<String, File>();
     private boolean             isOptionalPhaseRequired;
     private boolean             isShowRecommendationsEnabled = true;
 
