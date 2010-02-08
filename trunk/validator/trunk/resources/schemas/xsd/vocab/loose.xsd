@@ -32,7 +32,7 @@
     </xs:documentation>
   </xs:annotation>
 
-  <xs:import namespace="http://ltsc.ieee.org/xsd/LOM"/>
+  <xs:import namespace="http://ltsc.ieee.org/xsd/LOM" schemaLocation="../lomLoose.xsd"/>
 
   <!-- Vocabulary data type declarations -->
 

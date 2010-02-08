@@ -21,15 +21,15 @@
       </xs:documentation>
     </xs:annotation>
     <!-- Learning Object Metadata -->
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/anyElement.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/unique/strict.xsd"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/vocab" schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/vocab/strict.xsd.jsp"/>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend" schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/extend/strict.xsd"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/dataTypes.xsd.jsp"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/elementNames.xsd"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/elementTypes.xsd.jsp"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/rootElement.xsd"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/vocabValues.xsd"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/common/vocabTypes.xsd.jsp"/>
-    <xs:include schemaLocation="http://localhost:8080/NormeticValidator/xsd/normetic/normetic/vocabValues.xsd"/>
+    <xs:include schemaLocation="common/anyElement.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique" schemaLocation="unique/strict.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/vocab" schemaLocation="vocab/strict.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend" schemaLocation="extend/strict.xsd"/>
+    <xs:include schemaLocation="common/dataTypes.xsd"/>
+    <xs:include schemaLocation="common/elementNames.xsd"/>
+    <xs:include schemaLocation="common/elementTypes.xsd"/>
+    <xs:include schemaLocation="common/rootElement.xsd"/>
+    <xs:include schemaLocation="common/vocabValues.xsd"/>
+    <xs:include schemaLocation="common/vocabTypes.xsd"/>
+    <xs:include schemaLocation="normetic/vocabValues.xsd"/>
 </xs:schema>
