@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.ResourceBundle;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -56,6 +57,11 @@ class XsdValidator {
 
     private Validator getValidator() throws SAXException, MalformedURLException {
         if( validator == null ) {
+         	Properties p = new Properties(System.getProperties());
+         	p.setProperty("javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema",
+         				  "org.apache.xerces.jaxp.validation.XMLSchemaFactory");
+         	System.setProperties(p);
+	
             SchemaFactory schemafactory = SchemaFactory.newInstance( XMLConstants.W3C_XML_SCHEMA_NS_URI );
 
             String prefix = "/schemas/xsd/";
