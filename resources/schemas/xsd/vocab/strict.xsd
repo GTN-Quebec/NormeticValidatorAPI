@@ -25,7 +25,7 @@
          Date: 2007/05
       </xs:documentation>
     </xs:annotation>
-    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM" schemaLocation="http://demo.licef.teluq.uquebec.ca/xsd/normetic/lom.xsd"/>
+    <xs:import namespace="http://ltsc.ieee.org/xsd/LOM" schemaLocation="../lom.xsd"/>
     <!-- Vocabulary data type declarations -->
     <!-- Source -->
     <xs:simpleType name="source">

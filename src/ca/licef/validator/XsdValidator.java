@@ -3,6 +3,7 @@ package ca.licef.validator;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.net.MalformedURLException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.xml.transform.Source;
@@ -54,26 +55,12 @@ class XsdValidator {
         return( report );
     }
 
-    private Validator getValidator() throws SAXException {
+    private Validator getValidator() throws SAXException, MalformedURLException {
         if( validator == null ) {
             SchemaFactory schemafactory = SchemaFactory.newInstance( XMLConstants.W3C_XML_SCHEMA_NS_URI );
 
             String prefix = "/schemas/xsd/";
-            Source[] xsdSources = new Source[] {
-                new StreamSource( getClass().getResourceAsStream( prefix + "lomStrict.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/anyElement.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "unique/strict.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "vocab/strict.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "normetic/vocabValues.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "extend/strict.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/dataTypes.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/elementNames.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/elementTypes.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/rootElement.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/vocabValues.xsd" ) ),
-                new StreamSource( getClass().getResourceAsStream( prefix + "common/vocabTypes.xsd" ) )
-            };
-            Schema schema = schemafactory.newSchema( xsdSources );
+            Schema schema = schemafactory.newSchema( getClass().getResource( prefix+"lomStrict.xsd") );
             validator = schema.newValidator();
         }
         return( validator );
