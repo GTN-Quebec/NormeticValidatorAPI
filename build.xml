@@ -57,7 +57,7 @@
             <arg value="-lang"/>
             <arg path="fr"/>
             <arg value="-location"/>
-            <arg path="../../LOM/specimens/4.xml"/>
+            <arg path="../LOM/specimens/4.xml"/>
         </java>
     </target>
 
