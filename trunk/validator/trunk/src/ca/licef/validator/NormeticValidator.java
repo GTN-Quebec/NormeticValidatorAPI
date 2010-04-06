@@ -260,6 +260,8 @@ public class NormeticValidator {
         NormeticValidator validator = new NormeticValidator();
         if( "fr".equals( languageParam ) )
             validator.setLocale( Locale.FRENCH );
+        else
+            validator.setLocale( Locale.ENGLISH );
         if( !isXSDEnabled )
             validator.setXSDValidationEnabled( false );
         if( !isSchematronEnabled )
