@@ -1,4 +1,5 @@
-#file: E1DateTime.xml expectedResult: OkWithWarnings[E1DateTime(2.3.3)]
+# file: E1DateTime.xml expectedResult: OkWithWarnings[E1DateTime(2.3.3)]
+file: E1DateTime.xml expectedResult: OkWithWarnings[RC2(2.3.3)]
 file: E2DateTime.xml expectedResult: Invalid[E2DateTime(2.3.3)]
 file: E3DateTime.xml expectedResult: Invalid[E3DateTime(2.3.3)]
 #file: E1Description.xml expectedResult: OkWithWarnings[E1Description(2.3.3)]
