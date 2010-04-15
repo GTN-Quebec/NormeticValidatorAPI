@@ -1,1 +1,2 @@
 file: SE2.xml expectedResult: OkWithWarnings[SE2(1.1.2)]
+file: E1.xml expectedResult: OkWithWarnings[E1(1.1.2)]
