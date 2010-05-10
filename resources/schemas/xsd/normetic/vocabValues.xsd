@@ -7,9 +7,10 @@
    <xs:annotation>
       <xs:documentation>
          This component schema defintion defines the standard vocabulary value 
-         declarations as defined in the NORMETIC1.1 profile.
+         declarations as defined in the NORMETIC1.2 profile.
          Written by: Frédéric Bergeron &lt;frederic.bergeron@licef.teluq.uqam.ca&gt;
-         Date: 2007/05
+         Edited by: Marc-Antoine Parent &lt;map@ntic.org&gt;
+         Date: 2010/05
       </xs:documentation>
    </xs:annotation>
 
@@ -17,50 +18,68 @@
    <xs:simpleType name="normeticSourceValues">
       <xs:restriction base="xs:token">
          <xs:enumeration value="http://www.normetic.org/vdex/typeressourcev1_2.xml"/>
+         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml"/>
          <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml"/>
+         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.2_element_5_6_contexte_voc.xml"/>
+         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.0_element_6_2_copyright_et_autres_restrictions_voc.xml"/>
       </xs:restriction>
    </xs:simpleType>
 
    <!-- 5.2 Learning Resource Type -->
    <xs:simpleType name="normeticLearningResourceTypeValues">
       <xs:restriction base="xs:token">
-         <xs:enumeration value="évaluation"/>
-         <xs:enumeration value="animation"/>
-         <xs:enumeration value="tutoriel"/>
-         <xs:enumeration value="glossaire"/>
-         <xs:enumeration value="guide"/>
-         <xs:enumeration value="matériel de référence"/>
-         <xs:enumeration value="outils"/>
-         <xs:enumeration value="simulation"/>
-         <xs:enumeration value="lecture/présentation"/>
          <xs:enumeration value="activité"/>
+         <xs:enumeration value="animation"/>
          <xs:enumeration value="démonstration"/>
+         <xs:enumeration value="evaluation"/>
+         <xs:enumeration value="évaluation"/>
          <xs:enumeration value="examen"/>
          <xs:enumeration value="exercice"/>
-         <xs:enumeration value="expérience"/>
          <xs:enumeration value="exploration"/>
+         <xs:enumeration value="expérience"/>
+         <xs:enumeration value="glossaire"/>
+         <xs:enumeration value="glossary"/>
+         <xs:enumeration value="guide"/>
+         <xs:enumeration value="lecture/présentation"/>
+         <xs:enumeration value="matériel de référence"/>
          <xs:enumeration value="méthodologie"/>
+         <xs:enumeration value="outils"/>
+         <xs:enumeration value="presentation"/>
          <xs:enumeration value="questionnaire"/>
+         <xs:enumeration value="reference material"/>
          <xs:enumeration value="scénario pédagogique"/>
+         <xs:enumeration value="simulation"/>
          <xs:enumeration value="situation d'apprentissage et d'évaluation"/>
          <xs:enumeration value="texte-document informatif"/>
+         <xs:enumeration value="tools"/>
+         <xs:enumeration value="tutorial"/>
+         <xs:enumeration value="tutoriel"/>
       </xs:restriction>
    </xs:simpleType>
 
    <!-- 5.6 Context -->
    <xs:simpleType name="normeticContextValues">
       <xs:restriction base="xs:token">
+         <xs:enumeration value="autre"/>
+         <xs:enumeration value="cegep"/>
+         <xs:enumeration value="cégep"/>
          <xs:enumeration value="education pre scolaire"/>
          <xs:enumeration value="education primaire"/>
          <xs:enumeration value="education secondaire"/>
+         <xs:enumeration value="éducation primaire"/>
+         <xs:enumeration value="éducation préscolaire"/>
+         <xs:enumeration value="éducation secondaire"/>
+         <xs:enumeration value="formation continue ou en entreprise"/>
+         <xs:enumeration value="formation continue"/>
+         <xs:enumeration value="formation en entreprise"/>
          <xs:enumeration value="formation professionnelle"/>
-         <xs:enumeration value="cegep"/>
          <xs:enumeration value="formation technique"/>
          <xs:enumeration value="universite premier cycle"/>
          <xs:enumeration value="universite second cycle"/>
          <xs:enumeration value="universite troisieme cycle"/>
-         <xs:enumeration value="formation continue ou en entreprise"/>
-         <xs:enumeration value="autre"/>
+         <xs:enumeration value="université premier cycle"/>
+         <xs:enumeration value="université second cycle"/>
+         <xs:enumeration value="université troisième cycle"/>
       </xs:restriction>
    </xs:simpleType>
 
