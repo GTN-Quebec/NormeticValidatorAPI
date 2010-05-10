@@ -810,17 +810,19 @@
         <iso:rule context="lom:lom/lom:educational/lom:learningResourceType">
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
-            <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://www.normetic.org/vdex/typeressourcev1_2.xml'" diagnostics="E3-5.2_UnrecognizedVocabularySourceForElement5.2">E3-5.2_UnrecognizedVocabularySourceForElement5.2</iso:report>
+            <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and $source != 'http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml'" diagnostics="E3-5.2_UnrecognizedVocabularySourceForElement5.2">E3-5.2_UnrecognizedVocabularySourceForElement5.2</iso:report>
             <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_2_learning_resource_type_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.2_InvalidVocabularyForElement5.2">E3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
             <iso:report test="$value and $source = 'http://www.normetic.org/vdex/typeressourcev1_2.xml' and not(document('typeressourcev1_2.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.2_InvalidVocabularyForElement5.2">E3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
+            <iso:report test="$value and $source = 'http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml' and not(document('NORMETICv1.1_element_5_2_type_de_ressource_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.2_InvalidVocabularyForElement5.2">E3Value-5.2_InvalidVocabularyForElement5.2</iso:report>
         </iso:rule>
 
         <iso:rule context="lom:lom/lom:educational/lom:context">
             <iso:let name="source" value="normalize-space(lom:source/text())"/>
             <iso:let name="value" value="normalize-space(current()/lom:value/text())"/>
-            <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml'" diagnostics="E3-5.6_UnrecognizedVocabularySourceForElement5.6">E3-5.6_UnrecognizedVocabularySourceForElement5.6</iso:report>
+            <iso:report test="normalize-space($source) != '' and $source != 'LOMv1.0' and $source != 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml' and $source != 'http://eureka.ntic.org/vdex/NORMETICv1.2_element_5_6_contexte_voc.xml'" diagnostics="E3-5.6_UnrecognizedVocabularySourceForElement5.6">E3-5.6_UnrecognizedVocabularySourceForElement5.6</iso:report>
             <iso:report test="$value and $source = 'LOMv1.0' and not(document('LOMv1.0_element_5_6_context_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.6_InvalidVocabularyForElement5.6">E3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
             <iso:report test="$value and $source = 'http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml' and not(document('NORMETICv1.0_element_5_6_contexte_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.6_InvalidVocabularyForElement5.6">E3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
+            <iso:report test="$value and $source = 'http://eureka.ntic.org/vdex/NORMETICv1.2_element_5_6_contexte_voc.xml' and not(document('NORMETICv1.2_element_5_6_contexte_voc.xml')//vdx:termIdentifier[normalize-space(text()) = $value])" diagnostics="E3Value-5.6_InvalidVocabularyForElement5.6">E3Value-5.6_InvalidVocabularyForElement5.6</iso:report>
         </iso:rule>
     </iso:pattern>
 

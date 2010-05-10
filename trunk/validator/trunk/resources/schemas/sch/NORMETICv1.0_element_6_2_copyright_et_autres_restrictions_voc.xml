@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="fr">
+  <vocabName>
+    <langstring language="fr">Vocabulaire NORMETICv1.0: &#xC9;l&#xE9;ment 6.2 copyright et autres restrictions</langstring>
+  </vocabName>
+  <vocabIdentifier isRegistered="false">http://eureka.ntic.org/vdex/NORMETICv1.0_element_6_2_copyright_et_autres_restrictions_voc.xml</vocabIdentifier>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>52</termIdentifier>
+    <caption>
+      <langstring language="fr">Oui</langstring>
+      <langstring language="en">Yes</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">""</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>53</termIdentifier>
+    <caption>
+      <langstring language="en">No</langstring>
+      <langstring language="fr">Non</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">""</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>54</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">Libre de distribuer des versions modifi&#xE9;es.</langstring>
+    </caption>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>55</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">Libre de distribuer mais non de modifier.</langstring>
+    </caption>
+  </term>
+  <metadata>
+    <vocabSource xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd"></vocabSource>
+    <vocabIsSystem xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">false</vocabIsSystem>
+    <vocabIsRelationship xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">false</vocabIsRelationship>
+  </metadata>
+</vdex>
