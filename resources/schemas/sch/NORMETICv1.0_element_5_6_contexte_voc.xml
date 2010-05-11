@@ -1,62 +1,62 @@
 <?xml version="1.0"?>
-<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="fr">
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="thesaurus" language="fr">
   <vocabName>
-    <langstring language="fr">Vocabulaire NORMETICv1.0: élément 5.6 contexte</langstring>
+    <langstring language="fr">Vocabulaire NORMETICv1.0: &#xE9;l&#xE9;ment 5.6 contexte</langstring>
   </vocabName>
   <vocabIdentifier isRegistered="false">http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml</vocabIdentifier>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>education pre scolaire</termIdentifier>
+    <termIdentifier>education prescolaire</termIdentifier>
     <caption>
+      <langstring language="fr-CA">&#xE9;ducation pr&#xE9;scolaire</langstring>
       <langstring language="en">kindergarten</langstring>
-      <langstring language="fr-CA">éducation pré scolaire</langstring>
     </caption>
     <description>
+      <langstring language="fr-CA">&#xE9;ducation pr&#xE9;scolaire</langstring>
       <langstring language="en">kindergarten</langstring>
-      <langstring language="fr-CA">éducation pré scolaire</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>education primaire</termIdentifier>
     <caption>
+      <langstring language="fr-CA">&#xE9;ducation primaire</langstring>
       <langstring language="en">primary education</langstring>
-      <langstring language="fr-CA">éducation primaire</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">éducation primaire</langstring>
       <langstring language="en">primary education</langstring>
+      <langstring language="fr-CA">&#xE9;ducation primaire</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>education secondaire</termIdentifier>
     <caption>
       <langstring language="en">secondary education</langstring>
-      <langstring language="fr-CA">éducation secondaire</langstring>
+      <langstring language="fr-CA">&#xE9;ducation secondaire</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">éducation secondaire</langstring>
       <langstring language="en">secondary education</langstring>
+      <langstring language="fr-CA">&#xE9;ducation secondaire</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>formation professionnelle</termIdentifier>
     <caption>
-      <langstring language="en">vocational training</langstring>
       <langstring language="fr-CA">formation professionnelle</langstring>
+      <langstring language="en">vocational training</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">formation professionnelle au secondaire</langstring>
       <langstring language="en">vocational training at secondary school</langstring>
+      <langstring language="fr-CA">formation professionnelle au secondaire</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>cegep</termIdentifier>
     <caption>
+      <langstring language="fr-CA">c&#xE9;gep</langstring>
       <langstring language="en">cegep</langstring>
-      <langstring language="fr-CA">cégep</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">collège d'enseignement général et professionnel</langstring>
       <langstring language="en">college of general and vocational education</langstring>
+      <langstring language="fr-CA">coll&#xE8;ge d'enseignement g&#xE9;n&#xE9;ral et professionnel</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
@@ -66,63 +66,71 @@
       <langstring language="en">technical education</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">formation professionnelle au cégep</langstring>
       <langstring language="en">vocational training at cegep</langstring>
+      <langstring language="fr-CA">formation professionnelle au c&#xE9;gep</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>universite premier cycle</termIdentifier>
     <caption>
-      <langstring language="fr-CA">université premier cycle</langstring>
       <langstring language="en">undergraduate education</langstring>
+      <langstring language="fr-CA">universit&#xE9; premier cycle</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">université premier cycle</langstring>
+      <langstring language="fr-CA">universit&#xE9; premier cycle</langstring>
       <langstring language="en">undergraduate education</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>universite second cycle</termIdentifier>
     <caption>
+      <langstring language="fr-CA">universit&#xE9; second cycle</langstring>
       <langstring language="en">graduate education</langstring>
-      <langstring language="fr-CA">université second cycle</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">université second cycle</langstring>
+      <langstring language="fr-CA">universit&#xE9; second cycle</langstring>
       <langstring language="en">graduate education</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>universite troisieme cycle</termIdentifier>
     <caption>
+      <langstring language="fr-CA">universit&#xE9; troisi&#xE8;me cycle</langstring>
       <langstring language="en">postgraduate education</langstring>
-      <langstring language="fr-CA">université troisième cycle</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">université troisième cycle</langstring>
+      <langstring language="fr-CA">universit&#xE9; troisi&#xE8;me cycle</langstring>
       <langstring language="en">postgraduate education</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>formation continue ou en entreprise</termIdentifier>
+    <termIdentifier>formation continue</termIdentifier>
     <caption>
-      <langstring language="fr-CA">formation continue ou en entreprise</langstring>
-      <langstring language="en">continuous or corporate training</langstring>
+      <langstring language="fr-CA">formation continue</langstring>
+      <langstring language="en">continuous training</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">formation continue ou en entreprise</langstring>
-      <langstring language="en">continuous or corporate training</langstring>
+      <langstring language="fr-CA">Ensemble des processus d&#x2019;apprentissage, formels ou autres, gr&#xE2;ce auxquels les individus consid&#xE9;r&#xE9;s comme adultes dans la soci&#xE9;t&#xE9; &#xE0; laquelle ils appartiennent d&#xE9;veloppent leurs aptitudes, enrichissent leurs connaissances et am&#xE9;liorent leurs qualifications techniques ou professionnelles, ou les r&#xE9;orientent en fonction de leurs propres besoins et de ceux de la soci&#xE9;t&#xE9;. (MELS)</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>autre</termIdentifier>
     <caption>
-      <langstring language="fr-CA">autre</langstring>
       <langstring language="en">other</langstring>
+      <langstring language="fr-CA">autre</langstring>
     </caption>
     <description>
-      <langstring language="fr-CA">autre</langstring>
       <langstring language="en">other</langstring>
+      <langstring language="fr-CA">autre</langstring>
+    </description>
+  </term>
+  <term validIndex="true" orderSignificant="false">
+    <termIdentifier>formation en entreprise</termIdentifier>
+    <caption>
+      <langstring language="fr-CA">formation en entreprise</langstring>
+    </caption>
+    <description>
+      <langstring language="fr-CA">Formation sp&#xE9;cifique d&#xE9;velopp&#xE9;e pour r&#xE9;pondre aux besoins particuliers d'une entreprise.</langstring>
     </description>
   </term>
   <metadata>
