@@ -1,110 +1,110 @@
 <?xml version="1.0"?>
-<vdex  xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="en">
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" orderSignificant="false" profileType="flatTokenTerms" language="en">
   <vocabName>
-    <langstring language="fr-CA">Vocabulaire NORMETICv1.1: Élément 5.2 type de ressource</langstring>
+    <langstring language="fr-CA">Vocabulaire NORMETICv1.1: &#xC9;l&#xE9;ment 5.2 type de ressource</langstring>
   </vocabName>
   <vocabIdentifier isRegistered="false">http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml</vocabIdentifier>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>evaluation</termIdentifier>
     <caption>
-      <langstring language="en">Evaluation</langstring>
-      <langstring language="fr">Évaluation</langstring>
+      <langstring language="en">evaluation</langstring>
+      <langstring language="fr">&#xE9;valuation</langstring>
     </caption>
     <description>
       <langstring language="en">Use this term for any ressource intended to provide measurements of learning either during training or at the end of a sequence of contents.</langstring>
-      <langstring language="fr">Utiliser ce terme pour toute REA dont la vocation est de permettre la mesure d’un apprentissage, que ce soit en cours de formation ou à la fin d’une séquence de contenu. </langstring>
+      <langstring language="fr">Utiliser ce terme pour toute REA dont la vocation est de permettre la mesure d&#x2019;un apprentissage, que ce soit en cours de formation ou &#xE0; la fin d&#x2019;une s&#xE9;quence de contenu. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>animation</termIdentifier>
     <caption>
-      <langstring language="fr">Animation</langstring>
-      <langstring language="en">Animation</langstring>
+      <langstring language="en">animation</langstring>
+      <langstring language="fr">animation</langstring>
     </caption>
     <description>
-      <langstring language="fr">Ce terme qualifie une REA qui consiste en une illustration animée d’une notion, d’un phénomène ou d’un processus. </langstring>
       <langstring language="en">This term refers to a ressource which consists in an animated illustration of a concept, phenomenon or process.</langstring>
+      <langstring language="fr">Ce terme qualifie une REA qui consiste en une illustration anim&#xE9;e d&#x2019;une notion, d&#x2019;un ph&#xE9;nom&#xE8;ne ou d&#x2019;un processus. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>tutorial</termIdentifier>
+    <termIdentifier>tutoriel</termIdentifier>
     <caption>
-      <langstring language="en">Tutorial</langstring>
-      <langstring language="fr">Tutoriel</langstring>
+      <langstring language="fr">tutoriel</langstring>
+      <langstring language="en">tutorial</langstring>
     </caption>
     <description>
-      <langstring language="fr">S’emploie lorsque la REA est utilisée pour guider l'utilisateur dans l'apprentissage et la mise en œuvre d'un logiciel d'application ou d'une procédure. </langstring>
+      <langstring language="fr">S&#x2019;emploie lorsque la REA est utilis&#xE9;e pour guider l'utilisateur dans l'apprentissage et la mise en &#x153;uvre d'un logiciel d'application ou d'une proc&#xE9;dure. </langstring>
       <langstring language="en">Is used when the ressource serves to guide users in learning and implementing application software or procedures.</langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>glossary</termIdentifier>
+    <termIdentifier>glossaire</termIdentifier>
     <caption>
-      <langstring language="en">Glossary</langstring>
-      <langstring language="fr">Glossaire</langstring>
+      <langstring language="en">glossary</langstring>
+      <langstring language="fr">glossaire</langstring>
     </caption>
     <description>
-      <langstring language="fr">Lorsque la REA peut être utilisée comme répertoire de termes pour lesquels il est donné un synonyme connu ou une explication. </langstring>
       <langstring language="en">When the ressource can be used as an index of terms for which known synonyms or definitions are provided.</langstring>
+      <langstring language="fr">Lorsque la REA peut &#xEA;tre utilis&#xE9;e comme r&#xE9;pertoire de termes pour lesquels il est donn&#xE9; un synonyme connu ou une explication. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>guide</termIdentifier>
     <caption>
-      <langstring language="en">Guide</langstring>
-      <langstring language="fr">Guide</langstring>
+      <langstring language="fr">guide</langstring>
+      <langstring language="en">guide</langstring>
     </caption>
     <description>
-      <langstring language="fr">Qualifie une REA utilisée comme un ouvrage didactique présentant les notions essentielles d'un art, d'une science ou d'une technique. </langstring>
       <langstring language="en">Refers to a ressource used as teaching material that presents the fundamentals of an art, science or technique.</langstring>
+      <langstring language="fr">Qualifie une REA utilis&#xE9;e comme un ouvrage didactique pr&#xE9;sentant les notions essentielles d'un art, d'une science ou d'une technique. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>reference material</termIdentifier>
+    <termIdentifier>materiel de reference</termIdentifier>
     <caption>
-      <langstring language="fr">Matériel de référence</langstring>
-      <langstring language="en">Reference material</langstring>
+      <langstring language="en">reference material</langstring>
+      <langstring language="fr">mat&#xE9;riel de r&#xE9;f&#xE9;rence</langstring>
     </caption>
     <description>
+      <langstring language="fr">Qualifie une REA qui consiste en un outil de consultation, une source de renseignements ou de donn&#xE9;es. </langstring>
       <langstring language="en">Qualifies a ressource consisting in a reference tool, source of information or data.</langstring>
-      <langstring language="fr">Qualifie une REA qui consiste en un outil de consultation, une source de renseignements ou de données. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>tools</termIdentifier>
+    <termIdentifier>outils</termIdentifier>
     <caption>
-      <langstring language="fr">Outils</langstring>
-      <langstring language="en">Tools</langstring>
+      <langstring language="en">tools</langstring>
+      <langstring language="fr">outils</langstring>
     </caption>
     <description>
       <langstring language="en">Describes a ressource that provides users with tools to complete a specific task within a broader process. For example, a spreadsheet that provides Canadian dollar equivalents for foreign currency amounts, or a tool that displays universal physical constants in the units of measurement of a specific system of units.</langstring>
-      <langstring language="fr">Décrit une REA servant à instrumenter l’utilisateur pour la réalisation d’une tâche précise se situant à l’intérieur d’un processus plus vaste. Par exemple, une feuille de calcul permettant de trouver l’équivalent en dollars canadiens d’un montant en devise étrangère, ou un instrument permettant d’afficher les constantes physiques universelles dans les unités de mesure d’un système d’unités particulier. </langstring>
+      <langstring language="fr">D&#xE9;crit une REA servant &#xE0; instrumenter l&#x2019;utilisateur pour la r&#xE9;alisation d&#x2019;une t&#xE2;che pr&#xE9;cise se situant &#xE0; l&#x2019;int&#xE9;rieur d&#x2019;un processus plus vaste. Par exemple, une feuille de calcul permettant de trouver l&#x2019;&#xE9;quivalent en dollars canadiens d&#x2019;un montant en devise &#xE9;trang&#xE8;re, ou un instrument permettant d&#x2019;afficher les constantes physiques universelles dans les unit&#xE9;s de mesure d&#x2019;un syst&#xE8;me d&#x2019;unit&#xE9;s particulier. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
     <termIdentifier>simulation</termIdentifier>
     <caption>
-      <langstring language="fr">Simulation</langstring>
-      <langstring language="en">Simulation</langstring>
+      <langstring language="en">simulation</langstring>
+      <langstring language="fr">simulation</langstring>
     </caption>
     <description>
-      <langstring language="fr">À utiliser lorsque la REA sert à simuler certains processus ou les conditions de certaines situations. </langstring>
       <langstring language="en">To be used when the ressource is intended to simulate certain processes or the conditions of certain situations.</langstring>
+      <langstring language="fr">&#xC0; utiliser lorsque la REA sert &#xE0; simuler certains processus ou les conditions de certaines situations. </langstring>
     </description>
   </term>
   <term validIndex="true" orderSignificant="false">
-    <termIdentifier>presentation</termIdentifier>
+    <termIdentifier>lecture/presentation</termIdentifier>
     <caption>
-      <langstring language="en">Lecture/presentation</langstring>
-      <langstring language="fr">Présentation</langstring>
+      <langstring language="en">lecture/presentation</langstring>
+      <langstring language="fr">lecture/pr&#xE9;sentation</langstring>
     </caption>
     <description>
-      <langstring language="fr">À utiliser pour toute REA dont l’objectif est de présenter de l’information textuelle, y compris les hypertextes et les communications orales ou écrites, sauf si le texte sert à des fins touchant d’autre(s) terme(s) du vocabulaire actuel (par exemple, utiliser plutôt « évaluation » s’il s’agit d’un questionnaire d’examen). </langstring>
-      <langstring language="en">To be used for any ressource intended to present textual information, including hypertext, and oral or written communications, except when the text is used for purposes involving one or more other terms of the current vocabulary (e.g. use “evaluation” in the case of an examination questionnaire).</langstring>
+      <langstring language="fr">&#xC0; utiliser pour toute REA dont l&#x2019;objectif est de pr&#xE9;senter de l&#x2019;information textuelle, y compris les hypertextes et les communications orales ou &#xE9;crites, sauf si le texte sert &#xE0; des fins touchant d&#x2019;autre(s) terme(s) du vocabulaire actuel (par exemple, utiliser plut&#xF4;t &#xAB; &#xE9;valuation &#xBB; s&#x2019;il s&#x2019;agit d&#x2019;un questionnaire d&#x2019;examen). </langstring>
+      <langstring language="en">To be used for any ressource intended to present textual information, including hypertext, and oral or written communications, except when the text is used for purposes involving one or more other terms of the current vocabulary (e.g. use &#x201C;evaluation&#x201D; in the case of an examination questionnaire).</langstring>
     </description>
   </term>
   <metadata>
-    <vocabSource xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd"/>
+    <vocabSource xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd"></vocabSource>
     <vocabIsSystem xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">true</vocabIsSystem>
     <vocabIsRelationship xmlns="http://eureka.coeus.ca/xsd/vdex_eureka_metadata.xsd">false</vocabIsRelationship>
   </metadata>

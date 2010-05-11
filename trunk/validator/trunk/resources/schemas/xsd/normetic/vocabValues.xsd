@@ -38,21 +38,16 @@
          <xs:enumeration value="exploration"/>
          <xs:enumeration value="expérience"/>
          <xs:enumeration value="glossaire"/>
-         <xs:enumeration value="glossary"/>
          <xs:enumeration value="guide"/>
          <xs:enumeration value="lecture/présentation"/>
          <xs:enumeration value="matériel de référence"/>
          <xs:enumeration value="méthodologie"/>
          <xs:enumeration value="outils"/>
-         <xs:enumeration value="presentation"/>
          <xs:enumeration value="questionnaire"/>
-         <xs:enumeration value="reference material"/>
          <xs:enumeration value="scénario pédagogique"/>
          <xs:enumeration value="simulation"/>
          <xs:enumeration value="situation d'apprentissage et d'évaluation"/>
          <xs:enumeration value="texte-document informatif"/>
-         <xs:enumeration value="tools"/>
-         <xs:enumeration value="tutorial"/>
          <xs:enumeration value="tutoriel"/>
       </xs:restriction>
    </xs:simpleType>
@@ -69,7 +64,6 @@
          <xs:enumeration value="éducation primaire"/>
          <xs:enumeration value="éducation préscolaire"/>
          <xs:enumeration value="éducation secondaire"/>
-         <xs:enumeration value="formation continue ou en entreprise"/>
          <xs:enumeration value="formation continue"/>
          <xs:enumeration value="formation en entreprise"/>
          <xs:enumeration value="formation professionnelle"/>
