@@ -10,6 +10,7 @@
     <property name="src"                    value="src"/>
     <property name="properties"             value="properties"/>
     <property name="resources"              value="resources"/>
+    <property name="etc"                    value="etc"/>
     <property name="build"                  value="build"/>
 
     <!-- Custom properties -->
@@ -38,6 +39,7 @@
             <fileset dir="${classes}"/>
             <fileset dir="${properties}"/>
             <fileset dir="${resources}"/>
+            <fileset dir="${etc}"/>
         </jar>
     </target>
 
