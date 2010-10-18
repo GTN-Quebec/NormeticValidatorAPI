@@ -20,7 +20,6 @@
          <xs:enumeration value="http://www.normetic.org/vdex/typeressourcev1_2.xml"/>
          <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.1_element_5_2_type_de_ressource_voc.xml"/>
          <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.0_element_5_6_contexte_voc.xml"/>
-         <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.2_element_5_6_contexte_voc.xml"/>
          <xs:enumeration value="http://eureka.ntic.org/vdex/NORMETICv1.0_element_6_2_copyright_et_autres_restrictions_voc.xml"/>
       </xs:restriction>
    </xs:simpleType>
@@ -57,13 +56,9 @@
       <xs:restriction base="xs:token">
          <xs:enumeration value="autre"/>
          <xs:enumeration value="cegep"/>
-         <xs:enumeration value="cégep"/>
-         <xs:enumeration value="education pre scolaire"/>
+         <xs:enumeration value="education prescolaire"/>
          <xs:enumeration value="education primaire"/>
          <xs:enumeration value="education secondaire"/>
-         <xs:enumeration value="éducation primaire"/>
-         <xs:enumeration value="éducation préscolaire"/>
-         <xs:enumeration value="éducation secondaire"/>
          <xs:enumeration value="formation continue"/>
          <xs:enumeration value="formation en entreprise"/>
          <xs:enumeration value="formation professionnelle"/>
@@ -71,9 +66,6 @@
          <xs:enumeration value="universite premier cycle"/>
          <xs:enumeration value="universite second cycle"/>
          <xs:enumeration value="universite troisieme cycle"/>
-         <xs:enumeration value="université premier cycle"/>
-         <xs:enumeration value="université second cycle"/>
-         <xs:enumeration value="université troisième cycle"/>
       </xs:restriction>
    </xs:simpleType>
 
