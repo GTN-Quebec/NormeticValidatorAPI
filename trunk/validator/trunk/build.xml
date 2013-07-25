@@ -26,6 +26,7 @@
     <target name="compile">
         <mkdir dir="${classes}"/>
         <javac srcdir="${src}" destdir="${classes}" 
+            includeantruntime="false"
             source="${build.compiler.source}" target="${build.compiler.target}" 
             debug="${build.compiler.debug}" 
             nowarn="${build.compiler.nowarn}" deprecation="${build.compiler.deprecation}">
@@ -64,7 +65,7 @@
     </target>
 
     <target name="test" depends="build">
-        <java classname="ca.licef.validator.GraphicalNormeticValidator" spawn="true" fork="true">
+        <java classname="ca.licef.validator.GraphicalNormeticValidator" spawn="false" fork="true">
             <classpath>
                 <pathelement location="${build}/${ant.project.name}.jar"/>            
                 <fileset dir="${lib}">

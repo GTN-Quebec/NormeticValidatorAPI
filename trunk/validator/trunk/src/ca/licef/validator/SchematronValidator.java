@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -31,7 +32,15 @@ import net.sf.saxon.value.UntypedAtomicValue;
 
 class SchematronValidator {
 
-    public SchematronValidator( ) {
+    public SchematronValidator() {
+    }
+
+    public boolean isHideXslt2Warning() {
+        return( isHideXslt2Warning );
+    }
+
+    public void setHideXslt2Warning( boolean isHideXslt2Warning ) {
+        this.isHideXslt2Warning = isHideXslt2Warning;
     }
 
     public void setLocale( Locale locale ) {
@@ -157,7 +166,10 @@ class SchematronValidator {
             factory.setURIResolver( 
                 new URIResolver() {
                     public Source resolve( String href, String base ) {
-                        return( new StreamSource( getClass().getResourceAsStream( "/schematron/" + href ) ) );
+                        String path = "/schematron/";
+                        if( isHideXslt2Warning )
+                            path += "xslt2WarningHidden/";
+                        return( new StreamSource( getClass().getResourceAsStream( path + href ) ) );
                     }
                 }
             );
@@ -174,7 +186,10 @@ class SchematronValidator {
 
             XMLReader styleParser = config.getStyleParser();
 
-            Source styleSource = new SAXSource(styleParser, new InputSource( getClass().getResourceAsStream( "/schematron/iso_schematron_text.xsl" ) ) );
+            String path = "/schematron/";
+            if( isHideXslt2Warning )
+                path += "xslt2WarningHidden/";
+            Source styleSource = new SAXSource(styleParser, new InputSource( getClass().getResourceAsStream( path + "iso_schematron_text.xsl" ) ) );
 
             sheet = (PreparedStylesheet) factory.newTemplates(styleSource);
 
@@ -187,7 +202,7 @@ class SchematronValidator {
             Transformer instance = sheet.newTransformer();
             instance.setParameter( "phase", new UntypedAtomicValue( phase ) );
 
-            schXslStyleSheet = File.createTempFile("schValidor", ".xsl");
+            schXslStyleSheet = File.createTempFile("schValidator", ".xsl");
 
             Result result = new StreamResult(schXslStyleSheet.toURI().toString());
 
@@ -275,5 +290,6 @@ class SchematronValidator {
     private Hashtable<String, File> hSchXslStyleSheet = new Hashtable<String, File>();
     private boolean             isOptionalPhaseRequired;
     private boolean             isShowRecommendationsEnabled = true;
+    private boolean             isHideXslt2Warning = false;
 
 }
