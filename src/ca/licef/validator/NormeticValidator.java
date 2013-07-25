@@ -27,6 +27,14 @@ public class NormeticValidator {
     public NormeticValidator() {
     }
 
+    public boolean isSchematronValidationLessNoisy() {
+        return( isSchematronValidationLessNoisy );
+    }
+
+    public void setSchematronValidationLessNoisy( boolean isSchematronValidationLessNoisy ) {
+        this.isSchematronValidationLessNoisy = isSchematronValidationLessNoisy;
+    }
+
     public ValidationReport validateFolder( File lomFolder ) throws IOException, FileNotFoundException, TransformerConfigurationException, TransformerException, SAXException, ValidatorException {
         if( !lomFolder.exists() )
             throw( new ValidatorException( "Folder not found: " + lomFolder ) );
@@ -198,6 +206,8 @@ public class NormeticValidator {
 
         if( ( isValid || isForcedValidationEnabled() ) && isSchematronEnabled ) {
             SchematronValidator schValidator = new SchematronValidator();
+            if( isSchematronValidationLessNoisy )
+                schValidator.setHideXslt2Warning( true );
             schValidator.setLocale( locale );
             schValidator.setShowRecommendationsEnabled( isShowRecommendationsEnabled() );
             try {
@@ -383,6 +393,7 @@ public class NormeticValidator {
     }
 
     private Locale      locale = Locale.ENGLISH;
+    private boolean     isSchematronValidationLessNoisy = false;
     private boolean     isXSDEnabled = true;
     private boolean     isSchematronEnabled = true;
     private boolean     isForcedValidationEnabled = false;
